@@ -1,0 +1,67 @@
+.sobre-nos {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--amarelo-mobiliza);
+    padding: 40px;
+  }
+  
+  .conteudo-sobre-nos {
+    max-width: 60%;
+  }
+  
+  .sobre-nos h2 {
+    color: var(--roxo-mobiliza);
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+  }
+  
+  .sobre-nos p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #fff;
+    margin-bottom: 20px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+  /* Estilo para o contador */
+  .contador {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: white; /* cor de destaque */
+    white-space: nowrap;
+  }
+  
+  
+  .sobre-nos blockquote {
+    font-style: italic;
+    color: var(--roxo-mobiliza);
+    font-size: 20px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  .imagens-sobre-nos {
+    display: grid;
+    margin-top: 35px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 15px;
+    max-width: 30%;
+    margin-left: 35px;
+  }
+  
+  .imagens-sobre-nos img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  #img2-sobre-nos{  
+    transform: translateY(15%);
+  }
