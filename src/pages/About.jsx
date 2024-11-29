@@ -1,10 +1,14 @@
+import Header from "../components/Header/Header";
+import Footer from "../components/Footer/Footer";
+import AboutUs from "../components/AboutUs/AboutUs";
 function About() {
     return (
         <>
-            <h1>About</h1>
-            <p>Subtitle</p>
+        <Header />
+            <AboutUs />
+        <Footer />
         </>
-    )
+    );
 }
 
-export default About
+export default About;

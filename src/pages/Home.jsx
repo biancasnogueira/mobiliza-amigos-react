@@ -7,10 +7,10 @@ function Home() {
     return (
         <>
             <Header />
-            <h1>Home</h1>
-            <p>Subtitle</p>
             <Button buttonStyle="outline">Olá</Button>
-            <Banner title="Home" image="volunteer-background.svg"/>
+            <div className="home"> 
+                <Banner title="Doacoes" image="volunteer-background.svg"/>
+            </div>
             <Footer />
         </>
     );
