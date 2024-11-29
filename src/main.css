@@ -42,49 +42,7 @@
     font-weight: bold;
   }
   
-  /* PRIMARY */
-.cta-buttons {
-  display: flex;
-  gap: 15px;
-}
 
-.cta-buttons .btn {
-  text-decoration: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-weight: bold;
-  color: #fff;
-}
-
-.cta-buttons .doar,
-.cta-buttons .patrocinar {
-  background-color: var(--roxo-mobiliza);
-}
-
-/* OUTLINE */
-.colunas button {
-  background-color: transparent;
-  border: 2px solid white;
-  color: white;
-  width: 230px;
-  padding: 10px;
-  border-radius: 25px;
-  margin-top: 20px;
-  font-size: 1.1em;
-  cursor: pointer;
-  text-align: center;
-}
-
-.coluna-time-do-bem button, .coluna-nossa-lojinha button {
-  margin: 0 auto;
-  display: block;
-}
-
-.colunas button:hover {
-  background-color: white;
-  color: var(--amarelo-mobiliza);
-  transition: 0.3s;
-}
 
 .hero {
     position: relative;

@@ -1,4 +1,5 @@
 function Contact() {
+    console.log('Componente Contact carregado');
     return (
         <>
             <h1>Contact</h1>
@@ -7,4 +8,4 @@ function Contact() {
     )
 }
 
-export default Contact
+export default Contact;
