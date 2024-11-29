@@ -1,0 +1,52 @@
+/* BOTÃO BASE */
+.button {
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* PRIMARY */
+.button.primary {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+}
+
+.button.primary > .btn {
+    text-decoration: none;
+    color: #fff;
+}
+
+.cta-buttons .doar,
+.cta-buttons .patrocinar {
+    background-color: var(--roxo-mobiliza);
+}
+
+/* OUTLINE */
+.button.outline {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    width: 230px;
+    padding: 10px;
+    border-radius: 25px;
+    margin-top: 20px;
+    font-size: 1.1em;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.coluna-time-do-bem button, 
+.coluna-nossa-lojinha button {
+    margin: 0 auto;
+    display: block;
+}
+
+.button.outline:hover {
+    background-color: white;
+    color: var(--amarelo-mobiliza);
+}
