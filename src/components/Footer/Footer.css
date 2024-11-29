@@ -1,0 +1,71 @@
+footer {
+    background-color: #80276E; /* Cor roxa de fundo */
+    color: white;
+    padding: 20px 0;
+    font-family: 'Roboto', sans-serif; 
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin-top: 40px;
+    gap: 20px;
+  }
+  
+  .footer-column {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .logo-column img {
+    max-width: 200px; /* Tamanho máximo do logo */
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .footer-column h4 {
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+  }
+  
+  .links-column a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 1.1em;
+  }
+  
+  .links-column a:hover {
+    text-decoration: underline;
+  }
+  
+  .contacts-column p {
+    font-size: 0.9em;
+    margin: 5px 0;
+  }
+  
+  .social-column h4 {
+    font-size: 1em;
+    margin-bottom: 10px;
+  }
+  
+  .social-column img {
+    color: white;
+    font-size: 1.5em;
+    margin: 0 10px;
+    text-decoration: none;
+    max-width: 30px;
+    height: auto;
+  }
+  
+  .footer-bottom {
+    border-top: 1px solid #ffffff33;
+    padding-top: 10px;
+    font-size: 0.8em;
+    text-align: center;
+  }
