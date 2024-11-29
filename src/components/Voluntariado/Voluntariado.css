@@ -1,0 +1,123 @@
+.voluntariado {
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  
+  .voluntariado h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+  }
+  
+  .colunas {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+  
+  .coluna {
+    flex: 1;  
+    padding: 30px;
+    min-height: 400px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #fff;
+    align-items: center;
+  }
+  
+  .coluna-desejo-ser-voluntario {
+    background-color: var(--roxo-mobiliza);
+    color: #fff;
+  }
+  
+  .coluna-time-do-bem {
+    background-color:var(--amarelo-mobiliza);
+    color: var(--roxo-mobiliza);
+  }
+  
+  .coluna-nossa-lojinha {
+    background-color: var(--roxo-mobiliza);
+    color: #fff;
+  }
+  
+  .coluna h3 {
+    font-size: 2.4em;
+    font-family: 'Poetsen One', sans-serif;
+    font-weight: 400;
+    color: white;
+  }
+  
+  .coluna-nossa-lojinha .paragrafo1-amarelo{
+    font-family: 'Caveat', serif;
+    color: var(--amarelo-mobiliza);
+    font-size: 35px;
+    margin: 33px 0px 15px 0px;
+  }
+  
+  .coluna-desejo-ser-voluntario .paragrafo1-amarelo{
+    font-family: 'Caveat', serif;
+    color: var(--amarelo-mobiliza);
+    font-size: 35px;
+    margin: 0px 0px 10px 0px;
+  }
+  
+  .coluna-time-do-bem .paragrafo1-roxo {
+    font-family: 'Caveat', serif;
+    color: var(--roxo-mobiliza);
+    font-size: 35px;
+    margin: 10px 0px 10px 0px;
+  }
+  
+  .paragrafo2,
+  #roboto {
+    font-family: 'Roboto', sans-serif; 
+    color: white;
+  }
+  
+  .coluna-time-do-bem button,
+  .coluna-nossa-lojinha button {
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .colunas button {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    width: 230px;
+    padding: 10px;
+    border-radius: 25px;
+    margin-top: 20px;
+    font-size: 1.1em;
+    cursor: pointer;
+    text-align:  center;
+  }
+  
+  .colunas button:hover {
+    background-color: white;
+    color: var(--amarelo-mobiliza);
+    transition: 0.3s;
+  }
+  
+  .coluna-nossa-lojinha {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .imagens-lojinha {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .coluna-desejo-ser-voluntario img {
+    position: absolute;
+    width: 210px;
+    align-items: flex-end;
+    margin-top: 105px;
+    left: 29%;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
