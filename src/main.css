@@ -1,68 +1,328 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+    --roxo-mobiliza: #733268;
+    --amarelo-mobiliza: #FFB600;
   }
-  a:hover {
-    color: #747bff;
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
-  button {
+  
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+  }
+  
+  header {
+    background-color: #fff;
+    padding: 5px 0;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .logo img {
+    width: 150px;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .cta-buttons {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .cta-buttons .btn {
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  .cta-buttons .doar,
+  .cta-buttons .patrocinar {
+    background-color: var(--roxo-mobiliza);
+  }
+  
+  .hero {
+    position: relative;
+    height: 500px;
+  }
+  
+  .hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .hero-text {
+    position: absolute;
+    top: 20%;
+    right: 20px;
+    background-color: #f7b32b;
+    padding: 20px;
+    border-radius: 10px;
+    color: #49073D;
+    font-weight: bold;
+    font-size: 1.5rem;
+    width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .voluntariado {
     background-color: #f9f9f9;
+    text-align: center;
   }
-}
+  
+  .voluntariado h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+  }
+  
+  .colunas {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+  
+  .coluna {
+    flex: 1;  
+    padding: 30px;
+    min-height: 400px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #fff;
+    align-items: center;
+  }
+  
+  .coluna-desejo-ser-voluntario {
+    background-color: var(--roxo-mobiliza);
+    color: #fff;
+  }
+  
+  .coluna-time-do-bem {
+    background-color: var(--amarelo-mobiliza);
+    color: var(--roxo-mobiliza);
+  }
+  
+  .coluna-nossa-lojinha {
+    background-color: var(--roxo-mobiliza);
+    color: #fff;
+  }
+  
+  .coluna h3 {
+    font-size: 2.4em;
+    font-family: 'Poetsen One', sans-serif;
+    font-weight: 400;
+    color: white;
+  }
+  
+  .colunas button {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    width: 230px;
+    padding: 10px;
+    border-radius: 25px;
+    margin-top: 20px;
+    font-size: 1.1em;
+    cursor: pointer;
+    text-align:  center;
+  }
+  
+  .colunas button:hover {
+    background-color: white;
+    color: var(--amarelo-mobiliza);
+    transition: 0.3s;
+  }
+  
+  .sobre-nos {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--amarelo-mobiliza);
+    padding: 40px;
+  }
+  
+  .conteudo-sobre-nos {
+    max-width: 60%;
+  }
+  
+  .sobre-nos h2 {
+    color: var(--roxo-mobiliza);
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+  }
+  
+  .sobre-nos p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #fff;
+  }
+  
+  .contador {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: white;
+  }
+  
+  .imagens-sobre-nos {
+    display: grid;
+    margin-top: 35px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 15px;
+    max-width: 30%;
+    margin-left: 35px;
+  }
+  
+  .imagens-sobre-nos img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .missao-mobiliza {
+    background-color: var(--roxo-mobiliza);
+  }
+  
+  .missao-mobiliza h2 {
+    color: #fff;
+    font-size: 36px;
+    padding: 50px 0px 0px 40px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+  }
+  
+  .informacoes-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 20px 0px 60px 30px;
+    color: #fff;
+  }
+  
+  .informacao-item {
+    flex: 1;
+    padding: 10px;
+    margin-top: 50px;
+  }
+  
+  .informacao-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 13px;
+    color: #fff;
+  }
+  
+  .informacao-item p {
+    font-size: 1em;
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  .container-carrossel {
+    position: relative;
+    max-width: 100%;
+    margin: 0;
+  }
+  
+  .gallery-wrapper {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+  }
+  
+  .arrow-left,
+  .arrow-right {
+    position: absolute;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    z-index: 2;
+    background-color: transparent;
+  }
+  
+  .arrow-left {
+    left: 10px;
+    top: 50%;
+  }
+  
+  .arrow-right {
+    right: 27px;
+    top: 42%;
+  }
+  
+  .gallery {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  
+  .item {
+    min-width: 303px;
+    height: 250px;
+    flex-shrink: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .current-item {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  
+  .gallery-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .control:focus {
+    outline: none;
+  }
+  
+  .gallery-wrapper {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  #fale-com-a-gente {
+    background-color: var(--amarelo-mobiliza);
+    color: #FFFFFF;
+    text-align: left;
+  }
+  
+  #fale-com-a-gente h2 {
+    font-size: 36px;
+    font-weight: bold;
+    font-family: "Poppins", sans-serif;
+    padding: 50px 0px 0px 40px;
+  }
+  
+  .contato-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 40px;
+  }
+
+  
+  
