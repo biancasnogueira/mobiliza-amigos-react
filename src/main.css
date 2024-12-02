@@ -144,14 +144,27 @@
     font-size: 18px;
     line-height: 1.6;
     color: #fff;
+    margin-bottom: 20px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
   }
   
   .contador {
     font-weight: bold;
     font-size: 1.5rem;
-    color: white;
+    color: white; /* cor de destaque */
+    white-space: nowrap;
   }
-  
+
+  .sobre-nos blockquote {
+    font-style: italic;
+    color: var(--roxo-mobiliza);
+    font-size: 20px;
+    font-family: "Poppins", sans-serif !important; /* Força a aplicação da fonte */
+    font-weight: 600;
+  }
+
   .imagens-sobre-nos {
     display: grid;
     margin-top: 35px;
@@ -166,6 +179,10 @@
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
+
+  #imgAboutUs2 {    
+    transform: translateY(15%);
+  }
   
   .missao-mobiliza {
     background-color: var(--roxo-mobiliza);
@@ -178,7 +195,13 @@
     font-family: "Poppins", sans-serif;
     font-weight: 800;
   }
-  
+  #retangulo-abaixo-do-titulo {
+    width: auto; /* Usa a largura original da imagem */
+    height: auto; /* Usa a altura original da imagem */
+    object-fit: none; /* Evita o recorte ou redimensionamento */
+    margin-left: 42px; /* Adiciona margem à esquerda */
+    display: block; /* Faz a imagem respeitar as margens */
+  }
   .informacoes-container {
     display: flex;
     justify-content: space-between;

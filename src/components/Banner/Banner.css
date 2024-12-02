@@ -46,12 +46,4 @@
     }
   }
   
-  /* Estilos adicionais para a imagem */
-  img {
-    width: 100%; /* garante que a imagem ocupe 100% do container */
-    height: 100%; /* mantém a altura da imagem proporcional */
-    object-fit: cover; /* cobre o fundo sem distorcer */
-    overflow-clip-margin: content-box;
-    overflow: clip;
-  }
   
