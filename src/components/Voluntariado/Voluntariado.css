@@ -48,21 +48,21 @@
     color: white;
   }
   
-  .coluna-nossa-lojinha .paragrafo1-amarelo{
+  .coluna-nossa-lojinha .destaque-amarelo{
     font-family: 'Caveat', serif;
     color: var(--amarelo-mobiliza);
     font-size: 35px;
     margin: 33px 0px 15px 0px;
   }
   
-  .coluna-desejo-ser-voluntario .paragrafo1-amarelo{
+  .coluna-desejo-ser-voluntario .destaque-amarelo{
     font-family: 'Caveat', serif;
     color: var(--amarelo-mobiliza);
     font-size: 35px;
     margin: 0px 0px 10px 0px;
   }
   
-  .coluna-time-do-bem .paragrafo1-roxo {
+  .coluna-time-do-bem .destaque-roxo {
     font-family: 'Caveat', serif;
     color: var(--roxo-mobiliza);
     font-size: 35px;
@@ -116,7 +116,7 @@
     position: absolute;
     width: 210px;
     align-items: flex-end;
-    margin-top: 105px;
+    margin-top: 62px;
     left: 29%;
     transform: translateX(-50%);
     z-index: 1;
