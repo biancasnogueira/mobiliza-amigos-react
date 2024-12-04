@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { initializeCarousel } from '../../utils/carouselFunction';
 
 // ASSETS
 import imgAboutUs1 from '../../assets/aboutus1.svg';
@@ -23,14 +24,15 @@ const AboutUs = () => {
   const [currentItem, setCurrentItem] = useState(0);
   const [count, setCount] = useState(0);
   const items = [
-    carrossel2, carrossel3, carrossel4, carrossel5, carrossel6, carrossel7, carrossel8, carrossel9, carrossel10, carrossel11, carrossel12
-  ]; // Imagens do carrossel
+    carrossel2, carrossel3, carrossel4, carrossel5, carrossel6, carrossel7, 
+    carrossel8, carrossel9, carrossel10, carrossel11, carrossel12,
+  ];
   const maxItems = items.length;
 
-  // Função do contador
-  const animateCounter = () => {
+  // Contador animado
+  useEffect(() => {
     let current = 0;
-    const increment = 1000 / 200; // Controla a velocidade
+    const increment = 1000 / 200;
     const timer = setInterval(() => {
       current += increment;
       if (current >= 1000) {
@@ -40,19 +42,16 @@ const AboutUs = () => {
         setCount(Math.ceil(current));
       }
     }, 10);
-  };
 
-  useEffect(() => {
-    animateCounter(); // Inicia o contador quando o componente é montado
+    return () => clearInterval(timer); // Limpa o timer ao desmontar
   }, []);
 
-  // Função do carrossel
+  // Controle do carrossel
   const handleControlClick = (isLeft) => {
-    if (isLeft) {
-      setCurrentItem((prevItem) => (prevItem === 0 ? maxItems - 1 : prevItem - 1));
-    } else {
-      setCurrentItem((prevItem) => (prevItem === maxItems - 1 ? 0 : prevItem + 1));
-    }
+    setCurrentItem((prevItem) => 
+      isLeft ? (prevItem === 0 ? maxItems - 1 : prevItem - 1) : 
+               (prevItem === maxItems - 1 ? 0 : prevItem + 1)
+    );
   };
 
   return (
@@ -119,7 +118,11 @@ const AboutUs = () => {
 
         <div className="container-carrossel">
           <div className="gallery-wrapper">
-            <button className="arrow-left control" aria-label="Previous image" onClick={() => handleControlClick(true)}>
+            <button 
+              className="arrow-left control" 
+              aria-label="Previous image" 
+              onClick={() => handleControlClick(true)}
+            >
               <img src={setaEsquerda} alt="Previous" />
             </button>
             <div className="gallery">
@@ -132,7 +135,11 @@ const AboutUs = () => {
                 />
               ))}
             </div>
-            <button className="arrow-right control" aria-label="Next Image" onClick={() => handleControlClick(false)}>
+            <button 
+              className="arrow-right control" 
+              aria-label="Next Image" 
+              onClick={() => handleControlClick(false)}
+            >
               <img src={setaDireita} alt="Next" />
             </button>
           </div>
