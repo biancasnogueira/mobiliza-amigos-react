@@ -1,48 +1,29 @@
-// Seleciona todos os botões de controle (setas) e armazena em uma NodeList
-const controls = document.querySelectorAll(".control");
-// Inicializa a variável para controlar qual item está visível atualmente
-let currentItem = 0;
-// Seleciona todos os itens (imagens) da galeria
-const items = document.querySelectorAll(".item");
-// Armazena o número total de itens
-const maxItems = items.length;
-// Seleciona o elemento da galeria onde os itens estão
-const gallery = document.querySelector(".gallery");
+export function initializeCarousel(gallerySelector, controlsSelector, itemClass) {
+  const controls = document.querySelectorAll(controlsSelector);
+  const gallery = document.querySelector(gallerySelector);
+  const items = document.querySelectorAll(`.${itemClass}`);
 
-// Para cada controle (seta), adiciona um evento de clique
-controls.forEach((control) => {
-  control.addEventListener("click", (e) => {
-    // Verifica se o botão clicado é a seta da esquerda
-    const isLeft = e.target.classList.contains("arrow-left");
+  if (!gallery || controls.length === 0 || items.length === 0) {
+    console.error("Carousel elements not found");
+    return;
+  }
 
-    // Se for a seta da esquerda, diminui o índice do item atual
-    if (isLeft) {
-      currentItem -= 1; 
-    } else {
-      // Caso contrário, aumenta o índice do item atual
-      currentItem += 1; 
-    }
+  let currentItem = 0;
+  const maxItems = items.length;
 
-    // Se o índice atual exceder o número máximo de itens, reinicia para o primeiro item
-    if (currentItem >= maxItems) {
-      currentItem = 0; // Reinicia para o começo se for o último
-    }
+  controls.forEach((control) => {
+    control.addEventListener("click", (e) => {
+      const isLeft = e.target.closest("button").classList.contains("arrow-left");
 
-    // Se o índice atual for menor que 0, volta para o último item
-    if (currentItem < 0) {
-      currentItem = maxItems - 1; // Volta para o último se for o primeiro
-    }
+      currentItem = isLeft
+        ? (currentItem - 1 + maxItems) % maxItems
+        : (currentItem + 1) % maxItems;
 
-    // Calcula o deslocamento horizontal necessário para o item atual
-    // Multiplica o índice atual pela largura do item + qualquer espaçamento entre eles
-    const offset = -currentItem * 265; // Largura do item + gap entre eles
-    // Aplica a transformação para mover a galeria horizontalmente
-    gallery.style.transform = `translateX(${offset}px)`;
+      const offset = -currentItem * 265; // Ajuste a largura conforme necessário
+      gallery.style.transform = `translateX(${offset}px)`;
 
-    // Atualiza a opacidade do item atual
-    // Remove a classe 'current-item' de todos os itens
-    items.forEach((item) => item.classList.remove("current-item"));
-    // Adiciona a classe 'current-item' apenas ao item atual
-    items[currentItem].classList.add("current-item");
+      items.forEach((item) => item.classList.remove("current-item"));
+      items[currentItem].classList.add("current-item");
+    });
   });
-});
+}

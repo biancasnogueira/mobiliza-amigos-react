@@ -151,25 +151,19 @@
   top: 42%;
 }
 
-/* Estilo da galeria de imagens */
 .gallery {
-  display: flex; /* Permite que os itens sejam alinhados em linha */
-  transition: transform 0.5s ease; /* Anima a transição de movimento */
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+  overflow: hidden;
 }
-
-/* Estilo individual de cada item da galeria */
 .item {
-  min-width: 303px; /* Largura mínima de cada item */
-  height: 250px; /* Altura fixa para os itens */
-  flex-shrink: 0; /* Impede que os itens encolham */
-  transition: opacity 0.5s ease; /* Anima a transição da opacidade */
+  flex-shrink: 0;
+  width: 265px; /* Ajuste conforme necessário */
+}
+.current-item {
+  opacity: 1;
 }
 
-/* Estilo do item atualmente visível */
-.current-item {
-  opacity: 1; /* O item atual é completamente opaco */
-  transform: scale(1.05); /* Aumenta levemente o item atual para destaque opcional */
-}
 
 /* Oculta a barra de rolagem para Chrome, Safari e Opera */
 .gallery-wrapper::-webkit-scrollbar {
