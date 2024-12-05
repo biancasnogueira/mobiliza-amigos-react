@@ -1,4 +1,6 @@
-import { Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import AboutUs from '../AboutUs/AboutUs';
+import Doacoes from '../Doacoes/Doacoes';
 
 // ASSETS
 import './Footer.css';
@@ -14,11 +16,11 @@ function Footer() {
           <img src={FooterMobiliza} alt="Mobiliza Amigos" />
         </div>
         <div className="footer-column links-column">
-          <a href="#">Quem somos</a>
-          <br />
-          <a href="#">Doações</a>
-          <br />
-          <a href="#">Fale conosco</a>
+          <ul>
+            <li><Link to="/about">Quem Somos</Link></li>
+            <li><Link to="/donations">Doações</Link></li>
+            <li><Link to="/contact">Contatos</Link></li>
+          </ul>
         </div>
         <div className="footer-column contacts-column">
           <h4>Contatos</h4>
