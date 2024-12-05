@@ -1,185 +1,60 @@
 .sobre-nos {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--amarelo-mobiliza);
-    padding: 40px;
-  }
-  
-  .conteudo-sobre-nos {
-    max-width: 60%;
-  }
-  
-  .sobre-nos h2 {
-    color: var(--roxo-mobiliza);
-    font-size: 36px;
-    margin-bottom: 20px;
-    font-family: "Poppins", sans-serif;
-    font-weight: 800;
-    font-style: normal;
-  }
-  
-  .sobre-nos p {
-    font-size: 18px;
-    line-height: 1.6;
-    color: #fff;
-    margin-bottom: 20px;
-    font-family: "Poppins", sans-serif;
-    font-weight: 600;
-    font-style: normal;
-  }
-  /* Estilo para o contador */
-  .contador {
-    font-weight: bold;
-    font-size: 1.5rem;
-    color: white; /* cor de destaque */
-    white-space: nowrap;
-  }
-  
-  .sobre-nos blockquote {
-    font-style: italic;
-    color: var(--roxo-mobiliza);
-    font-size: 20px;
-    font-family: "Poppins", sans-serif !important;
-    font-weight: 600;
-}
-  
-  .imagens-sobre-nos {
-    display: grid;
-    margin-top: 35px;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 15px;
-    max-width: 30%;
-    margin-left: 35px;
-  }
-  
-  .imagens-sobre-nos img {
-    width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  #imgAboutUs2{  
-    transform: translateY(15%);
-  }
-
-  
-/* Seção missao visao valores */
-.missao-mobiliza{
-  background-color: var(--roxo-mobiliza);
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--amarelo-mobiliza);
+  padding: 40px;
 }
 
+.conteudo-sobre-nos {
+  max-width: 60%;
+}
 
-
-.missao-mobiliza h2{
-  color: #fff;
+.sobre-nos h2 {
+  color: var(--roxo-mobiliza);
   font-size: 36px;
-  padding: 50px 0px 0px 40px;
+  margin-bottom: 20px;
   font-family: "Poppins", sans-serif;
   font-weight: 800;
-  font-style: normal;
 }
 
-.informacoes-container {
-  display: flex; /* Define o container como flexbox */
-  justify-content: space-between; /* Espaçamento igual entre os itens */
-  align-items: flex-start; /* Alinha os itens no topo (início da linha) */
-  gap: 20px; /* Espaço entre os itens */
-  /* padding: 20px 0px 20px 30px; */
-  margin: 20px 0px 60px 30px; 
+.sobre-nos p {
+  font-size: 18px;
+  line-height: 1.8;
   color: #fff;
+  margin-bottom: 20px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
 }
 
-.informacao-item {
-  flex: 1; /* Garante que cada item ocupe a mesma largura */
-  padding: 10px;
-  margin-top: 50px;
+.sobre-nos blockquote {
+  font-style: italic;
+  color: var(--roxo-mobiliza);
+  font-size: 20px;
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 600;
 }
 
-.informacao-item h3 {
-  font-size: 1.5em; /* Tamanho maior para os títulos */
-  margin-bottom: 13px;
-  color: #fff; /* Cor para os títulos */
+.imagens-sobre-nos {
+  display: grid;
+  margin-top: 35px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 15px;
+  max-width: 30%;
+  margin-left: 35px;
 }
 
-.informacao-item p {
-  font-size: 1em;
-  color: #333; /* Cor do texto do parágrafo */
-  line-height: 1.5; /* Melhor leitura com espaçamento entre as linhas */
-  color: #fff;
-  font-family: "Roboto", sans-serif;
+.imagens-sobre-nos img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Define a área do carrossel, centralizando-o e limitando a largura máxima */
-.container-carrossel {
-  position: relative; /* Necessário para posicionar as setas absolutas dentro desse container */
-  max-width: 100%; /* Define a largura máxima do carrossel */
-  margin: 0; /* Centraliza o carrossel na página */
+#imgAboutUs2 {
+  transform: translateY(15%);
 }
 
-/* Contêiner que mantém as imagens visíveis e esconde o resto */
-.gallery-wrapper {
-  overflow: hidden; /* Esconde as partes da galeria que saem do contêiner */
-  width: 100%; /* Mantém a largura da galeria dentro do container */
-  position: relative; /* Permite o posicionamento absoluto dos elementos filhos */
-}
-
-/* Estilo das setas de navegação */
-.arrow-left,
-.arrow-right {
-  position: absolute; /* Permite que as setas sejam posicionadas em relação ao contêiner pai */
-/* Alinha as setas verticalmente ao centro do contêiner */
-  transform: translateY(-50%); /* Ajusta a posição das setas para o centro */
-  width: 40px; /* Largura das setas */
-  height: 40px; /* Altura das setas */
-  border: none; /* Remove a borda padrão dos botões */
-  cursor: pointer; /* Muda o cursor para indicar que é um botão clicável */
-  z-index: 2; /* Garante que as setas fiquem acima de outros elementos */
-  background-color: transparent;
-}
-
-/* Posiciona a seta esquerda */
-.arrow-left {
-  left: 10px; /* Distância do lado esquerdo */
-  top: 50%;
-}
-
-/* Posiciona a seta direita */
-.arrow-right {
-  right: 27px; /* Distância do lado direito */
-  top: 42%;
-}
-
-.gallery {
-  display: flex;
-  transition: transform 0.3s ease-in-out;
-  overflow: hidden;
-}
-.item {
-  flex-shrink: 0;
-  width: 265px; /* Ajuste conforme necessário */
-}
-.current-item {
-  opacity: 1;
-}
-
-
-/* Oculta a barra de rolagem para Chrome, Safari e Opera */
-.gallery-wrapper::-webkit-scrollbar {
-  display: none; /* Remove a barra de rolagem do navegador */
-}
-
-/* Remove qualquer indicação de foco ao interagir com o controle */
-.control:focus {
-  outline: none; /* Remove a indicação de foco ao clicar */
-}
-
-/* Oculta a barra de rolagem para IE, Edge e Firefox */
-.gallery-wrapper {
-  -ms-overflow-style: none; /* IE e Edge */
-  scrollbar-width: none; /* Firefox */
-}
 
 
 
