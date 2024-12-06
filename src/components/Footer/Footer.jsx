@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import AboutUs from '../AboutUs/AboutUs';
 import Doacoes from '../Doacoes/Doacoes';
+import Contatos from '../FaleConosco/FaleConosco';
 
 // ASSETS
 import './Footer.css';

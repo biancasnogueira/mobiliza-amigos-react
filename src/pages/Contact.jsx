@@ -1,9 +1,13 @@
+import FaleConosco from "../components/FaleConosco/FaleConosco";
+import Header from "../components/Header/Header";
+import Footer from "../components/Footer/Footer";
+
 function Contact() {
-    console.log('Componente Contact carregado');
     return (
         <>
-            <h1>Contact</h1>
-            <p>Subtitle</p>
+        <Header />
+        <FaleConosco />
+        <Footer />
         </>
     )
 }

@@ -88,13 +88,37 @@
     z-index: 10;
   }
   
-  .arrow-left {
-    left: 10px;
-  }
-  
-  .arrow-right {
-    right: 10px;
-  }
+  .arrow-left, .arrow-right {
+    position: absolute;
+    top: 50%; /* Centraliza verticalmente */
+    transform: translateY(-50%); /* Ajusta o alinhamento exato */
+    width: 40px; /* Largura da seta */
+    height: 40px; /* Altura da seta */
+    background-color: rgba(106, 27, 154, 0.8); /* Fundo com cor e transparência */
+    border-radius: 50%; /* Deixa o botão em formato circular */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    opacity: 0.6; /* Define uma opacidade inicial */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Transição suave */
+    z-index: 10; /* Garante que as setas fiquem acima de outros elementos */
+}
+
+.arrow-left {
+    left: 10px; /* Distância da borda esquerda */
+}
+
+.arrow-right {
+    right: 10px; /* Distância da borda direita */
+}
+
+.arrow-left:hover, .arrow-right:hover {
+    opacity: 1; /* Fica totalmente visível ao passar o mouse */
+    transform: translateY(-50%) scale(1.1); /* Adiciona leve aumento ao hover */
+    background-color: rgba(74, 20, 140, 1); /* Fundo fica mais escuro no hover */
+}
+
   
   .gallery img {
     width: 265px;

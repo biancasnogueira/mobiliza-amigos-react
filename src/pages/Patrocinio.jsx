@@ -1,15 +1,15 @@
-import InscricaoForm from "../components/Inscricao/Inscricao"
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
+import Patrocinador from "../components/Patrocinador/Patrocinio";
 
-function Register() {
+function Patrocinio() {
     return (
         <>
             <Header />
-            <InscricaoForm />
+            <Patrocinador />
             <Footer />
         </>
-    )
+    );
 }
 
-export default Register
+export default Patrocinio;
