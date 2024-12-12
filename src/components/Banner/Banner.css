@@ -1,49 +1,80 @@
 /* Estilos para a seção Hero com fundo dinâmico */
 .hero {
-    position: relative;
-    height: 540px;/* altura fixa, mas pode ser ajustada com media queries */
-    background-size: cover; /* garante que a imagem cubra toda a área */
-    background-position: center center; /* centraliza a imagem */
-    display: flex;
-    align-items: center; /* Alinha o conteúdo verticalmente */
-    justify-content: center; /* Alinha o conteúdo horizontalmente */
+  position: relative;
+  height: 551px; /* altura fixa, mas pode ser ajustada com media queries */
+  background-size: cover; /* garante que a imagem cubra toda a área */
+  background-position: center center; /* centraliza a imagem */
+  display: flex;
+  align-items: center; /* Alinha o conteúdo verticalmente */
+  justify-content: center; /* Alinha o conteúdo horizontalmente */
+  overflow: hidden; /* Esconde qualquer conteúdo extra */
+  animation: fadeInHero 2s ease-out; /* Animação para a seção hero */
+}
+
+.hero .container {
+  display: flex;
+  justify-content: center; /* Centraliza os itens dentro da div */
+  width: 100%;
+}
+
+.hero-text {
+  position: absolute;
+  top: 42%; /* ajusta a posição do texto conforme necessário */
+  left: 10%; /* margem à esquerda para evitar sobreposição */
+  background-color: rgba(247, 179, 43, 0.8); /* cor com opacidade para melhor contraste */
+  padding: 20px;
+  border-radius: 10px;
+  color: #49073D; /* cor do texto */
+  font-weight: bold;
+  font-size: 1.5rem;
+  width: 80%;
+  max-width: 400px;
+  text-align: center; /* centraliza o texto */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(50px);
+  opacity: 0;
+  animation: fadeInText 1.5s ease-out 0.5s forwards; /* Animação do texto */
+}
+
+.hero-text p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Efeito de parallax para o fundo */
+@keyframes fadeInHero {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
   }
-  
-  .hero .container {
-    display: flex;
-    justify-content: center; /* Centraliza os itens dentro da div */
-    width: 100%;
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
+}
+
+@keyframes fadeInText {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .hero {
+    height: 300px; /* ajusta a altura para dispositivos menores */
+  }
+
   .hero-text {
-    position: absolute;
-    top: 42%; /* ajusta a posição do texto conforme necessário */
-    left: 10%; /* margem à esquerda para evitar sobreposição */
-    background-color: rgba(247, 179, 43, 0.8); /* cor com opacidade para melhor contraste */
-    padding: 20px;
-    border-radius: 10px;
-    color: #49073D; /* cor do texto */
-    font-weight: bold;
-    font-size: 1.5rem;
-    width: 80%;
-    max-width: 400px;
-    text-align: center; /* centraliza o texto */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 1.2rem;
+    top: 10%;
+    left: 5%; /* margens ajustadas para telas menores */
+    width: 90%; /* aumenta a largura do texto */
+    max-width: 350px; /* ajusta a largura máxima */
   }
-  
-  /* Responsividade para telas menores */
-  @media (max-width: 768px) {
-    .hero {
-      height: 300px; /* ajusta a altura para dispositivos menores */
-    }
-  
-    .hero-text {
-      font-size: 1.2rem;
-      top: 10%;
-      left: 5%; /* margens ajustadas para telas menores */
-      width: 90%; /* aumenta a largura do texto */
-      max-width: 350px; /* ajusta a largura máxima */
-    }
-  }
-  
-  
+}

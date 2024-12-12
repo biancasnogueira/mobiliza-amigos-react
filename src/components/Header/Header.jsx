@@ -24,7 +24,7 @@ function Header() {
         </nav>
         <div className="cta-buttons">
           <Link to="/donations" className="btn doar">Quero Doar</Link>
-          <Link to="/patrocinio" className="btn patrocinar">Quero Patrocinar</Link>
+          <Link to="/patrocinador" className="btn patrocinar">Quero Patrocinar</Link>
         </div>
       </div>
     </header>

@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import './Patrocinio.css'
+import { Link } from 'react-router-dom';
+import './Patrocinio.css';
 
-const Patrocinador = () => {
+const Patrocinio = () => {
   const [formData, setFormData] = useState({
     nome: '',
     email: '',
@@ -19,22 +20,19 @@ const Patrocinador = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Aqui você pode implementar o envio do formulário, como uma API de email ou banco de dados
     alert('Formulário enviado com sucesso! Obrigado pelo seu interesse.');
   };
 
   return (
     <div className="patrocinador-page">
-      <header>
+      <p>
         <h1>Seja um Patrocinador do Mobiliza Amigos</h1>
-        <p>
-          O *Mobiliza Amigos* é um projeto voluntário que faz a diferença na vida de muitas
+          O <strong>Mobiliza Amigos</strong> é um projeto voluntário que faz a diferença na vida de muitas
           crianças. A sua empresa pode ajudar a transformar vidas através de patrocínios que
           financiam nossas atividades e eventos.
         </p>
-      </header>
 
-      <section id="como-ajudar">
+      <section id="como-ajudar" className="como-ajudar">
         <h2>Como Sua Empresa Pode Ajudar</h2>
         <ul>
           <li>Patrocínio financeiro para eventos e atividades.</li>
@@ -43,7 +41,7 @@ const Patrocinador = () => {
         </ul>
       </section>
 
-      <section id="formulario-contato">
+      <section id="formulario-contato" className="formulario-contato">
         <h2>Entre em Contato Conosco</h2>
         <p>Preencha o formulário abaixo para mais informações sobre como sua empresa pode se envolver:</p>
 
@@ -87,11 +85,11 @@ const Patrocinador = () => {
             required
           ></textarea>
 
-          <button type="submit">Enviar</button>
+          <button type="submit" className="btn-enviar">Enviar</button>
         </form>
       </section>
     </div>
   );
 };
 
-export default Patrocinador;
+export default Patrocinio;

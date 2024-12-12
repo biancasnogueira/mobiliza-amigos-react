@@ -1,94 +1,137 @@
 #fale-com-a-gente {
-    background-color:var(--amarelo-mobiliza);
-    color: #FFFFFF;
-    text-align: left;
+  background-color: var(--amarelo-mobiliza);
+  color: #FFFFFF;
+  text-align: left;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+#fale-com-a-gente h2 {
+  font-size: 36px;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  padding: 50px 0px 0px 40px;
+  opacity: 0;
+  animation: fadeIn 1s forwards 0.5s;
+}
+
+.contato-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: flex-start;
+  padding: 40px;
+}
+
+.contatos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 20px;
+  width: 60%;
+}
+
+.contato-opcao {
+  background-color: var(--amarelo-mobiliza);
+  border-radius: 5px;
+  text-align: left;
+  padding: 20px;
+  opacity: 0;
+  animation: slideUp 0.8s forwards;
+  font-family: "Poppins", sans-serif;
+}
+
+.contato-opcao h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: var(--roxo-mobiliza);
+}
+
+.contato-opcao p {
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  color: white;
+  width: 280px;
+  text-align: left;
+}
+
+.contato-opcao img {
+  width: 150px;
+  height: auto;
+  margin-top: 8px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.contato-opcao a:hover img {
+  transform: scale(1.2);
+  opacity: 0.8;
+}
+
+.formulario-contato {
+  width: 35%;
+  opacity: 0;
+  animation: fadeIn 1s forwards 1s;
+}
+
+.formulario-contato h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: var(--roxo-mobiliza);
+}
+
+.formulario-contato form {
+  display: flex;
+  flex-direction: column;
+}
+
+.formulario-contato input,
+.formulario-contato textarea {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: 'Roboto', sans-serif;
+  transition: border 0.3s ease;
+}
+
+.formulario-contato input:focus,
+.formulario-contato textarea:focus {
+  border-color: var(--roxo-mobiliza);
+}
+
+.formulario-contato button {
+  background-color: var(--roxo-mobiliza);
+  color: #FFFFFF;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.formulario-contato button:hover {
+  background-color: darken(var(--roxo-mobiliza), 10%);
+}
+
+/* Animações */
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
   }
-  
-  #fale-com-a-gente h2 {
-    font-size: 36px;
-    font-weight: bold;
-    font-family: "Poppins", sans-serif;
-    font-weight: 800;
-    font-style: normal;
-    padding: 50px 0px 0px 40px;
+  100% {
+    opacity: 1;
   }
-  
-  .contato-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    align-items: flex-start;
-    padding: 40px;
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  
-  .contatos {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, auto);
-    gap: 20px;
-    width: 60%;
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  .contato-opcao {
-    background-color: var(--amarelo-mobiliza);
-    border-radius: 5px;
-    text-align: left;
-    padding: 20px; /* Adiciona um pouco de espaço interno */
-  }
-  
-  .contato-opcao h3 {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-    color: var(--roxo-mobiliza);
-  }
-  
-  .contato-opcao p {
-    font-size: 0.9rem;
-    margin-bottom: 10px;
-    color: white;
-    width: 280px;
-    text-align: left;
-  }
-  
-  .contato-opcao img {
-    width: 150px; /* Ajuste o tamanho do ícone para melhor visibilidade */
-    height: auto; /* Manter a proporção */
-    margin-top: 8px; /* Espaço acima do ícone */
-    transition: transform 0.3s; /* Transição suave para o ícone */
-  }
-  
-  .contato-opcao a:hover img {
-    transform: scale(1.2); /* Aumenta o ícone ao passar o mouse */
-  }
-  .formulario-contato {
-    width: 35%;
-  }
-  
-  .formulario-contato h3 {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-    color: var(--roxo-mobiliza);
-  }
-  
-  .formulario-contato form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .formulario-contato input,
-  .formulario-contato textarea {
-    margin-bottom: 10px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-family: 'Roboto', sans-serif; 
-  }
-  
-  .formulario-contato button {
-    background-color: var(--roxo-mobiliza);
-    color: #FFFFFF;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-  }
-  
+}

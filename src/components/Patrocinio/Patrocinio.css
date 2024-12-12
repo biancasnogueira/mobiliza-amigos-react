@@ -1,0 +1,144 @@
+/* Patrocinio.css */
+
+.patrocinador-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+}
+
+.patrocinador-page h1 {
+  font-size: 2.5rem;
+  color: var(--amarelo-mobiliza);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.patrocinador-page p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: justify;
+  margin-bottom: 40px;
+}
+
+#como-ajudar {
+  margin: 40px 0;
+}
+
+#como-ajudar h2 {
+  font-size: 2rem;
+  color: var(--amarelo-mobiliza);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#como-ajudar ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+#como-ajudar li {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#como-ajudar li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+#formulario-contato {
+  background: #f9f9f9;
+  padding: 40px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+#formulario-contato h2 {
+  font-size: 2rem;
+  color: var(--amarelo-mobiliza);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#formulario-contato p {
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+form label {
+  font-weight: bold;
+  color: #555;
+}
+
+form input,
+form textarea {
+  padding: 15px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #fff;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: #0056b3;
+  box-shadow: 0 0 5px rgba(0, 86, 179, 0.2);
+  outline: none;
+}
+
+form textarea {
+  resize: none;
+  height: 120px;
+}
+
+.btn-enviar {
+  padding: 15px 20px;
+  font-size: 1.2rem;
+  color: #fff;
+  background: #0056b3;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-enviar:hover {
+  background: #003f8a;
+  transform: scale(1.05);
+}
+
+.btn-enviar:active {
+  background: #003570;
+}
+
+@media (max-width: 768px) {
+  #como-ajudar ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #como-ajudar li {
+    max-width: 90%;
+  }
+}

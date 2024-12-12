@@ -1,126 +1,162 @@
 .voluntariado {
-    background-color: #f9f9f9;
-    text-align: center;
-    box-sizing: border-box; 
-  }
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.voluntariado h2 {
+  font-size: 2em;
+  margin-bottom: 30px;
+}
+
+.colunas {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.coluna {
+  flex: 1; /* Garante colunas com mesma largura */
+  padding: 20px; /* Padding interno para espaçamento */
+  min-height: 400px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #fff;
+  align-items: center;
+  opacity: 0;
+  transform: translateX(-20px); /* Inicia deslocada à esquerda */
+  animation: slideIn 1s ease-out forwards;
+}
+
+.coluna-desejo-ser-voluntario {
+  background-color: var(--roxo-mobiliza);
+  color: #fff;
+  position: relative; /* necessário para o posicionamento absoluto da imagem */
+  z-index: 2; /* Defina um z-index maior */
+}
+
+.coluna-time-do-bem {
+  background-color: var(--amarelo-mobiliza);
+  color: var(--roxo-mobiliza);
+}
+
+.coluna-nossa-lojinha {
+  background-color: var(--roxo-mobiliza);
+  color: #fff;
+}
+
+.coluna h3 {
+  font-size: 2.4em;
+  font-family: 'Poetsen One', sans-serif;
+  font-weight: 400;
+  color: white;
+}
+
+.coluna-nossa-lojinha .destaque-amarelo{
+  font-family: 'Caveat', serif;
+  color: var(--amarelo-mobiliza);
+  font-size: 35px;
+}
+
+.coluna-desejo-ser-voluntario .destaque-amarelo{
+  font-family: 'Caveat', serif;
+  color: var(--amarelo-mobiliza);
+  font-size: 35px;
+}
+
+.coluna-time-do-bem .destaque-roxo {
+  font-family: 'Caveat', serif;
+  color: var(--roxo-mobiliza);
+  font-size: 35px;
+}
+
+.paragrafo2,
+#roboto {
+  font-family: 'Roboto', sans-serif; 
+  color: white;
+}
+
+.colunas button {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  width: 230px;
+  padding: 10px;
+  border-radius: 25px;
+  margin-top: 20px;
+  font-size: 1.1em;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.3s ease-in-out; /* Transição suave para hover */
+}
+
+.colunas button:hover {
+  background-color: white;
+  color: var(--amarelo-mobiliza);
+  transition: 0.3s;
+  transform: scale(1.05); /* Aumenta o botão levemente ao passar o mouse */
+}
+
+.coluna-nossa-lojinha {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.imagens-lojinha {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.imagens-lojinha img {
+  width: 95px; /* Reduz o tamanho das imagens */
+  height: auto; /* Mantém a proporção original */
+  animation: fadeInScale 0.8s ease-out forwards;
+  transition: transform 0.3s ease-in-out;
+}
+
+
+.coluna-desejo-ser-voluntario img {
+  position: absolute;
+  width: 220px;
+  margin-top: 57px;
+  left: 94%;
+  transform: translateX(-50%);
+  z-index: 3;
   
-  .voluntariado h2 {
-    font-size: 2em;
-    margin-bottom: 30px;
+}
+
+.coluna .destaque-amarelo, 
+.coluna .destaque-roxo {
+  font-family: 'Caveat', serif;
+  font-size: 35px;
+  margin: 20px 0; /* Uniformiza a margem */
+  line-height: 1.2; /* Controla o espaçamento interno */
+
+}
+
+.imagens-lojinha img:hover {
+  transform: scale(1.1); /* Aumenta a imagem ao passar o mouse */
+}
+
+.voluntariado {
+  opacity: 0;
+  animation: fadeInContainer 1.5s ease-out forwards; /* Anima o aparecimento da seção */
+}
+
+
+
+@keyframes fadeInContainer {
+  to {
+    opacity: 1;
   }
-  
-  .colunas {
-    display: flex;
-    justify-content: space-between;
-    align-items: stretch;
-    width: 100%; /* Garante que as colunas ocupem a largura disponível */
-    margin: 0 auto; /* Centraliza o conteúdo */
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0); /* Move para a posição final */
   }
-  
-  .coluna {
-    flex: 1;  
-    padding: 30px;
-    min-height: 400px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: #fff;
-    align-items: center;
-  }
-  
-  .coluna-desejo-ser-voluntario {
-    background-color: var(--roxo-mobiliza);
-    color: #fff;
-  }
-  
-  .coluna-time-do-bem {
-    background-color:var(--amarelo-mobiliza);
-    color: var(--roxo-mobiliza);
-  }
-  
-  .coluna-nossa-lojinha {
-    background-color: var(--roxo-mobiliza);
-    color: #fff;
-  }
-  
-  .coluna h3 {
-    font-size: 2.4em;
-    font-family: 'Poetsen One', sans-serif;
-    font-weight: 400;
-    color: white;
-  }
-  
-  .coluna-nossa-lojinha .destaque-amarelo{
-    font-family: 'Caveat', serif;
-    color: var(--amarelo-mobiliza);
-    font-size: 35px;
-    margin: 33px 0px 15px 0px;
-  }
-  
-  .coluna-desejo-ser-voluntario .destaque-amarelo{
-    font-family: 'Caveat', serif;
-    color: var(--amarelo-mobiliza);
-    font-size: 35px;
-    margin: 0px 0px 10px 0px;
-  }
-  
-  .coluna-time-do-bem .destaque-roxo {
-    font-family: 'Caveat', serif;
-    color: var(--roxo-mobiliza);
-    font-size: 35px;
-    margin: 10px 0px 10px 0px;
-  }
-  
-  .paragrafo2,
-  #roboto {
-    font-family: 'Roboto', sans-serif; 
-    color: white;
-  }
-  
-  .coluna-time-do-bem button,
-  .coluna-nossa-lojinha button {
-    margin: 0 auto;
-    display: block;
-  }
-  
-  .colunas button {
-    background-color: transparent;
-    border: 2px solid white;
-    color: white;
-    width: 230px;
-    padding: 10px;
-    border-radius: 25px;
-    margin-top: 20px;
-    font-size: 1.1em;
-    cursor: pointer;
-    text-align:  center;
-  }
-  
-  .colunas button:hover {
-    background-color: white;
-    color: var(--amarelo-mobiliza);
-    transition: 0.3s;
-  }
-  
-  .coluna-nossa-lojinha {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .imagens-lojinha {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-  }
-  
-  .coluna-desejo-ser-voluntario img {
-    position: absolute;
-    width: 170px;
-    align-items: flex-end;
-    margin-top: 163px;
-    left: 29%;
-    transform: translateX(-50%);
-    z-index: 1;
-  }
+}

@@ -26,10 +26,28 @@ function Footer() {
         <div className="footer-column contacts-column">
           <h4>Contatos</h4>
           <p>
-            📍R. Mato Grosso, 612 -<br /> Vila Santana, Valinhos - SP, 13274-120
+            📍
+            <a
+              href="https://www.google.com/maps?q=R.+Mato+Grosso,+612+-+Vila+Santana,+Valinhos+-+SP,+13274-120"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer-link"
+            >
+              R. Mato Grosso, 612 -<br /> Vila Santana, Valinhos - SP, 13274-120
+            </a>
           </p>
-          <p>📞(19) 98990-6423</p>
-          <p>📧tais.mobilizaamigos@gmail.com</p>
+          <p>
+            📞
+            <a href="tel:+5519989906423" className="footer-link">
+              (19) 98990-6423
+            </a>
+          </p>
+          <p>
+            📧
+            <a href="mailto:tais.mobilizaamigos@gmail.com" className="footer-link">
+              tais.mobilizaamigos@gmail.com
+            </a>
+          </p>
         </div>
         <div className="footer-column social-column">
           <h4>Siga nossas redes:</h4>

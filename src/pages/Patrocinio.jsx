@@ -1,15 +1,15 @@
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
-import Patrocinador from "../components/Patrocinador/Patrocinio";
+import Patrocinio from "../components/Patrocinio/Patrocinio";
 
-function Patrocinio() {
+function Patrocinador() {
     return (
         <>
             <Header />
-            <Patrocinador />
+            <Patrocinio />
             <Footer />
         </>
     );
 }
 
-export default Patrocinio;
+export default Patrocinador;

@@ -87,7 +87,7 @@ const InscricaoForm = () => {
           </div>
 
           <div className="input-group">
-            <label htmlFor="interesse">Por que quer se voluntariar?</label>
+            <label htmlFor="interesse">Por que você quer se voluntariar?</label>
             <textarea
               id="interesse"
               name="interesse"

@@ -88,18 +88,22 @@
   }
   
   .botao button {
-    background-color: var(--amarelo-mobiliza);
+    background-color: var(--roxo-mobiliza);
     color: white;
     padding: 12px 20px;
     font-size: 1.2rem;
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    letter-spacing: 1px;
+  border: 2px solid var(--amarelo-mobiliza); /* Borda com a cor de destaque */
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
   }
   
   .botao button:hover {
-    background-color: var(--roxo-mobiliza);
+    background-color: var(--amarelo-mobiliza); /* Cor de fundo no hover */
+    transform: translateY(-3px); /* Efeito de elevação */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Sombra suave */
   }
   
   @media (max-width: 768px) {
