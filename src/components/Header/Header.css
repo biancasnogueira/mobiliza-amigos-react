@@ -1,50 +1,161 @@
+/* Estilo do Header */
 header {
-  position: fixed; /* Torna o header fixo */
-  top: 0; /* Posiciona o header no topo da tela */
-  left: 0; /* Garante que ele fique alinhado à esquerda */
-  width: 100%; /* Faz com que o header ocupe 100% da largura da tela */
-  background-color: #fff; /* Cor de fundo */
-  padding: 5px 0; /* Espaçamento interno */
-  border-bottom: 1px solid #ddd; /* Borda inferior para separação visual */
-  z-index: 1000; /* Garante que o header fique acima de outros elementos */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  padding: 0px 10%; /* Padding com porcentagem para garantir a responsividade */
+  z-index: 1000;
+  border-bottom: 1px solid #ddd;
+  opacity: 0;
+  padding-left: 39.344px;
+  padding-right: 39.344px;
+  animation: fadeInHeader 1s ease-out forwards; /* Animação de fade-in */
+}
+
+#Home a{
+  color: var(--amarelo-mobiliza); /* Definindo a cor amarela para o item "Início" */
+}
+
+/* Animação de Fade-in para o Header */
+@keyframes fadeInHeader {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Ajuste do espaçamento do conteúdo para evitar sobreposição */
 body {
-  padding-top: 60px; /* Adiciona espaço equivalente à altura do header */
+  padding-top: 60px;
 }
 
-  
-  .logo img {
-    width: 150px;
+/* Logo */
+.logo img {
+  width: 150px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.logo img:hover {
+  transform: scale(1.1); /* Efeito de zoom no logo ao passar o mouse */
+}
+
+/* Menu de Navegação */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  position: relative;
+  padding: 8px 16px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: var(--roxo-mobiliza); /* Cor de destaque */
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: var(--roxo-mobiliza); /* Cor de destaque */
+  transform: translateY(-3px); /* Efeito de levitação ao passar o mouse */
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+/* Botões de CTA */
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.cta-buttons .btn {
+  text-decoration: none;
+  padding: 10px 20px; /* Padding base */
+  border-radius: 5px;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 1px;
+  border: 2px solid var(--roxo-mobiliza); /* Borda com a cor de destaque */
+  background-color: transparent;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-buttons .btn:hover {
+  background-color: var(--roxo-mobiliza); /* Cor de fundo no hover */
+  transform: translateY(-3px); /* Efeito de elevação */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+.cta-buttons .doar {
+  background-color: var(--roxo-mobiliza);
+  border-color: var(--amarelo-mobiliza);
+}
+
+.cta-buttons .patrocinar {
+  background-color: var(--roxo-mobiliza);
+  border-color: var(--amarelo-mobiliza);
+}
+
+.cta-buttons .doar:hover {
+  background-color: var(--amarelo-mobiliza);
+}
+
+.cta-buttons .patrocinar:hover {
+  background-color: var(--amarelo-mobiliza);
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  header {
+    padding: 15px 5%; /* Menor padding em telas menores */
   }
-  
-  nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-  }
-  
-  nav ul li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-  }
-  
-  .cta-buttons {
-    display: flex;
-    gap: 15px;
-  }
-  
+
   .cta-buttons .btn {
-    text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-weight: bold;
-    color: #fff;
+    padding: 8px 16px; /* Diminuindo o padding em telas menores */
+    font-size: 12px; /* Font-size menor em telas menores */
   }
-  
-  .cta-buttons .doar,
-  .cta-buttons .patrocinar {
-    background-color: var(--roxo-mobiliza);
+}
+
+/* Responsividade para telas muito pequenas (mobile) */
+@media (max-width: 480px) {
+  header {
+    padding: 10px 3%; /* Menor padding para telas muito pequenas */
   }
+
+  .cta-buttons {
+    flex-direction: column; /* Colocando os botões em uma coluna */
+    gap: 10px; /* Menor espaço entre os botões */
+  }
+
+  .cta-buttons .btn {
+    width: 100%; /* Fazendo com que os botões ocupem toda a largura disponível */
+    padding: 12px; /* Aumentando o padding para botões mais clicáveis */
+  }
+}

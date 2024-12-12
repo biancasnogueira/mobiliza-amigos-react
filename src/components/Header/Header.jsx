@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-//ASSETS
+// ASSETS
 import './Header.css';
 import Logo from '../../assets/logo.svg';
 
@@ -15,7 +15,7 @@ function Header() {
         </div>
         <nav>
           <ul className="nav-links">
-            <li><Link to="/">Início</Link></li>
+            <li id='Home'><Link to="/">Início</Link></li>
             <li><Link to="/about">Quem Somos</Link></li>
             <li><Link to="/donations">Doações</Link></li>
             <li><Link to="/register">Inscrições</Link></li>

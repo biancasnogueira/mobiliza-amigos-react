@@ -1,6 +1,7 @@
 .voluntariado {
     background-color: #f9f9f9;
     text-align: center;
+    box-sizing: border-box; 
   }
   
   .voluntariado h2 {
@@ -12,6 +13,8 @@
     display: flex;
     justify-content: space-between;
     align-items: stretch;
+    width: 100%; /* Garante que as colunas ocupem a largura disponível */
+    margin: 0 auto; /* Centraliza o conteúdo */
   }
   
   .coluna {
@@ -114,9 +117,9 @@
   
   .coluna-desejo-ser-voluntario img {
     position: absolute;
-    width: 210px;
+    width: 170px;
     align-items: flex-end;
-    margin-top: 105px;
+    margin-top: 163px;
     left: 29%;
     transform: translateX(-50%);
     z-index: 1;

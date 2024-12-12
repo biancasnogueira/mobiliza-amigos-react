@@ -1,7 +1,7 @@
 /* Estilos para a seção Hero com fundo dinâmico */
 .hero {
     position: relative;
-    height: 500px; /* altura fixa, mas pode ser ajustada com media queries */
+    height: 540px;/* altura fixa, mas pode ser ajustada com media queries */
     background-size: cover; /* garante que a imagem cubra toda a área */
     background-position: center center; /* centraliza a imagem */
     display: flex;
@@ -17,7 +17,7 @@
   
   .hero-text {
     position: absolute;
-    top: 20%; /* ajusta a posição do texto conforme necessário */
+    top: 42%; /* ajusta a posição do texto conforme necessário */
     left: 10%; /* margem à esquerda para evitar sobreposição */
     background-color: rgba(247, 179, 43, 0.8); /* cor com opacidade para melhor contraste */
     padding: 20px;

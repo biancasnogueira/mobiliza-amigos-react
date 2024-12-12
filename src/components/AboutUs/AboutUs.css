@@ -5,6 +5,17 @@
   align-items: center;
   background-color: var(--amarelo-mobiliza);
   padding: 40px;
+  opacity: 0;
+  animation: fadeIn 1.5s forwards; /* Animação de fade-in */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .conteudo-sobre-nos {
@@ -17,6 +28,19 @@
   margin-bottom: 20px;
   font-family: "Poppins", sans-serif;
   font-weight: 800;
+  transform: translateX(-50px);
+  animation: slideInLeft 1s ease-out forwards; /* Animação de entrada da esquerda */
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 .sobre-nos p {
@@ -27,6 +51,8 @@
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   text-align: left;
+  opacity: 0;
+  animation: fadeIn 1.5s ease-in forwards 0.5s; /* Animação de fade-in para o texto */
 }
 
 .sobre-nos blockquote {
@@ -35,6 +61,8 @@
   font-size: 20px;
   font-family: "Poppins", sans-serif !important;
   font-weight: 600;
+  opacity: 0;
+  animation: fadeIn 1.5s ease-in forwards 1s; /* Animação de fade-in para o bloco de citação */
 }
 
 .imagens-sobre-nos {
@@ -44,18 +72,54 @@
   grid-gap: 15px;
   max-width: 30%;
   margin-left: 35px;
+  opacity: 0;
+  animation: fadeIn 1.5s ease-in forwards 1.5s; /* Animação de fade-in para as imagens */
 }
 
 .imagens-sobre-nos img {
   width: 100%;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: scale(1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.imagens-sobre-nos img:hover {
+  transform: scale(1.05); /* Efeito de zoom nas imagens */
 }
 
 #imgAboutUs2 {
   transform: translateY(15%);
+  animation: slideUp 1s ease-out forwards 2s; /* Animação de slide up para a segunda imagem */
 }
 
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 
+/* Animação do contador */
+.contador {
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--roxo-mobiliza);
+  transition: all 0.3s ease-in-out;
+  animation: counterAnim 1s ease-out forwards;
+}
 
-
+@keyframes counterAnim {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
