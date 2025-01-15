@@ -12,13 +12,13 @@ Abaixo está o progresso das telas do site com links para o design no Figma:
 
 | Tela                          | Link do Design                                                                                         | Status         |
 |-------------------------------|--------------------------------------------------------------------------------------------------------|----------------|
-| **Tela Inicial**              | [Tela Inicial no Figma](https://www.figma.com/proto/AiuqUFNCZJF1IcTJno04s4/Website-Mobiliza?node-id=0-1&t=6fFjGHiCt774qHMp-1) | ✅ Concluída    |
-| **Cadastro de Voluntário**    | [Cadastro no Figma](https://www.figma.com/proto/AiuqUFNCZJF1IcTJno04s4/Website-Mobiliza?node-id=0-1&t=6fFjGHiCt774qHMp-1)    | ✅ Concluída |
-| **Sobre**                     | [Sobre no Figma](https://www.figma.com/proto/AiuqUFNCZJF1IcTJno04s4/Website-Mobiliza?node-id=0-1&t=6fFjGHiCt774qHMp-1)       | ✅ Concluída |
-| **Missão**                    | [Missão no Figma](https://www.figma.com/proto/AiuqUFNCZJF1IcTJno04s4/Website-Mobiliza?node-id=0-1&t=6fFjGHiCt774qHMp-1)      | ✅ Concluída |
-| **Página de Contato**         | [Contato no Figma](https://www.figma.com/proto/AiuqUFNCZJF1IcTJno04s4/Website-Mobiliza?node-id=0-1&t=6fFjGHiCt774qHMp-1)     | ✅ Concluída |
-| **Cadastro de Patrocinador**  | [Patrocinador no Figma](https://www.figma.com/proto/AiuqUFNCZJF1IcTJno04s4/Website-Mobiliza?node-id=0-1&t=6fFjGHiCt774qHMp-1) | 🔄 Em andamento |
-| **Footer**                    | [Footer no Figma](https://www.figma.com/proto/AiuqUFNCZJF1IcTJno04s4/Website-Mobiliza?node-id=0-1&t=6fFjGHiCt774qHMp-1)      | ✅ Concluída |
+| **Tela Inicial**              | [Tela Inicial no Figma](https://www.figma.com/proto/yaQYz6BMbPSKatZjsp56wn/Mobiliza-Amigos---Website?node-id=4-608) | ✅ Concluída    |
+| **Inscrição de Voluntário**    | [Cadastro no Figma](https://www.figma.com/proto/yaQYz6BMbPSKatZjsp56wn/Mobiliza-Amigos---Website?node-id=4-608)    | ✅ Concluída |
+| **Sobre**                     | [Sobre no Figma](https://www.figma.com/proto/yaQYz6BMbPSKatZjsp56wn/Mobiliza-Amigos---Website?node-id=4-608)       | ✅ Concluída |
+| **Missão**                    | [Missão no Figma](https://www.figma.com/proto/yaQYz6BMbPSKatZjsp56wn/Mobiliza-Amigos---Website?node-id=4-608)      | ✅ Concluída |
+| **Página de Contato**         | [Contato no Figma](https://www.figma.com/proto/yaQYz6BMbPSKatZjsp56wn/Mobiliza-Amigos---Website?node-id=4-608)     | ✅ Concluída |
+| **Cadastro de Patrocinador**  | [Patrocinador no Figma](https://www.figma.com/proto/yaQYz6BMbPSKatZjsp56wn/Mobiliza-Amigos---Website?node-id=68-2) | 🔄 Em andamento |
+| **Footer**                    | [Footer no Figma](https://www.figma.com/proto/yaQYz6BMbPSKatZjsp56wn/Mobiliza-Amigos---Website?node-id=4-608)      | ✅ Concluída |
 
 ## Estrutura do Repositório 📁
 
