@@ -9,18 +9,23 @@
 
 /* PRIMARY */
 .button.primary {
-    background-color: var(--roxo-mobiliza); /* Cor de fundo com a variável */
-    color: #fff; /* Cor do texto */
-    box-shadow: none; /* Remove qualquer sombra */
-}
-
-.button.primary > .btn {
-    text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-weight: bold;
-    color: #fff;
-}
+    background-color: var(--roxo-mobiliza);
+    color: white;
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    letter-spacing: 1px;
+  border: 2px solid var(--amarelo-mobiliza); /* Borda com a cor de destaque */
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .button.primary:hover {
+    background-color: var(--amarelo-mobiliza); /* Cor de fundo no hover */
+    transform: translateY(-3px); /* Efeito de elevação */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Sombra suave */
+  }
 
 /* OUTLINE */
 .button.outline {

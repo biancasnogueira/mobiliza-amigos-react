@@ -22,7 +22,7 @@ function Voluntariado() {
 
         {/* Coluna 2 - Time do Bem */}
         <div className="coluna coluna-time-do-bem">
-          <h3>TIME DO <br /> BEM</h3>
+          <h3>CAMPANHA DOA  <br /> LEGAL</h3>
           <p className="destaque-roxo">UNIR-SE PELO BEM</p>
           <p className="paragrafo2">
             COM R$10 POR MÊS, VOCÊ AJUDA <br />

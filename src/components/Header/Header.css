@@ -63,6 +63,13 @@ nav ul li a {
   font-size: 16px;
   letter-spacing: 1px;
   transition: color 0.3s ease, transform 0.3s ease;
+  text-decoration: none;
+  color: #333;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
 }
 
 nav ul li a::after {
@@ -90,7 +97,7 @@ nav ul li a:hover::after {
 .cta-buttons {
   display: flex;
   justify-content: center;
-  gap: 15px;
+  gap: 15px;  
 }
 
 .cta-buttons .btn {

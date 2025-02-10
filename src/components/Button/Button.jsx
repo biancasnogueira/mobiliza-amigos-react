@@ -1,16 +1,12 @@
-import './Button.css'
+import React from 'react';
+import './Button.css'; // Importando os estilos do botão
 
-function Button({ arrow, buttonStyle, loading, children, ...props }) {
-  // Verifica se buttonStyle foi passado, caso contrário, usa uma classe padrão
-  const buttonClass = buttonStyle ? `button ${buttonStyle}` : 'button';
-
+const Button = ({ children, className = '', onClick, type = 'button' }) => {
   return (
-    <button className={buttonClass} {...props}>
-      {loading ? 'Carregando...' : children}
-      {/* Se houver um ícone de seta, você pode renderizá-lo aqui */}
-      {arrow && <span className="arrow">→</span>}
+    <button type={type} className={`button ${className}`} onClick={onClick}>
+      {children}
     </button>
   );
-}
+};
 
 export default Button;

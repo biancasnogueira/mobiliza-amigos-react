@@ -5,10 +5,14 @@ const InscricaoForm = () => {
   const [formData, setFormData] = useState({
     nome: '',
     email: '',
+    mensagem: '',
     telefone: '',
     endereco: '',
     interesse: '',
   });
+  
+
+  const [formStatus, setFormStatus] = useState('');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -18,16 +22,47 @@ const InscricaoForm = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Formulário enviado:', formData);
+    console.log("Dados enviados:", formData);
+    try {
+      const response = await fetch('http://localhost:5000/submit-form', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setFormStatus('Inscrição enviada com sucesso!');
+        setFormData({
+          nome: '',
+          email: '',
+          mensagem: '',
+          telefone: '',
+          endereco: '',
+          interesse: '',
+        });
+      } else {
+        setFormStatus('Erro ao enviar a inscrição. Tente novamente.');
+      }
+    } catch (error) {
+      setFormStatus('Erro ao enviar a inscrição. Tente novamente.');
+      console.error('Erro:', error);
+    }
+
+    // Limpa o status após 5 segundos
+    setTimeout(() => setFormStatus(''), 5000);
   };
 
   return (
     <section className="inscricao">
       <div className="container-inscricao">
         <h1>Inscreva-se para o Mobiliza Amigos</h1>
-        <p className='paragrafo-1'>Junte-se a nós e ajude a fazer a diferença! Complete o formulário abaixo para se inscrever como voluntário.</p>
+        <p className='paragrafo-1'>
+          Junte-se a nós e ajude a fazer a diferença! Complete o formulário abaixo para se inscrever como voluntário.
+        </p>
 
         <div className="imagem-voluntario">
           <img src="/imagem-voluntario.svg" alt="Voluntário com criança" />
@@ -102,6 +137,8 @@ const InscricaoForm = () => {
             <button type="submit">Enviar Inscrição</button>
           </div>
         </form>
+
+        {formStatus && <p className="form-status">{formStatus}</p>}
       </div>
     </section>
   );

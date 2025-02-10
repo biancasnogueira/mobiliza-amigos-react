@@ -10,6 +10,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongoose": "^8.10.0",
+    "nodemon": "^3.1.9",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^7.0.1"
@@ -25,5 +30,10 @@
     "eslint-plugin-react-refresh": "^0.4.14",
     "globals": "^15.12.0",
     "vite": "^6.0.1"
-  }
+  },
+  "description": "Bem-vindo ao repositório do **Mobiliza Amigos**! Este site foi desenvolvido como parte de minha contribuição voluntária para conectar pessoas interessadas em apoiar nosso projeto. Nosso objetivo é ampliar a visibilidade da iniciativa, formalizar nossa presença online e alcançar mais pessoas dispostas a colaborar com nossa missão.",
+  "main": "eslint.config.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }

@@ -1,144 +1,145 @@
-/* Patrocinio.css */
-
-.patrocinador-page {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-  font-family: 'Arial', sans-serif;
-  color: #333;
+/* Seção do Patrocinador */
+.patrocinador-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 50px 40px 0 50px;
 }
 
-.patrocinador-page h1 {
+.patrocinador-texto {
+  flex: 1;
+  margin-right: 20px;
+  line-height: 1.8; /* Substitui o valor fixo para melhorar a escalabilidade */
+}
+
+.patrocinador-texto h2 {
+  color: var(--amarelo-mobiliza);
   font-size: 2.5rem;
-  color: var(--amarelo-mobiliza);
-  text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  white-space: nowrap; /* Garante que o texto não quebre */
 }
 
-.patrocinador-page p {
+.patrocinador-texto p {
   font-size: 1.1rem;
-  line-height: 1.6;
-  text-align: justify;
-  margin-bottom: 40px;
+  margin: 3rem 0 15px;
+  color: #49073D;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  width: 650px;
+  line-height: 1.6; /* Adiciona uma proporção consistente */
 }
 
-#como-ajudar {
-  margin: 40px 0;
-}
-
-#como-ajudar h2 {
-  font-size: 2rem;
-  color: var(--amarelo-mobiliza);
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-#como-ajudar ul {
-  list-style: none;
-  padding: 0;
+.logos-patrocinadores {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
+  gap: 15px;
+  margin: 20px 0;
 }
 
-#como-ajudar li {
-  background: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 8px;
+.logos-patrocinadores img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: scale-down;
+  overflow: hidden;
+}
+
+/* Formulário de Contato */
+.formulario-contato {
+  flex: 1;
+  background-color: #fff;
   padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 0 20px;
+  border-radius: 8px; /* Suaviza os cantos do formulário */
+}
+
+.formulario-contato h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: var(--roxo-mobiliza);
+}
+
+.formulario-contato input,
+.formulario-contato textarea {
   width: 100%;
-  max-width: 300px;
-  text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-#como-ajudar li:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-#formulario-contato {
-  background: #f9f9f9;
-  padding: 40px 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-}
-
-#formulario-contato h2 {
-  font-size: 2rem;
-  color: var(--amarelo-mobiliza);
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-#formulario-contato p {
-  text-align: center;
+  padding: 12px;
   font-size: 1rem;
-  margin-bottom: 30px;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-form label {
-  font-weight: bold;
-  color: #555;
-}
-
-form input,
-form textarea {
-  padding: 15px;
-  font-size: 1rem;
-  border: 1px solid #ccc;
+  border: 1px solid #ddd;
   border-radius: 5px;
-  background: #fff;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 5px;
+  box-sizing: border-box; /* Garante que padding não cause overflow */
 }
 
-form input:focus,
-form textarea:focus {
-  border-color: #0056b3;
-  box-shadow: 0 0 5px rgba(0, 86, 179, 0.2);
-  outline: none;
+.formulario-contato textarea {
+  resize: none; /* Evita redimensionamento */
 }
 
-form textarea {
-  resize: none;
-  height: 120px;
-}
-
-.btn-enviar {
-  padding: 15px 20px;
-  font-size: 1.2rem;
+.formulario-contato button {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--roxo-mobiliza);
   color: #fff;
-  background: #0056b3;
+  font-size: 1.1rem;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background 0.3s ease, transform 0.2s ease;
+  transition: background-color 0.3s ease;
 }
 
-.btn-enviar:hover {
-  background: #003f8a;
-  transform: scale(1.05);
+.formulario-contato button:hover {
+  background-color: var(--amarelo-mobiliza);
+
 }
 
-.btn-enviar:active {
-  background: #003570;
-}
-
+/* Responsividade */
 @media (max-width: 768px) {
-  #como-ajudar ul {
+  .patrocinador-section {
+    flex-direction: column;
+    align-items: center;
+    margin: 30px 20px;
+  }
+
+  .patrocinador-texto {
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .logos-patrocinadores {
     flex-direction: column;
     align-items: center;
   }
 
-  #como-ajudar li {
-    max-width: 90%;
+  .logos-patrocinadores img {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 10px;
+  }
+
+  .formulario-contato {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .patrocinador-texto h2 {
+    font-size: 2rem;
+  }
+
+  .patrocinador-texto p {
+    font-size: 1rem;
+    width: auto; /* Remove largura fixa para ajustar a tela menor */
+  }
+
+  .formulario-contato h3 {
+    font-size: 1.6rem;
+  }
+
+  .formulario-contato input,
+  .formulario-contato textarea {
+    padding: 10px;
+  }
+
+  .formulario-contato button {
+    padding: 10px;
   }
 }
