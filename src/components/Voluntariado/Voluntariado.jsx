@@ -16,13 +16,15 @@ function Voluntariado() {
           <h3>DESEJO SER <br /> VOLUNTÁRIO</h3>
           <p className="destaque-amarelo">SE LIGA NA AGENDA</p>
           <p className="paragrafo2">VENHA FAZER A DIFERENÇA <br /> QUE O MUNDO PRECISA!</p>
-          <button>QUERO FAZER PARTE</button>
+          <Link to="/register">
+            <button>QUERO FAZER PARTE</button>
+          </Link>
           <img src={Voluntario} alt="Imagem representando um voluntário" />
         </div>
 
         {/* Coluna 2 - Time do Bem */}
         <div className="coluna coluna-time-do-bem">
-          <h3>CAMPANHA DOA  <br /> LEGAL</h3>
+          <h3>AMIGO DOA  <br /> LEGAL</h3>
           <p className="destaque-roxo">UNIR-SE PELO BEM</p>
           <p className="paragrafo2">
             COM R$10 POR MÊS, VOCÊ AJUDA <br />
@@ -30,7 +32,9 @@ function Voluntariado() {
             AMOR E DIVERSÃO PARA AS <br />
             CRIANÇAS.
           </p>
-          <button>SAIBA MAIS</button>
+          <Link to="/donations">
+            <button>SAIBA MAIS</button>
+          </Link>
         </div>
 
         {/* Coluna 3 - Nossa Lojinha */}
@@ -42,7 +46,11 @@ function Voluntariado() {
             <img src={Lojinha2} alt="Produto 2 da lojinha" />
             <img src={Lojinha3} alt="Produto 3 da lojinha" />
           </div>
-          <button>SAIBA MAIS</button>
+          <a href="https://wa.me/5519995022463?text=Olá%20Mobiliza,%20gostaria%20de%20saber%20mais%20sobre%20o%20catálogo%20da%20lojinha" target="_blank" rel="noopener noreferrer">
+  <button>SAIBA MAIS</button>
+</a>
+
+
         </div>
       </div>
     </section>

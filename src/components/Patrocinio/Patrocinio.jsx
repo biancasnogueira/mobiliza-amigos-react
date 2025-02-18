@@ -22,14 +22,15 @@ const Patrocinio = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:5000/submit-form', { // URL do backend
+      // Envio para o SheetMonkey
+      const response = await fetch('https://api.sheetmonkey.io/form/jfqAJnhfbm1K3QiSx6V3U3', { // Substitua com seu URL do SheetMonkey
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(formData),
       });
-  
+
       if (response.ok) {
         setFormStatus('Formulário enviado com sucesso!');
         setFormData({
@@ -44,7 +45,7 @@ const Patrocinio = () => {
       setFormStatus('Erro ao enviar o formulário. Tente novamente.');
       console.error('Erro:', error);
     }
-  
+
     // Remove a mensagem de status após 5 segundos
     setTimeout(() => setFormStatus(''), 5000);
   };

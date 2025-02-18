@@ -5,12 +5,10 @@ const InscricaoForm = () => {
   const [formData, setFormData] = useState({
     nome: '',
     email: '',
-    mensagem: '',
     telefone: '',
     endereco: '',
-    interesse: '',
+    interesse: '', // Mantido apenas os campos necessários
   });
-  
 
   const [formStatus, setFormStatus] = useState('');
 
@@ -26,7 +24,7 @@ const InscricaoForm = () => {
     e.preventDefault();
     console.log("Dados enviados:", formData);
     try {
-      const response = await fetch('http://localhost:5000/submit-form', {
+      const response = await fetch('https://api.sheetmonkey.io/form/eMF7iLtuCa6vNW28ni2W4n', { // URL do SheetMonkey
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -39,7 +37,6 @@ const InscricaoForm = () => {
         setFormData({
           nome: '',
           email: '',
-          mensagem: '',
           telefone: '',
           endereco: '',
           interesse: '',
