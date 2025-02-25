@@ -1,124 +1,87 @@
 .sobre-nos {
   display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  background-color: var(--amarelo-mobiliza);
-  padding: 40px;
-  opacity: 0;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  justify-content: center;
+  padding: 20px;
+  gap: 20px;
 }
 
 .conteudo-sobre-nos {
-  max-width: 60%;
+  text-align: center;
 }
 
-.sobre-nos h2 {
-  color: var(--roxo-mobiliza);
-  font-size: 36px;
-  margin-bottom: 20px;
-  font-family: "Poppins", sans-serif;
-  font-weight: 800;
-  transform: translateX(-50px);
-  animation: slideInLeft 1s ease-out forwards; /* Animação de entrada da esquerda */
+.conteudo-sobre-nos h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
 }
 
-@keyframes slideInLeft {
-  from {
-    transform: translateX(-50px);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
+.conteudo-sobre-nos p {
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
-.sobre-nos p {
-  font-size: 18px;
-  line-height: 1.8;
-  color: #fff;
-  margin-bottom: 20px;
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  text-align: left;
-  opacity: 0;
-  animation: fadeIn 1s ease-in forwards 0.5s; /* Animação de fade-in para o texto */
-}
-
-.sobre-nos blockquote {
+.conteudo-sobre-nos blockquote {
   font-style: italic;
-  color: var(--roxo-mobiliza);
-  font-size: 20px;
-  font-family: "Poppins", sans-serif !important;
-  font-weight: 600;
-  opacity: 0;
-  animation: fadeIn 1s ease-in forwards 0.5s; /* Animação de fade-in para o bloco de citação */
+  margin-top: 20px;
 }
 
 .imagens-sobre-nos {
-  display: grid;
-  margin-top: 35px;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 15px;
-  max-width: 30%;
-  margin-left: 35px;
-  opacity: 0;
-  animation: fadeIn 1s ease-in forwards 0.5s; /* Animação de fade-in para as imagens */
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
 .imagens-sobre-nos img {
-  width: 100%;
+  max-width: 100%;
+  height: auto;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transform: scale(1);
-  transition: transform 0.3s ease-in-out;
 }
 
-.imagens-sobre-nos img:hover {
-  transform: scale(1.05); /* Efeito de zoom nas imagens */
-}
-
-#imgAboutUs2 {
-  transform: translateY(15%);
-  animation: slideUp 1s ease-out forwards 2s; /* Animação de slide up para a segunda imagem */
-}
-
-@keyframes slideUp {
-  from {
-    transform: translateY(50px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-/* Animação do contador */
 .contador {
-  font-size: 30px;
-  font-weight: 700;
-  color: var(--roxo-mobiliza);
-  transition: all 0.3s ease-in-out;
-  animation: counterAnim 1s ease-out forwards;
+  font-weight: bold;
+  font-size: 1.2rem;
 }
 
-@keyframes counterAnim {
-  from {
-    transform: scale(0.5);
-    opacity: 0;
+@media (max-width: 768px) {
+  .conteudo-sobre-nos h2 {
+    font-size: 1.5rem;
   }
-  to {
-    transform: scale(1);
-    opacity: 1;
+
+  .conteudo-sobre-nos p {
+    font-size: 0.9rem;
+  }
+
+  .conteudo-sobre-nos blockquote {
+    font-size: 0.9rem;
+  }
+
+  .imagens-sobre-nos {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .imagens-sobre-nos img {
+    max-width: 90%;
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .conteudo-sobre-nos h2 {
+    font-size: 1.2rem;
+  }
+
+  .conteudo-sobre-nos p {
+    font-size: 0.85rem;
+  }
+
+  .conteudo-sobre-nos blockquote {
+    font-size: 0.85rem;
+  }
+
+  .imagens-sobre-nos img {
+    max-width: 100%;
   }
 }

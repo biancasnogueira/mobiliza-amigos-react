@@ -14,6 +14,18 @@ header {
   animation: fadeInHeader 1s ease-out forwards; /* Animação de fade-in */
 }
 
+/* Exibe o menu hamburguer só em telas menores */
+.menu-toggle {
+  display: none; /* Esconde o ícone por padrão */
+}
+
+/* Mostra o ícone apenas em telas menores que 768px */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* Exibe o ícone */
+  }
+}
+
 #Home a{
   color: var(--amarelo-mobiliza); /* Definindo a cor amarela para o item "Início" */
 }
@@ -141,28 +153,109 @@ nav ul li a:hover::after {
 /* Responsividade para telas menores */
 @media (max-width: 768px) {
   header {
-    padding: 15px 5%; /* Menor padding em telas menores */
+    padding: 0; /* Menor padding em telas menores */
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo img {
+    width: 120px;
+    transition: transform 0.3s ease-in-out;
   }
 
   .cta-buttons .btn {
     padding: 8px 16px; /* Diminuindo o padding em telas menores */
     font-size: 12px; /* Font-size menor em telas menores */
   }
+
+  /* Menu Hamburguer - Início */
+  nav ul {
+    display: none; /* Escondendo o menu em telas pequenas */
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  nav ul.active {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0); /* Exibindo o menu quando a classe active for adicionada */
+  }
+
+  nav ul li {
+    margin: 10px 0;
+    width: 100%;
+    text-align: left;
+  }
+
+  nav ul li a {
+    font-size: 14px; /* Ajustando o tamanho da fonte */
+  }
+
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 1001;
+  }
+
+  .menu-toggle div {
+    width: 30px;
+    height: 4px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: transform 0.4s, opacity 0.4s;
+  }
+
+  .menu-toggle.active div:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .menu-toggle.active div:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.active div:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+  /* Menu Hamburguer - Fim */
 }
 
 /* Responsividade para telas muito pequenas (mobile) */
 @media (max-width: 480px) {
   header {
-    padding: 10px 3%; /* Menor padding para telas muito pequenas */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffffef;/* Padding com porcentagem para garantir a responsividade */
+    z-index: 1000;
+    border-bottom: 1px solid #ddd;
+    opacity: 0;
+    padding-right: 3.9rem;
+    animation: fadeInHeader 1s ease-out forwards; /* Animação de fade-in */
   }
 
   .cta-buttons {
-    flex-direction: column; /* Colocando os botões em uma coluna */
-    gap: 10px; /* Menor espaço entre os botões */
+    flex-direction: row; /* Colocando os botões em uma linha */
+    gap: 5px; /* Menor espaço entre os botões */
+  }
+
+  .logo img {
+    width: 110px;
+    transition: transform 0.3s ease-in-out;
   }
 
   .cta-buttons .btn {
-    width: 100%; /* Fazendo com que os botões ocupem toda a largura disponível */
-    padding: 12px; /* Aumentando o padding para botões mais clicáveis */
+    width: 6.5rem;
+    height: 2.9rem; /* Aumentando o padding para botões mais clicáveis */
+    padding: 2%;  
   }
 }

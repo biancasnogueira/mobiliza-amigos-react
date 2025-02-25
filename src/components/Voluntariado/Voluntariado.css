@@ -67,12 +67,14 @@
   font-family: 'Caveat', serif;
   color: var(--amarelo-mobiliza);
   font-size: 35px;
+  margin: 1.0rem;
 }
 
 .destaque-roxo {
   font-family: 'Caveat', serif;
   color: var(--roxo-mobiliza);
   font-size: 35px;
+  margin: 1.0rem;
 }
 
 /* Parágrafos */
@@ -80,6 +82,7 @@
 #roboto {
   font-family: 'Roboto', sans-serif;
   color: white;
+  margin: 1.0rem;
 }
 
 /* Botões */
@@ -129,7 +132,7 @@
 
 .coluna-desejo-ser-voluntario img {
   position: absolute;
-  width: 220px;
+  width: 13.75rem;
   margin-top: 57px;
   left: 94%;
   transform: translateX(-50%);
@@ -148,4 +151,66 @@
     opacity: 1;
     transform: translateX(0);
   }
+}
+
+/* Responsivo para telas menores que 768px */
+@media (max-width: 768px) {
+  .colunas {
+    flex-direction: column;
+  }
+
+  .coluna {
+    min-height: auto;
+    padding: 25px;
+  }
+  .coluna-desejo-ser-voluntario {
+    background-color: var(--roxo-mobiliza);
+    color: #fff;
+    position: relative;
+    z-index: 2;
+    padding-left: 90px; /* Adiciona um espaço interno à esquerda */
+  }
+  
+  .coluna-desejo-ser-voluntario img {
+    position: absolute;
+    width: 13.5rem;
+    margin-top: -4%;
+    left: 8%;
+    transform: translateX(-50%);
+    z-index: 3;
+  }
+
+
+  .coluna h3 {
+    font-size: 1.8rem;
+    font-family: 'Poetsen One', sans-serif;
+    font-weight: 400;
+    color: white;
+  }
+  .imagens-lojinha img {
+    width: calc(33.33% - 10px);  /* Ajuste de largura para as imagens da lojinha */
+    max-width: 100px;
+    height: auto;
+  }
+
+  .colunas button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1em;
+  }
+
+  .destaque-amarelo {
+    font-family: 'Caveat', serif;
+    color: var(--amarelo-mobiliza);
+    font-size: 1.5rem;
+    margin: 1.0rem;
+}
+
+.destaque-roxo {
+  font-family: 'Caveat', serif;
+  color: var(--roxo-mobiliza);
+  font-size: 1.5rem;
+  margin: 1.0rem;
+}
+
 }

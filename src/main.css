@@ -20,16 +20,6 @@
     padding: 5px;
   }
   
-  header {
-    position: fixed; /* Torna o header fixo */
-    top: 0; /* Posiciona o header no topo da tela */
-    left: 0; /* Garante que ele fique alinhado à esquerda */
-    width: 100%; /* Faz com que o header ocupe 100% da largura da tela */
-    background-color: #fff; /* Cor de fundo */
-    padding: 5px 0; /* Espaçamento interno */
-    border-bottom: 1px solid #ddd; /* Borda inferior para separação visual */
-    z-index: 1000; /* Garante que o header fique acima de outros elementos */
-}
 
 /* Ajuste do espaçamento do conteúdo para evitar sobreposição */
 body {
