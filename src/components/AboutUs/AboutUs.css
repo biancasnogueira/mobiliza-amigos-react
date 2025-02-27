@@ -1,14 +1,14 @@
 .sobre-nos {
   display: flex;
-  flex-direction: column;
+  flex-direction: row-reverse;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  padding: 20px;
-  gap: 20px;
+  background-color: var(--amarelo-mobiliza);
+  padding: 40px;
 }
-
 .conteudo-sobre-nos {
   text-align: center;
+  padding: 0 15px;
 }
 
 .conteudo-sobre-nos h2 {
@@ -24,30 +24,38 @@
 .conteudo-sobre-nos blockquote {
   font-style: italic;
   margin-top: 20px;
+  font-size: 1.1rem;
 }
 
 .imagens-sobre-nos {
   display: flex;
   justify-content: center;
-  gap: 10px;
+  gap: 20px;
   flex-wrap: wrap;
+  margin-top: 20px;
 }
 
 .imagens-sobre-nos img {
   max-width: 100%;
   height: auto;
   border-radius: 10px;
+  object-fit: cover;
 }
 
-.contador {
-  font-weight: bold;
-  font-size: 1.2rem;
-}
-
+/* Responsividade para telas menores que 768px (tablets) */
 @media (max-width: 768px) {
   .conteudo-sobre-nos h2 {
     font-size: 1.5rem;
   }
+  .sobre-nos {
+    /* display: flex
+; */
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--amarelo-mobiliza);
+    padding: 40px;
+}
 
   .conteudo-sobre-nos p {
     font-size: 0.9rem;
@@ -57,17 +65,21 @@
     font-size: 0.9rem;
   }
 
+  Colocando as imagens embaixo do conteúdo e centralizando tudo *
+
   .imagens-sobre-nos {
     flex-direction: column;
     align-items: center;
+    gap: 15px;
   }
 
   .imagens-sobre-nos img {
-    max-width: 90%;
+    max-width: 80%; /* Imagens menores para se ajustarem ao tamanho da tela */
     margin-bottom: 15px;
   }
 }
 
+/* Responsividade para telas menores que 480px (celulares) */
 @media (max-width: 480px) {
   .conteudo-sobre-nos h2 {
     font-size: 1.2rem;
@@ -76,12 +88,28 @@
   .conteudo-sobre-nos p {
     font-size: 0.85rem;
   }
+  .sobre-nos {
+    /* display: flex
+; */
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--amarelo-mobiliza);
+    padding: 40px;
+}
 
   .conteudo-sobre-nos blockquote {
     font-size: 0.85rem;
   }
 
+  /* Imagens maiores no celular */
+  .imagens-sobre-nos {
+    max-width: 100%; /* As imagens ocupam toda a largura disponível */
+    margin-bottom: 10px;
+  }
+
   .imagens-sobre-nos img {
-    max-width: 100%;
+    max-width: 100%; /* Garantir que as imagens fiquem bem ajustadas */
+    margin-bottom: 15px; /* Espaçamento entre as imagens */
   }
 }
