@@ -1,28 +1,32 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
+import "./AboutUs.css";
 
 // ASSETS
-import imgAboutUs1 from '../../assets/aboutus1.svg';
-import imgAboutUs2 from '../../assets/aboutus2.svg';
-import imgAboutUs3 from '../../assets/aboutus3.svg';
+import imgAboutUs1 from "/Image1.jpg";
+import imgAboutUs2 from "../../assets/aboutus2.svg";
+import imgAboutUs3 from "../../assets/aboutus3.svg";
 
 const AboutUs = () => {
   const [count, setCount] = useState(0);
 
   // Contador animado
   useEffect(() => {
-    let current = 0;
-    const increment = 1000 / 200;
-    const timer = setInterval(() => {
-      current += increment;
-      if (current >= 1000) {
-        setCount(1000);
-        clearInterval(timer);
-      } else {
-        setCount(Math.ceil(current));
-      }
-    }, 10);
+    let start = 0;
+    const end = 2000;
+    const duration = 2000;
+    const startTime = performance.now();
 
-    return () => clearInterval(timer);
+    const animateCount = (time) => {
+      const elapsedTime = time - startTime;
+      const progress = Math.min(elapsedTime / duration, 1);
+      setCount(Math.floor(progress * end));
+
+      if (progress < 1) {
+        requestAnimationFrame(animateCount);
+      }
+    };
+
+    requestAnimationFrame(animateCount);
   }, []);
 
   return (
@@ -30,30 +34,32 @@ const AboutUs = () => {
       <div className="conteudo-sobre-nos">
         <h2>SOBRE NÓS</h2>
         <p>
-          Mobiliza Amigos é uma iniciativa social sem fins lucrativos, fundada em 2020 <br />
-          por Aila Nadiele da Silva, José Alfredo Rodrigues de Andrade Júnior e Taís Melo dos Santos. 
-          Em apenas quatro anos de atuação, já transformamos a vida de <span id="contador" className="contador">{count}</span> crianças, conectando sonhos e inspirando ações através do poder do voluntariado.
+          Mobiliza Amigos é uma iniciativa social sem fins lucrativos, fundada
+          em 2020 por Aila Nadiele da Silva, José Alfredo Rodrigues de Andrade
+          Júnior e Taís Melo dos Santos. Em apenas quatro anos de atuação, já
+          transformamos a vida de{" "}
+          <span id="contador" className="contador">
+            {count}
+          </span>{" "}
+          pessoas, conectando sonhos e inspirando ações através do poder do
+          voluntariado.
         </p>
         <blockquote>
-          "Mobilizar é a nossa desculpa para levar amor, inspiração e transformação para crianças e comunidades que precisam de esperança."
+          "Mobilizar é a nossa desculpa para levar amor, inspiração e
+          transformação para crianças e comunidades que precisam de esperança."
         </blockquote>
       </div>
 
       <div className="imagens-sobre-nos">
-        <img 
-          id="imgAboutUs1" 
-          src={imgAboutUs1} 
-          alt="Imagem de crianças sorrindo em uma atividade organizada pela Mobiliza Amigos" 
+        <img
+          id="imgAboutUs1"
+          src={imgAboutUs1}
+          alt="Imagem de crianças sorrindo em uma atividade organizada pela Mobiliza Amigos"
         />
-        <img 
-          id="imgAboutUs2" 
+        <img
+          id="imgAboutUs2"
           src={imgAboutUs2}
-          alt="Voluntários entregando brinquedos para crianças" 
-        />
-        <img 
-          id="imgAboutUs3" 
-          src={imgAboutUs3} 
-          alt="Evento de arrecadação de doações da Mobiliza Amigos" 
+          alt="Voluntários entregando brinquedos para crianças"
         />
       </div>
     </section>

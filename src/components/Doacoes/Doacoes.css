@@ -52,7 +52,7 @@
 .btn-doacao {
   display: inline-block;
   margin-top: 20px;
-  padding: 12px 30px;
+  padding: 14px 30px; /* Ajuste o padding para garantir um tamanho uniforme */
   background-color: var(--amarelo-mobiliza);
   color: #ffffff;
   text-decoration: none;
@@ -61,6 +61,11 @@
   font-weight: bold;
   transition: background-color 0.3s ease;
   align-self: center; /* Garante que o botão fique centralizado */
+  width: 100%; /* Garante que os botões ocupem 100% da largura do container */
+  box-sizing: border-box; /* Garantir que o padding e a largura total sejam calculados corretamente */
+  max-width: 300px; /* Limita a largura máxima para manter o design responsivo */
+  border: none; /* Remover borda indesejada */
+  outline: none; /* Remover o contorno de foco */
 }
 
 .btn-doacao:hover {

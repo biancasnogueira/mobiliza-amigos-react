@@ -1,123 +1,169 @@
-
 /* Estilos principais */
 .inscricao {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #f9f9f9;
+  padding: 40px 20px;
+}
+
+.container-inscricao {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+  padding: 0 20px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--amarelo-mobiliza);
+  text-align: center;
+  font-family: "Caveat", serif;
+  margin-bottom: 0.5rem;
+}
+
+.paragrafo-1 {
+  font-size: 1.2rem;
+  color: #333;
+  text-align: center;
+  margin: 10px 0 30px;
+}
+
+/* Estilização da mensagem informativa */
+.paragrafo-2 {
+  font-size: 1.2rem;
+  color: var(--roxo-mobiliza);
+  background-color: #fff9e6;
+  border: 2px solid var(--amarelo-mobiliza);
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+/* Container para agrupar a imagem e o parágrafo informativo */
+.info-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  width: 100%;
+}
+
+/* Estilos para a imagem */
+.imagem-voluntario {
+  text-align: center;
+}
+
+.imagem-voluntario img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+}
+
+/* Estilos do formulário */
+.form-inscricao {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 600px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  font-family: "Roboto", sans-serif;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.input-group label {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--roxo-mobiliza);
+}
+
+.input-group input,
+.input-group textarea {
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.input-group textarea {
+  resize: vertical;
+  height: 150px;
+}
+
+.botao button {
+  background-color: var(--roxo-mobiliza);
+  color: white;
+  padding: 12px 20px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  border: 2px solid var(--amarelo-mobiliza);
+  transition: background-color 0.3s ease, transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.botao button:hover {
+  background-color: var(--amarelo-mobiliza);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilizações específicas para desktop */
+@media (min-width: 1024px) {
+  .info-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    flex-direction: column;
-    background-color: #f9f9f9;
-    padding: 40px 20px;
+    width: 82%;
   }
-  
-  .container-inscricao {
-    max-width: 1200px;
+
+  /* Reduz a largura do parágrafo para forçar mais quebras de linha */
+  .paragrafo-2 {
+    max-width: 400px;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 1.9rem;
-  }
-  
-  h1 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: var(--amarelo-mobiliza);
     text-align: center;
-    font-family: 'Caveat', serif;
-  }
-  
-  .paragrafo-1 {
-    font-size: 1.2rem;
-    color: #333;
-    text-align: center;
-    margin-bottom: 30px;
-    margin-top: 20px;
-  }
-  
-  .imagem-voluntario {
-    margin: 30px 0;
-    text-align: center;
-  }
-  
-  .imagem-voluntario img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .form-inscricao {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    width: 100%;
-    max-width: 600px;
-    background-color: #fff;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
-    font-family: 'Roboto', sans-serif;
-  }
-  
-  .input-group {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  .input-group label {
-    font-size: 1.1rem;
-    font-weight: bold;
-    color: var(--roxo-mobiliza);
-  }
-  
-  .input-group input,
-  .input-group textarea {
-    padding: 12px;
-    font-size: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    width: 100%;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
-  }
-  
-  .input-group textarea {
-    resize: vertical;
-    height: 150px;
-  }
-  
-  .botao button {
-    background-color: var(--roxo-mobiliza);
-    color: white;
-    padding: 12px 20px;
     font-size: 1.2rem;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    letter-spacing: 1px;
-  border: 2px solid var(--amarelo-mobiliza); /* Borda com a cor de destaque */
-  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 0;
+    line-height: 1.5;
   }
-  
-  .botao button:hover {
-    background-color: var(--amarelo-mobiliza); /* Cor de fundo no hover */
-    transform: translateY(-3px); /* Efeito de elevação */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Sombra suave */
+
+  .imagem-voluntario {
+    width: calc(
+      100% - 100px
+    ); /* Espaço total menos largura do parágrafo e gap */
+    text-align: right;
   }
-  
-  @media (max-width: 768px) {
-    .inscricao {
-      padding: 20px;
-    }
-  
-    .imagem-voluntario img {
-      width: 90%;
-    }
-  
-    .form-inscricao {
-      width: 100%;
-      padding: 15px;
-    }
+
+  .imagem-voluntario img {
+    width: 80%;
+    border-radius: 10px;
   }
-  
+
+  .form-inscricao {
+    margin-top: 40px;
+  }
+}

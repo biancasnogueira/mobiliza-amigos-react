@@ -1,13 +1,13 @@
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
-import AboutUs from '../AboutUs/AboutUs';
-import Doacoes from '../Doacoes/Doacoes';
-import Contatos from '../FaleConosco/FaleConosco';
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import AboutUs from "../AboutUs/AboutUs";
+import Doacoes from "../Doacoes/Doacoes";
+import Contatos from "../FaleConosco/FaleConosco";
 
 // ASSETS
-import './Footer.css';
-import LogoInstagram from '../../assets/logo-instagram.svg';
-import LogoTiktok from '../../assets/logo-tiktok.svg';
-import FooterMobiliza from '../../assets/footer-mobiliza.svg';
+import "./Footer.css";
+import LogoInstagram from "../../assets/logo-instagram.svg";
+import LogoTiktok from "../../assets/logo-tiktok.svg";
+import FooterMobiliza from "../../assets/footer-mobiliza.svg";
 
 function Footer() {
   return (
@@ -18,9 +18,15 @@ function Footer() {
         </div>
         <div className="footer-column links-column">
           <ul>
-            <li><Link to="/about">Quem Somos</Link></li>
-            <li><Link to="/donations">Doações</Link></li>
-            <li><Link to="/contact">Contatos</Link></li>
+            <li>
+              <Link to="/about">Quem Somos</Link>
+            </li>
+            <li>
+              <Link to="/donations">Doações</Link>
+            </li>
+            <li>
+              <Link to="/contact">Contatos</Link>
+            </li>
           </ul>
         </div>
         <div className="footer-column contacts-column">
@@ -38,14 +44,17 @@ function Footer() {
           </p>
           <p>
             📞
-            <a href="tel:+5519989906423" className="footer-link">
-              (19) 98990-6423
+            <a href="tel:+5519999063242" className="footer-link">
+              (19) 99906-3242
             </a>
           </p>
           <p>
             📧
-            <a href="mailto:tais.mobilizaamigos@gmail.com" className="footer-link">
-              tais.mobilizaamigos@gmail.com
+            <a
+              href="mailto:contato.mobilizaamigos@gmail.com"
+              className="footer-link"
+            >
+              contato.mobilizaamigos@gmail.com
             </a>
           </p>
         </div>
@@ -68,7 +77,19 @@ function Footer() {
         </div>
       </div>
       <div className="footer-bottom">
-        © 2024 por BN Development | Política de Proteção de Dados
+        © 2025 Mobiliza Amigos. Todos os direitos reservados. <br />
+        <Link to="/cookie-policy" className="footer-link">
+          Política de Privacidade
+        </Link>
+        <br />
+        Desenvolvido por{" "}
+        <a
+          href="https://github.com/biancasnogueira"
+          target="_blank"
+          className="footer-link"
+        >
+          BN Development
+        </a>
       </div>
     </footer>
   );

@@ -1,55 +1,8 @@
-import React, { useState } from 'react';
-import './Patrocinio.css';
-import Button from '../Button/Button'; // Componente de botão estilizado
+import React from "react";
+import "./Patrocinio.css";
+import Button from "../Button/Button"; // Componente de botão estilizado
 
 const Patrocinio = () => {
-  const [formData, setFormData] = useState({
-    nome: '',
-    email: '',
-    mensagem: '',
-  });
-
-  const [formStatus, setFormStatus] = useState(''); // Status do envio do formulário
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevState) => ({
-      ...prevState,
-      [name]: value,
-    }));
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      // Envio para o SheetMonkey
-      const response = await fetch('https://api.sheetmonkey.io/form/jfqAJnhfbm1K3QiSx6V3U3', { // Substitua com seu URL do SheetMonkey
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
-
-      if (response.ok) {
-        setFormStatus('Formulário enviado com sucesso!');
-        setFormData({
-          nome: '',
-          email: '',
-          mensagem: '',
-        });
-      } else {
-        setFormStatus('Erro ao enviar o formulário. Tente novamente.');
-      }
-    } catch (error) {
-      setFormStatus('Erro ao enviar o formulário. Tente novamente.');
-      console.error('Erro:', error);
-    }
-
-    // Remove a mensagem de status após 5 segundos
-    setTimeout(() => setFormStatus(''), 5000);
-  };
-
   return (
     <div className="container">
       <section className="patrocinador-section">
@@ -57,49 +10,33 @@ const Patrocinio = () => {
         <div className="patrocinador-texto">
           <h2>Seja um Patrocinador do Mobiliza Amigos</h2>
           <p>
-            O Mobiliza Amigos é um projeto voluntário que faz a diferença na
-            vida de muitas crianças. A sua empresa pode ajudar a transformar
-            vidas através de patrocínios que financiam nossas atividades e
-            eventos.
+            O Mobiliza Amigos é uma iniciativa social que transforma vidas de
+            crianças, idosos e animais resgatados. Sua empresa pode apoiar
+            nossos projetos e eventos, levando mais impacto positivo à
+            comunidade.
           </p>
-          <p>Contribua junto de:</p>
+          <p>Alguns dos nossos patrocinadores:</p>
           <div className="logos-patrocinadores">
-            <img src="/logo-feav.png" alt="Logo FEAV" className="logo" />
-            <img src="/logo-pururucas.jpg" alt="Logo Pururucas" className="logo" />
+            <img src="/adelpho.png" alt="Logo Adelpho" className="logo" />
+            <img
+              src="/logo-pururucas.jpg"
+              alt="Logo Pururucas"
+              className="logo"
+            />
           </div>
         </div>
 
-        {/* Formulário de Contato */}
+        {/* Botão de Envio */}
         <div className="formulario-contato">
-          <h3>Envie sua mensagem:</h3>
-          <form onSubmit={handleSubmit}>
-            <input
-              type="text"
-              name="nome"
-              placeholder="Nome"
-              value={formData.nome}
-              onChange={handleChange}
-              required
-            />
-            <input
-              type="email"
-              name="email"
-              placeholder="E-mail"
-              value={formData.email}
-              onChange={handleChange}
-              required
-            />
-            <textarea
-              name="mensagem"
-              placeholder="Digite sua mensagem aqui..."
-              value={formData.mensagem}
-              onChange={handleChange}
-              required
-            ></textarea>
-            <button type="submit">ENVIAR</button>
-          </form>
-
-          {formStatus && <p className="form-status">{formStatus}</p>}
+          <h3>Fale Conosco</h3>
+          <a
+            href="https://wa.me/5519996813159?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20como%20me%20tornar%20um%20patrocinador%20do%20Mobiliza%20Amigos."
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Entre em contato pelo WhatsApp para saber mais sobre o patrocínio"
+          >
+            <Button>Quero Patrocinar</Button>
+          </a>
         </div>
       </section>
     </div>

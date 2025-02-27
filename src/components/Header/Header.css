@@ -26,8 +26,10 @@ header {
   }
 }
 
-#Home a{
-  color: var(--amarelo-mobiliza); /* Definindo a cor amarela para o item "Início" */
+#Home a {
+  color: var(
+    --amarelo-mobiliza
+  ); /* Definindo a cor amarela para o item "Início" */
 }
 
 /* Animação de Fade-in para o Header */
@@ -77,7 +79,7 @@ nav ul li a {
   transition: color 0.3s ease, transform 0.3s ease;
   text-decoration: none;
   color: #333;
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -85,7 +87,7 @@ nav ul li a {
 }
 
 nav ul li a::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -97,7 +99,8 @@ nav ul li a::after {
 
 nav ul li a:hover {
   color: var(--roxo-mobiliza); /* Cor de destaque */
-  transform: translateY(-3px); /* Efeito de levitação ao passar o mouse */
+  transform: translateY(-3px);
+  text-decoration: none; /* Efeito de levitação ao passar o mouse */
 }
 
 nav ul li a:hover::after {
@@ -109,7 +112,7 @@ nav ul li a:hover::after {
 .cta-buttons {
   display: flex;
   justify-content: center;
-  gap: 15px;  
+  gap: 15px;
 }
 
 .cta-buttons .btn {
@@ -123,7 +126,8 @@ nav ul li a:hover::after {
   letter-spacing: 1px;
   border: 2px solid var(--roxo-mobiliza); /* Borda com a cor de destaque */
   background-color: transparent;
-  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .cta-buttons .btn:hover {
@@ -184,7 +188,9 @@ nav ul li a:hover::after {
   nav ul.active {
     display: flex;
     opacity: 1;
-    transform: translateY(0); /* Exibindo o menu quando a classe active for adicionada */
+    transform: translateY(
+      0
+    ); /* Exibindo o menu quando a classe active for adicionada */
   }
 
   nav ul li {
@@ -235,7 +241,7 @@ nav ul li a:hover::after {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #ffffffef;/* Padding com porcentagem para garantir a responsividade */
+    background-color: #ffffffef; /* Padding com porcentagem para garantir a responsividade */
     z-index: 1000;
     border-bottom: 1px solid #ddd;
     opacity: 0;
@@ -256,6 +262,6 @@ nav ul li a:hover::after {
   .cta-buttons .btn {
     width: 6.5rem;
     height: 2.9rem; /* Aumentando o padding para botões mais clicáveis */
-    padding: 2%;  
+    padding: 2%;
   }
 }

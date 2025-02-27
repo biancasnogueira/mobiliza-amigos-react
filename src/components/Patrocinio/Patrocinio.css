@@ -3,34 +3,41 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  flex-wrap: wrap;
   margin: 50px 40px 0 50px;
+  max-width: 1200px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .patrocinador-texto {
   flex: 1;
   margin-right: 20px;
-  line-height: 1.8; /* Substitui o valor fixo para melhorar a escalabilidade */
+  line-height: 1.8;
 }
 
 .patrocinador-texto h2 {
   color: var(--amarelo-mobiliza);
   font-size: 2.5rem;
   margin-bottom: 10px;
-  white-space: nowrap; /* Garante que o texto não quebre */
+  white-space: nowrap;
 }
 
 .patrocinador-texto p {
   font-size: 1.1rem;
   margin: 3rem 0 15px;
-  color: #49073D;
+  color: #49073d;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
-  width: 650px;
-  line-height: 1.6; /* Adiciona uma proporção consistente */
+  width: 100%;
+  max-width: 650px;
+  line-height: 1.6;
 }
 
 .logos-patrocinadores {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 15px;
   margin: 20px 0;
 }
@@ -50,7 +57,10 @@
   padding: 20px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   margin: 0 20px;
-  border-radius: 8px; /* Suaviza os cantos do formulário */
+  border-radius: 8px;
+  width: 100%;
+  max-width: 600px;
+  box-sizing: border-box;
 }
 
 .formulario-contato h3 {
@@ -67,11 +77,11 @@
   border: 1px solid #ddd;
   border-radius: 5px;
   margin-top: 5px;
-  box-sizing: border-box; /* Garante que padding não cause overflow */
+  box-sizing: border-box;
 }
 
 .formulario-contato textarea {
-  resize: none; /* Evita redimensionamento */
+  resize: none;
 }
 
 .formulario-contato button {
@@ -88,7 +98,6 @@
 
 .formulario-contato button:hover {
   background-color: var(--amarelo-mobiliza);
-
 }
 
 /* Responsividade */
@@ -97,49 +106,51 @@
     flex-direction: column;
     align-items: center;
     margin: 30px 20px;
+    padding: 0 10px;
+    box-sizing: border-box;
   }
 
-  .patrocinador-texto {
-    margin-right: 0;
+  .patrocinador-texto,
+  .formulario-contato {
+    width: 100%;
+    max-width: 100%;
     text-align: center;
   }
 
-  .logos-patrocinadores {
-    flex-direction: column;
-    align-items: center;
+  .patrocinador-texto p {
+    width: 100%;
+    margin: 20px 0;
   }
 
   .logos-patrocinadores img {
     width: 120px;
     height: 120px;
-    margin-bottom: 10px;
-  }
-
-  .formulario-contato {
-    margin-top: 20px;
   }
 }
 
 @media (max-width: 480px) {
+  .patrocinador-section {
+    padding: 10px;
+  }
+
   .patrocinador-texto h2 {
     font-size: 2rem;
+    margin-bottom: 15px;
+    white-space: normal;
   }
 
   .patrocinador-texto p {
     font-size: 1rem;
-    width: auto; /* Remove largura fixa para ajustar a tela menor */
+    width: 100%;
+    margin-bottom: 20px;
   }
 
-  .formulario-contato h3 {
-    font-size: 1.6rem;
+  .logos-patrocinadores img {
+    width: 100px;
+    height: 100px;
   }
 
-  .formulario-contato input,
-  .formulario-contato textarea {
-    padding: 10px;
-  }
-
-  .formulario-contato button {
-    padding: 10px;
+  .formulario-contato {
+    margin: 20px 0;
   }
 }

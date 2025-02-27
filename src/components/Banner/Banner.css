@@ -1,7 +1,7 @@
 /* Estilos para a seção Hero com fundo dinâmico */
 .hero {
   position: relative;
-  height: 551px; /* altura fixa, mas pode ser ajustada com media queries */
+  height: 501px; /* altura fixa, mas pode ser ajustada com media queries */
   background-size: cover; /* garante que a imagem cubra toda a área */
   background-position: center center; /* centraliza a imagem */
   display: flex;
@@ -20,7 +20,7 @@
 .hero-text {
   position: absolute;
   top: 42%; /* ajusta a posição do texto conforme necessário */
-  left: 10%; /* margem à esquerda para evitar sobreposição */
+  left: 20%; /* margem à esquerda para evitar sobreposição */
   background-color: rgba(247, 179, 43, 0.8); /* cor com opacidade para melhor contraste */
   padding: 20px;
   border-radius: 10px;
@@ -67,7 +67,8 @@
 /* Responsividade para telas menores */
 @media (max-width: 768px) {
   .hero {
-    height: 300px; /* ajusta a altura para dispositivos menores */
+    height: 18.75rem;
+     /* ajusta a altura para dispositivos menores */
   }
 
   .hero-text {
@@ -75,6 +76,9 @@
     top: 10%;
     left: 5%; /* margens ajustadas para telas menores */
     width: 90%; /* aumenta a largura do texto */
-    max-width: 350px; /* ajusta a largura máxima */
+    max-width: 350px;
+    margin-top: 50px;
+    margin-left: 10px; /* ajusta a largura máxima */
   }
+  
 }

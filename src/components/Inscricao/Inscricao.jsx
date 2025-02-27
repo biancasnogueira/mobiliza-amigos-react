@@ -1,16 +1,17 @@
-import React, { useState } from 'react';
-import './Inscricao.css';
+import React, { useState } from "react";
+import "./Inscricao.css";
 
 const InscricaoForm = () => {
   const [formData, setFormData] = useState({
-    nome: '',
-    email: '',
-    telefone: '',
-    endereco: '',
-    interesse: '', // Mantido apenas os campos necessários
+    nome: "",
+    idade: "",
+    email: "",
+    telefone: "",
+    cidade: "",
+    interesse: "",
   });
 
-  const [formStatus, setFormStatus] = useState('');
+  const [formStatus, setFormStatus] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -24,45 +25,57 @@ const InscricaoForm = () => {
     e.preventDefault();
     console.log("Dados enviados:", formData);
     try {
-      const response = await fetch('https://api.sheetmonkey.io/form/eMF7iLtuCa6vNW28ni2W4n', { // URL do SheetMonkey
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
+      const response = await fetch(
+        "https://api.sheetmonkey.io/form/mC9QAR5G6GfDoa6GwL7Xew",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
 
       if (response.ok) {
-        setFormStatus('Inscrição enviada com sucesso!');
+        setFormStatus("Inscrição enviada com sucesso!");
         setFormData({
-          nome: '',
-          email: '',
-          telefone: '',
-          endereco: '',
-          interesse: '',
+          nome: "",
+          idade: "",
+          email: "",
+          telefone: "",
+          cidade: "",
+          interesse: "",
         });
       } else {
-        setFormStatus('Erro ao enviar a inscrição. Tente novamente.');
+        setFormStatus("Erro ao enviar a inscrição. Tente novamente.");
       }
     } catch (error) {
-      setFormStatus('Erro ao enviar a inscrição. Tente novamente.');
-      console.error('Erro:', error);
+      setFormStatus("Erro ao enviar a inscrição. Tente novamente.");
+      console.error("Erro:", error);
     }
 
     // Limpa o status após 5 segundos
-    setTimeout(() => setFormStatus(''), 5000);
+    setTimeout(() => setFormStatus(""), 5000);
   };
 
   return (
     <section className="inscricao">
       <div className="container-inscricao">
         <h1>Inscreva-se para o Mobiliza Amigos</h1>
-        <p className='paragrafo-1'>
-          Junte-se a nós e ajude a fazer a diferença! Complete o formulário abaixo para se inscrever como voluntário.
+        <p className="paragrafo-1">
+          Junte-se a nós e ajude a fazer a diferença!
         </p>
 
-        <div className="imagem-voluntario">
-          <img src="/imagem-voluntario.svg" alt="Voluntário com criança" />
+        {/* Container para posicionar imagem e parágrafo informativo */}
+        <div className="info-wrapper">
+          <p className="paragrafo-2">
+            Ao encaminhar seus dados, você será adicionado à nossa lista de
+            espera. Assim que as inscrições estiverem abertas, entraremos em
+            contato.
+          </p>
+          <div className="imagem-voluntario">
+            <img src="/imagem-voluntario.svg" alt="Voluntário com criança" />
+          </div>
         </div>
 
         <form onSubmit={handleSubmit} className="form-inscricao">
@@ -76,6 +89,18 @@ const InscricaoForm = () => {
               onChange={handleChange}
               required
               placeholder="Digite seu nome completo"
+            />
+          </div>
+          <div className="input-group">
+            <label htmlFor="idade">Sua idade</label>
+            <input
+              type="text"
+              id="idade"
+              name="idade"
+              value={formData.idade}
+              onChange={handleChange}
+              required
+              placeholder="Digite sua idade"
             />
           </div>
 
@@ -106,15 +131,15 @@ const InscricaoForm = () => {
           </div>
 
           <div className="input-group">
-            <label htmlFor="endereco">Endereço</label>
+            <label htmlFor="cidade">Cidade</label>
             <input
               type="text"
-              id="endereco"
-              name="endereco"
-              value={formData.endereco}
+              id="cidade"
+              name="cidade"
+              value={formData.cidade}
               onChange={handleChange}
               required
-              placeholder="Digite seu endereço"
+              placeholder="Digite sua cidade"
             />
           </div>
 

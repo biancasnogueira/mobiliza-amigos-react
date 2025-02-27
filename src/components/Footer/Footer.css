@@ -3,9 +3,20 @@ footer {
   background-color: var(--roxo-mobiliza); /* Cor roxa de fundo */
   color: white;
   padding: 20px 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   position: relative;
   overflow: hidden;
+}
+
+.footer-link {
+  color: yellow; /* Cor do link */
+  text-decoration: none; /* Remove o sublinhado */
+  font-weight: bold; /* Deixa o texto mais destacado */
+  transition: color 0.3s ease-in-out; /* Suaviza a transição de cor */
+}
+
+.footer-link:hover {
+  color: gold; /* Cor quando o mouse passa por cima */
 }
 
 /* Container Principal */
@@ -52,11 +63,10 @@ footer {
   transition: transform 0.3s ease-in-out;
 }
 
-
 ul {
-  list-style-type: none;  /* Remove as marcas de lista (círculos ou números) */
-  padding: 0;             /* Remove o preenchimento padrão */
-  margin: 0;              /* Remove a margem padrão */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 /* Títulos das Colunas */
@@ -82,19 +92,19 @@ ul {
 }
 
 .links-column a::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 50%;
   width: 0;
   height: 2px;
-  background-color: var(--amarelo-mobiliza); /* Cor de destaque */
+  background-color: var(--amarelo-mobiliza);
   transition: width 0.3s ease, left 0.3s ease;
 }
 
 .links-column a:hover {
-  color: white; /* Cor de destaque */
-  transform: translateY(-3px); /* Efeito de levitação ao passar o mouse */
+  color: white;
+  transform: translateY(-3px);
 }
 
 .links-column a:hover::after {
@@ -149,10 +159,9 @@ ul {
   transition: color 0.3s ease;
 }
 
-.footer-link:hover { 
+.footer-link:hover {
   text-decoration: underline;
 }
-
 
 /* Animação de Slide-in */
 @keyframes slideInBottom {
@@ -175,5 +184,20 @@ ul {
 
   .footer-column {
     margin-bottom: 20px;
+  }
+
+  .logo-column img {
+    display: none;
+  }
+}
+
+/* Manter o footer em linha em telas maiores que 768px */
+@media (min-width: 768px) {
+  .footer-container {
+    flex-direction: row; /* Alinha as colunas em linha */
+  }
+
+  .footer-column {
+    margin-bottom: 0; /* Remove a margem inferior */
   }
 }
