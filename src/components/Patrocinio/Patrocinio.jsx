@@ -17,9 +17,9 @@ const Patrocinio = () => {
           </p>
           <p>Alguns dos nossos patrocinadores:</p>
           <div className="logos-patrocinadores">
-            <img src="/adelpho.png" alt="Logo Adelpho" className="logo" />
+            <img src="/adelpho.webp" alt="Logo Adelpho" className="logo" />
             <img
-              src="/logo-pururucas.jpg"
+              src="/logo-pururucas.webp"
               alt="Logo Pururucas"
               className="logo"
             />

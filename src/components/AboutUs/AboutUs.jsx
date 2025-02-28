@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import "./AboutUs.css";
 
 // ASSETS
-// import imgAboutUs1 from "/Image1.jpg";
-// import imgAboutUs2 from "/AFE539E8-7AC9-41B9-964C-FC59B84F3D74.jpg";
+// import imgAboutUs1 from "/Image1.webp";
+// import imgAboutUs2 from "/AFE539E8-7AC9-41B9-964C-FC59B84F3D74.webp";
 // import imgAboutUs3 from "../../assets/aboutus3.svg";
 
 const AboutUs = () => {
@@ -53,18 +53,18 @@ const AboutUs = () => {
       <div className="imagens-sobre-nos">
         <img
           id="imgAboutUs1"
-          src="/Image1.jpg"
+          src="/Image1.webp"
           alt="Voluntários entregando alimentos para Comunidade Mandela Campinas-SP"
         />
         <img
           id="imgAboutUs2"
-          src="/IMG_8958.jpg"
+          src="/IMG_8958.webp"
           alt="Voluntária na ação Amigo do Idoso"
         />
         <img id="imgAboutUs3" src="/Foto.png" alt="Voluntários sorrindo" />
         <img
           id="imgAboutUs4"
-          src="/MeioAmbiente.jpg"
+          src="/MeioAmbiente.webp"
           alt="Voluntários em ação de meio ambiente plantando flores"
         />
       </div>

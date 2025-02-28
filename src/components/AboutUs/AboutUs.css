@@ -11,6 +11,7 @@
 .conteudo-sobre-nos {
   max-width: 60%;
   margin-top: 10px;
+  margin-left: 1rem;
 }
 
 .sobre-nos h2 {
@@ -52,6 +53,8 @@
   margin-top: 35px;
   max-width: 30%; /* Ajuste a largura para manter as imagens menores */
   opacity: 0;
+  padding-left: 1rem;
+  padding-right: 1rem;
   animation: fadeIn 1.5s ease-in forwards 1.5s;
 }
 
