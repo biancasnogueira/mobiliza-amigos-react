@@ -1,11 +1,11 @@
+/* Estrutura da seção */
 .sobre-nos {
   display: flex;
-  max-width: 100%;
-  flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
   background-color: var(--amarelo-mobiliza);
   padding: 40px;
+  flex-wrap: wrap; /* Permite que os elementos se ajustem em telas pequenas */
 }
 
 .conteudo-sobre-nos {
@@ -15,76 +15,67 @@
 
 .sobre-nos h2 {
   color: var(--roxo-mobiliza);
-  font-size: 36px;
+  font-size: 2.25rem; /* 36px em unidades de rem */
   margin-bottom: 20px;
   font-family: "Poppins", sans-serif;
   font-weight: 800;
   transform: translateX(-50px);
-  animation: slideInLeft 1s ease-out forwards; /* Animação de entrada da esquerda */
+  animation: slideInLeft 1s ease-out forwards;
 }
 
 .sobre-nos p {
-  font-size: 18px;
-  line-height: 1.8; /* Definindo o line-height para o <p> */
+  font-size: 1.125rem; /* 18px em unidades de rem */
+  line-height: 1.8;
   color: #fff;
   margin-bottom: 20px;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   text-align: justify;
   opacity: 0;
-  animation: fadeIn 1.5s ease-in forwards 0.5s; /* Animação de fade-in para o texto */
+  animation: fadeIn 1.5s ease-in forwards 0.5s;
 }
 
 .sobre-nos blockquote {
   font-style: italic;
   color: var(--roxo-mobiliza);
-  font-size: 20px;
+  font-size: 1.25rem; /* 20px em unidades de rem */
   font-weight: 600;
   opacity: 0;
-  animation: fadeIn 1.5s ease-in forwards 1s; /* Animação de fade-in para o bloco de citação */
+  animation: fadeIn 1.5s ease-in forwards 1s;
 }
 
+/* Layout das imagens */
 .imagens-sobre-nos {
   display: grid;
-  margin-top: 35px;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr); /* Mantém 2 colunas */
   grid-gap: 15px;
-  max-width: 30%;
-  margin-left: 35px;
+  margin-top: 35px;
+  max-width: 30%; /* Ajuste a largura para manter as imagens menores */
   opacity: 0;
-  animation: fadeIn 1.5s ease-in forwards 1.5s; /* Animação de fade-in para as imagens */
+  animation: fadeIn 1.5s ease-in forwards 1.5s;
 }
 
 .imagens-sobre-nos img {
-  width: 100%; 
-  height: 100%; /* Garantindo que a imagem ocupe toda a célula de grid */
-  max-width: 100%; /* Garantindo que a imagem ocupe toda a largura disponível */
-  object-fit: cover; /* Garante que a imagem cubra completamente o espaço da célula */
+  width: 100%;
+  height: auto;
+  max-width: 250px; /* Define a largura máxima para as imagens */
+  object-fit: cover;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transform: scale(1);
   transition: transform 0.3s ease-in-out;
   loading: lazy; /* Carregamento preguiçoso */
 }
 
 .imagens-sobre-nos img:hover {
-  transform: scale(1.05) translateY(-10px); /* Efeito de zoom e leve movimento ao passar o mouse */
+  transform: scale(1.05) translateY(-10px);
 }
 
-#imgAboutUs2 {
-  transform: translateY(50px); /* A imagem começa mais abaixo */
-  animation: slideUp 1s ease-out forwards 2s; /* Animação de slide up */
-}
-
+/* Estilo para contadores e números */
 .contador {
   font-weight: bold;
-  font-size: 1.5rem;
-  color: white; /* cor de destaque */
-  white-space: nowrap;
-  animation: counterAnim 1s ease-out forwards;
-  font-size: 30px;
-  font-weight: 700;
+  font-size: 1.875rem; /* 30px em unidades de rem */
   color: var(--roxo-mobiliza);
+  animation: counterAnim 1s ease-out forwards;
 }
 
 /* Animações */
@@ -129,7 +120,7 @@
 /* Media Queries */
 @media (max-width: 768px) {
   .conteudo-sobre-nos h2 {
-    font-size: 1.5rem;
+    font-size: 1.5rem; /* Ajustando o tamanho da fonte para telas menores */
   }
 
   .conteudo-sobre-nos p,
@@ -138,41 +129,28 @@
   }
 
   .sobre-nos {
-    flex-direction: column; /* Alinha a imagem abaixo do texto */
+    flex-direction: column;
     justify-content: center;
     align-items: center;
   }
 
   .conteudo-sobre-nos {
-    text-align: left;
     padding: 0 15px;
-    width: 100%; /* Ou 100% se você preferir preencher a largura */
-    max-width: 1200px; /* Para evitar que o texto se estique demais em telas grandes */
-    margin: 0 auto; /* Centraliza o conteúdo */
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
   }
 
   .imagens-sobre-nos {
-    display: grid;
-    margin-top: 35px;
-    grid-template-columns: repeat(3, 1fr); /* Adicionando uma terceira coluna */
-    grid-gap: 15px;
-    max-width: 90%; /* Para garantir que a grid não ocupe toda a largura */
-    margin-left: auto;
-    margin-right: auto; /* Centralizando a grid */
-    opacity: 0;
-    animation: fadeIn 1.5s ease-in forwards 1.5s; /* Animação de fade-in para as imagens */
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas em telas médias */
+    max-width: 100%;
   }
-  
+
   .imagens-sobre-nos img {
     width: 100%;
-    height: 100%;
-    max-width: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transform: scale(1);
-    transition: transform 0.3s ease-in-out;
-    loading: lazy; /* Carregamento preguiçoso */
+    height: auto;
+    max-width: 200px; /* Ajustando o tamanho das imagens para telas menores */
   }
 }
 
@@ -186,14 +164,6 @@
     font-size: 0.85rem;
   }
 
-  .conteudo-sobre-nos {
-    text-align: left;
-    padding: 0 5px;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-
   .sobre-nos {
     flex-direction: column;
     justify-content: center;
@@ -202,16 +172,16 @@
 
   .imagens-sobre-nos {
     display: grid;
-    grid-template-columns: repeat(3, minmax(100px, 1fr)); /* 3 colunas ajustáveis */
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas em telas pequenas */
     gap: 10px;
     width: 100%;
-    align-items: center;
   }
 
   .imagens-sobre-nos img {
-    width: 100%; /* Preenche a coluna disponível */
+    width: 100%;
     height: auto;
-    border-radius: 10px;
     object-fit: cover;
+    max-width: 150px; /* Ajustando o tamanho das imagens para telas muito pequenas */
+    border-radius: 10px;
   }
 }
