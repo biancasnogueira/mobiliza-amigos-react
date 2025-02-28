@@ -1,39 +1,38 @@
-/* Estilos para a seção Hero com fundo dinâmico */
 .hero {
   position: relative;
-  height: 501px; /* altura fixa, mas pode ser ajustada com media queries */
-  background-size: cover; /* garante que a imagem cubra toda a área */
-  background-position: center center; /* centraliza a imagem */
+  height: 501px;
+  background-size: cover;
+  background-position: center;
   display: flex;
-  align-items: center; /* Alinha o conteúdo verticalmente */
-  justify-content: center; /* Alinha o conteúdo horizontalmente */
-  overflow: hidden; /* Esconde qualquer conteúdo extra */
-  animation: fadeInHero 2s ease-out; /* Animação para a seção hero */
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  animation: fadeInHero 2s ease-out;
 }
 
 .hero .container {
   display: flex;
-  justify-content: center; /* Centraliza os itens dentro da div */
+  justify-content: center;
   width: 100%;
 }
 
 .hero-text {
   position: absolute;
-  top: 42%; /* ajusta a posição do texto conforme necessário */
-  left: 20%; /* margem à esquerda para evitar sobreposição */
-  background-color: rgba(247, 179, 43, 0.8); /* cor com opacidade para melhor contraste */
+  top: 42%;
+  left: 20%;
+  background-color: rgba(247, 179, 43, 0.8);
   padding: 20px;
   border-radius: 10px;
-  color: #49073D; /* cor do texto */
+  color: #49073d;
   font-weight: bold;
   font-size: 1.5rem;
   width: 80%;
   max-width: 400px;
-  text-align: center; /* centraliza o texto */
+  text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transform: translateY(50px);
   opacity: 0;
-  animation: fadeInText 1.5s ease-out 0.5s forwards; /* Animação do texto */
+  animation: fadeInText 1.5s ease-out 0.5s forwards;
 }
 
 .hero-text p {
@@ -41,7 +40,6 @@
   line-height: 1.5;
 }
 
-/* Efeito de parallax para o fundo */
 @keyframes fadeInHero {
   0% {
     opacity: 0;
@@ -64,21 +62,18 @@
   }
 }
 
-/* Responsividade para telas menores */
 @media (max-width: 768px) {
   .hero {
     height: 18.75rem;
-     /* ajusta a altura para dispositivos menores */
   }
 
   .hero-text {
     font-size: 1.2rem;
     top: 10%;
-    left: 5%; /* margens ajustadas para telas menores */
-    width: 90%; /* aumenta a largura do texto */
+    left: 5%;
+    width: 90%;
     max-width: 350px;
     margin-top: 50px;
-    margin-left: 10px; /* ajusta a largura máxima */
+    margin-left: 10px;
   }
-  
 }

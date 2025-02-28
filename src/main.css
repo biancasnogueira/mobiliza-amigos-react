@@ -135,31 +135,6 @@ nav ul li a {
   border-color: #49073d;
 }
 
-.hero {
-  position: relative;
-  height: 500px;
-}
-
-.hero-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.hero-text {
-  position: absolute;
-  top: 30%;
-  right: 20px;
-  background-color: #f7b32b;
-  padding: 20px;
-  border-radius: 10px;
-  color: #49073d;
-  font-weight: bold;
-  font-size: 1.5rem;
-  width: 400px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
 .voluntariado {
   background-color: #f9f9f9;
   text-align: center;
