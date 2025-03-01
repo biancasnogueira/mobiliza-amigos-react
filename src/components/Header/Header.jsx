@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import './Header.css';
-import Logo from '../../assets/logo.svg';
-import { HiMenu, HiX } from 'react-icons/hi';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import "./Header.css";
+import Logo from "../../assets/logo.webp"; // Usando WebP para otimização
+import { HiMenu, HiX } from "react-icons/hi";
 
 function Header() {
   const [menuActive, setMenuActive] = useState(false);
@@ -18,29 +18,42 @@ function Header() {
         {!menuActive && (
           <div className="logo">
             <Link to="/">
-              <img src={Logo} alt="Mobiliza Amigos" />
+              <img src={Logo} alt="Mobiliza Amigos" width="200" height="50" />
             </Link>
           </div>
         )}
-    
+
         <nav>
-          <ul className={menuActive ? 'active' : ''}>
-            <li id="Home"><Link to="/">Início</Link></li>
-            <li><Link to="/about">Quem Somos</Link></li>
-            <li><Link to="/donations">Doações</Link></li>
-            <li><Link to="/register">Inscrições</Link></li>
-            <li><Link to="/contact">Contatos</Link></li>
+          <ul className={menuActive ? "active" : ""}>
+            <li id="Home">
+              <Link to="/">Início</Link>
+            </li>
+            <li>
+              <Link to="/about">Quem Somos</Link>
+            </li>
+            <li>
+              <Link to="/donations">Doações</Link>
+            </li>
+            <li>
+              <Link to="/register">Inscrições</Link>
+            </li>
+            <li>
+              <Link to="/contact">Contatos</Link>
+            </li>
           </ul>
         </nav>
 
-                {/* Condição para ocultar os botões quando o menu estiver ativo */}
-                {!menuActive && (
+        {/* Condição para ocultar os botões quando o menu estiver ativo */}
+        {!menuActive && (
           <div className="cta-buttons">
-            <Link to="/donations" className="btn doar">Quero Doar</Link>
-            <Link to="/patrocinador" className="btn patrocinar">Quero Patrocinar</Link>
+            <Link to="/donations" className="button primary">
+              Quero Doar
+            </Link>
+            <Link to="/patrocinador" className="button primary">
+              Quero Patrocinar
+            </Link>
           </div>
         )}
-
 
         <div className="menu-toggle" onClick={toggleMenu}>
           {menuActive ? <HiX size={30} /> : <HiMenu size={30} />}

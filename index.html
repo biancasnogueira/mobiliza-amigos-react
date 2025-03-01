@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mobiliza Amigos</title>
     <link rel="icon" type="image/png" href="/src/assets/logo-mobiliza.png" />
 
-    <!-- Google tag (gtag.js) -->
+    <!-- Google Tag Manager -->
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-YS0VKZNL81"
@@ -17,24 +17,26 @@
         dataLayer.push(arguments);
       }
       gtag("js", new Date());
-
       gtag("config", "G-YS0VKZNL81");
     </script>
 
-    <!-- Pré-carregando as fontes de forma assíncrona -->
+    <!-- Preconnect para otimizar a conexão com os servidores do Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Pré-carrega a folha de estilos das fontes de forma assíncrona -->
     <link
       rel="preload"
-      href="https://fonts.googleapis.com/css2?family=Poetsen+One&family=Caveat:wght@400..700&family=Poppins:wght@400;600;800&family=Roboto:wght@400;700&display=swap"
       as="style"
-      type="font/woff2"
-      crossorigin="anonymous"
-    />
-
-    <!-- Carregando as fontes de forma assíncrona -->
-    <link
       href="https://fonts.googleapis.com/css2?family=Poetsen+One&family=Caveat:wght@400..700&family=Poppins:wght@400;600;800&family=Roboto:wght@400;700&display=swap"
-      rel="stylesheet"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poetsen+One&family=Caveat:wght@400..700&family=Poppins:wght@400;600;800&family=Roboto:wght@400;700&display=swap"
+      />
+    </noscript>
   </head>
   <body>
     <div id="root"></div>

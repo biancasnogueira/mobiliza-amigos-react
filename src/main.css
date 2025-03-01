@@ -12,119 +12,11 @@
 body {
   font-family: Arial, sans-serif;
 }
-/* Estilo geral do banner */
-/* Estilo geral do banner */
-.cookie-banner {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: #333; /* Cor de fundo escuro */
-  color: #fff; /* Texto branco */
-  padding: 10px 20px;
-  font-size: 14px;
-  text-align: center;
-  z-index: 1000;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
-}
 
-.cookie-banner p {
-  margin: 0;
-  flex: 1;
-  color: rgba(255, 255, 255, 0.87);
-}
 
-.cookie-banner a {
-  color: var(--amarelo-mobiliza); /* Cor de destaque para links */
-  text-decoration: underline;
-}
 
-.cookie-banner button {
-  background-color: var(--amarelo-mobiliza); /* Cor do botão amarelo */
-  color: #fff;
-  border: none;
-  padding: 8px 16px;
-  margin-left: 10px;
-  cursor: pointer;
-  font-size: 14px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
 
-.cookie-banner button:hover {
-  background-color: #e67e22; /* Cor do botão ao passar o mouse */
-}
 
-.cookie-banner .close-button {
-  background-color: transparent;
-  color: #fff;
-  font-size: 20px;
-  border: none;
-  cursor: pointer;
-  padding: 5px 10px;
-}
-
-.cookie-banner .close-button:hover {
-  background-color: #e67e22; /* Cor de hover do X */
-}
-
-.cookie-banner button:focus,
-.cookie-banner .close-button:focus {
-  outline: none;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-  .cookie-banner {
-    font-size: 12px;
-    padding: 10px;
-    flex-direction: column; /* Exibe os itens na vertical em telas pequenas */
-    align-items: center; /* Centraliza os itens */
-  }
-
-  .cookie-banner button {
-    margin-left: 0;
-    margin-top: 10px; /* Espaço entre o botão e o texto */
-  }
-
-  .cookie-banner p {
-    margin-bottom: 10px; /* Espaço entre o texto e o botão */
-  }
-}
-
-.container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 5px;
-}
-
-/* Ajuste do espaçamento do conteúdo para evitar sobreposição */
-body {
-  padding-top: 60px; /* Adiciona espaço equivalente à altura do header */
-}
-
-.logo img {
-  width: 150px;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-a{
-  text-decoration: none;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
-}
 
 .logos-patrocinadores img {
   width: 150px;
@@ -639,27 +531,7 @@ nav ul li a {
   border-color: var(--roxo-mobiliza);
 }
 
-.formulario-contato button {
-  background-color: var(--roxo-mobiliza);
-  color: #ffffff;
-  padding: 10px;
-  cursor: pointer;
-  font-weight: bold;
-  border: none;
-  text-transform: uppercase;
-  font-size: 14px;
-  letter-spacing: 1px;
-  border: 2px solid var(--amarelo-mobiliza); /* Borda com a cor de destaque */
-  border-radius: 5px;
-  transition: background-color 0.3s ease, transform 0.3s ease,
-    box-shadow 0.3s ease;
-}
 
-.formulario-contato button:hover {
-  background-color: var(--roxo-mobiliza); /* Cor de fundo no hover */
-  transform: translateY(-3px); /* Efeito de elevação */
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Sombra suave */
-}
 
 /* Animações */
 
@@ -714,14 +586,14 @@ nav ul li a {
   animation: fadeIn 1s forwards;
 }
 
-/* #fale-com-a-gente h2 {
+#fale-com-a-gente h2 {
   font-size: 2rem; /* Reduzido para desktop */
   font-weight: bold;
   font-family: "Poppins", sans-serif;
   padding: 40px 20px 0;
   opacity: 0;
   animation: fadeIn 1s forwards 0.5s;
-} */
+} 
 
 /* Contato container */
 .contato-container {
@@ -810,18 +682,7 @@ nav ul li a {
   border-color: var(--roxo-mobiliza);
 }
 
-.formulario-contato button {
-  background-color: var(--roxo-mobiliza);
-  color: #ffffff;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
 
-.formulario-contato button:hover {
-  background-color: darken(var(--roxo-mobiliza), 10%);
-}
 
 /* Animações */
 @keyframes fadeIn {

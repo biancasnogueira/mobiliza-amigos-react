@@ -8,6 +8,7 @@
   justify-content: center;
   overflow: hidden;
   animation: fadeInHero 2s ease-out;
+  margin-top: 80px;
 }
 
 .hero .container {

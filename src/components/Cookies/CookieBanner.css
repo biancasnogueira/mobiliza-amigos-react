@@ -1,0 +1,82 @@
+/* Estilo geral do banner */
+/* Estilo geral do banner */
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #333; /* Cor de fundo escuro */
+    color: #fff; /* Texto branco */
+    padding: 10px 20px;
+    font-size: 14px;
+    text-align: center;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .cookie-banner p {
+    margin: 0;
+    flex: 1;
+    color: rgba(255, 255, 255, 0.87);
+  }
+  
+  .cookie-banner a {
+    color: var(--amarelo-mobiliza); /* Cor de destaque para links */
+    text-decoration: underline;
+  }
+  
+  .cookie-banner button {
+    background-color: var(--amarelo-mobiliza); /* Cor do botão amarelo */
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cookie-banner button:hover {
+    background-color: #e67e22; /* Cor do botão ao passar o mouse */
+  }
+  
+  .cookie-banner .close-button {
+    background-color: transparent;
+    color: #fff;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
+  }
+  
+  .cookie-banner .close-button:hover {
+    background-color: #e67e22; /* Cor de hover do X */
+  }
+  
+  .cookie-banner button:focus,
+  .cookie-banner .close-button:focus {
+    outline: none;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .cookie-banner {
+      font-size: 12px;
+      padding: 10px;
+      flex-direction: column; /* Exibe os itens na vertical em telas pequenas */
+      align-items: center; /* Centraliza os itens */
+    }
+  
+    .cookie-banner button {
+      margin-left: 0;
+      margin-top: 10px; /* Espaço entre o botão e o texto */
+    }
+  
+    .cookie-banner p {
+      margin-bottom: 10px; /* Espaço entre o texto e o botão */
+    }
+  }

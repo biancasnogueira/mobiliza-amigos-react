@@ -1,54 +1,97 @@
 /* BOTÃO BASE */
 .button {
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
 }
 
-/* PRIMARY */
+/* Botão de Ação Principal (Primary) */
 .button.primary {
-    background-color: var(--roxo-mobiliza);
-    color: white;
-    padding: 12px 20px;
-    font-size: 1.2rem;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 14px;
     letter-spacing: 1px;
-  border: 2px solid var(--amarelo-mobiliza); /* Borda com a cor de destaque */
-  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid var(--roxo-mobiliza);
+    background-color: transparent;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: var(--roxo-mobiliza);
+    border-color: var(--amarelo-mobiliza);
   }
   
+  /* Efeito hover do botão */
   .button.primary:hover {
     background-color: var(--amarelo-mobiliza); /* Cor de fundo no hover */
-    transform: translateY(-3px); /* Efeito de elevação */
+    transform: translateY(-3px);  /* Efeito de elevação */
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Sombra suave */
   }
-
+  
+  /* Responsividade para telas menores (máximo 768px) */
+  @media (max-width: 768px) {
+    .button.primary {
+      padding: 8px 16px; /* Menor padding para telas pequenas */
+      font-size: 12px; /* Menor font-size para telas pequenas */
+    }
+  }
+  
+  /* Responsividade para telas muito pequenas (máximo 480px) */
+  @media (max-width: 480px) {
+    .button.primary {
+      padding: 6px 12px; /* Ajuste de padding para telas muito pequenas */
+      font-size: 10px; /* Ajuste de font-size para telas muito pequenas */
+        width: 6.5rem;
+        height: 2.9rem;
+        padding: 2%;
+        font-size: 12px;
+    }
+    .container {
+        display: flex;
+        justify-content: normal;
+        align-items: center;
+    }
 /* OUTLINE */
 .button.outline {
-    background-color: transparent;
-    border: 2px solid white;
-    color: white;
-    width: 230px;
-    padding: 10px;
-    border-radius: 25px;
-    margin-top: 20px;
-    font-size: 1.1em;
-    cursor: pointer;
-    text-align: center;
-    transition: background-color 0.3s, color 0.3s;
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  width: 230px;
+  padding: 10px;
+  border-radius: 25px;
+  margin-top: 20px;
+  font-size: 1.1em;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-.coluna-time-do-bem button, 
+.coluna-time-do-bem button,
 .coluna-nossa-lojinha button {
-    margin: 0 auto;
-    display: block;
+  margin: 0 auto;
+  display: block;
 }
 
 .button.outline:hover {
-    background-color: white;
-    color: var(--amarelo-mobiliza);
+  background-color: white;
+  color: var(--amarelo-mobiliza);
 }
+
+.logo img {
+    width: 110px;
+    transition: transform .3s ease-in-out;
+}
+
+.menu-toggle {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 1001;
+}
+
+  }
