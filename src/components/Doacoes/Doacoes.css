@@ -1,8 +1,11 @@
-/* Estilos gerais */
+/* ---------- Estilos gerais ---------- */
 .doacoes {
   background-color: var(--amarelo-mobiliza);
   padding: 40px 20px;
   text-align: center;
+  margin-top: 60px; /* Ajuste conforme a altura do seu header */
+  position: relative;
+  overflow: hidden;
 }
 
 .doacao-header h2 {
@@ -13,10 +16,22 @@
 
 .doacao-header p {
   font-size: 1.2rem;
-  color: #ffff;
+  color: #fff;
 }
 
-/* Estilo das opções de doação */
+/* ---------- Animação de aparição (fadeInUp) ---------- */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------- Estilo das opções de doação ---------- */
 .doacoes-options {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -24,57 +39,90 @@
   margin-top: 40px;
 }
 
+/* ---------- Cartão de doação (doacao-item) ---------- */
 .doacao-item {
   background-color: #ffffff;
   border-radius: 8px;
   padding: 20px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
-  transition: transform 0.3s ease;
+  transition: transform 0.5s ease, box-shadow 0.5s ease; /* Aumentando o tempo da transição */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   min-height: 300px; /* Altura mínima uniforme */
+  
+  /* Estado inicial: invisível e deslocado para baixo */
+  opacity: 0;
+  transform: translateY(20px);
 }
 
+.doacao-item.appear {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Mantém o hover funcionando */
 .doacao-item:hover {
-  transform: translateY(-10px);
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Títulos */
+/* ---------- Títulos dentro do cartão ---------- */
 .doacao-item h3 {
   font-size: 1.8rem;
   color: var(--roxo-mobiliza);
   margin-bottom: 10px;
 }
 
-/* Botões */
+/* ---------- Texto dentro do cartão ---------- */
+.doacao-item p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+/* ---------- Botões ---------- */
 .btn-doacao {
   display: inline-block;
   margin-top: 20px;
-  padding: 14px 30px; /* Ajuste o padding para garantir um tamanho uniforme */
+  padding: 14px 30px;
   background-color: var(--amarelo-mobiliza);
   color: #ffffff;
   text-decoration: none;
   border-radius: 50px;
   font-size: 1rem;
   font-weight: bold;
-  transition: background-color 0.3s ease;
-  align-self: center; /* Garante que o botão fique centralizado */
-  width: 100%; /* Garante que os botões ocupem 100% da largura do container */
-  box-sizing: border-box; /* Garantir que o padding e a largura total sejam calculados corretamente */
-  max-width: 300px; /* Limita a largura máxima para manter o design responsivo */
-  border: none; /* Remover borda indesejada */
-  outline: none; /* Remover o contorno de foco */
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  align-self: center;
+  width: 100%;
+  box-sizing: border-box;
+  max-width: 300px;
+  border: none;
+  outline: none;
 }
 
+/* Remover sublinhado quando o botão é clicado */
+.btn-doacao:active {
+  text-decoration: none;
+}
+
+/* Efeito de hover no botão */
 .btn-doacao:hover {
   background-color: var(--roxo-mobiliza);
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Estilo de texto */
-.doacao-item p {
-  font-size: 1rem;
-  color: #555;
-  margin-bottom: 15px;
+/* Foco acessível mas discreto */
+.btn-doacao:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(128, 0, 128, 0.3);
+}
+
+/* Estados de link e visitado */
+.btn-doacao:link,
+.btn-doacao:visited {
+  color: #fff;
+  text-decoration: none;
 }

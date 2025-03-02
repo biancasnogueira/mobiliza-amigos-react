@@ -5,9 +5,9 @@ import Contatos from "../FaleConosco/FaleConosco";
 
 // ASSETS
 import "./Footer.css";
-import LogoInstagram from "../../assets/logo-instagram.svg";
-import LogoTiktok from "../../assets/logo-tiktok.svg";
-import FooterMobiliza from "../../assets/footer-mobiliza.svg";
+import LogoInstagram from "../../assets/logo-instagram.webp";
+import LogoTiktok from "../../assets/logo-tiktok.webp";
+import FooterMobiliza from "../../assets/footer-mobiliza.webp";
 
 function Footer() {
   return (

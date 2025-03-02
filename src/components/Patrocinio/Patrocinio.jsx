@@ -1,6 +1,5 @@
 import React from "react";
 import "./Patrocinio.css";
-import Button from "../Button/Button"; // Componente de botão estilizado
 
 const Patrocinio = () => {
   return (

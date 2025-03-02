@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Doacoes.css";
 
 const Doacoes = () => {
@@ -8,7 +8,6 @@ const Doacoes = () => {
   const copyPixKey = () => {
     const pixKey = "doar.mobilizaamigos@gmail.com";
 
-    // Tenta usar a API Clipboard (funciona na maioria dos navegadores modernos)
     if (navigator.clipboard) {
       navigator.clipboard
         .writeText(pixKey)
@@ -21,15 +20,13 @@ const Doacoes = () => {
           setTimeout(() => setError(false), 2000);
         });
     } else {
-      // Fallback para navegadores mais antigos ou Safari em iPhones (sem suporte completo à API Clipboard)
       const textArea = document.createElement("textarea");
       textArea.value = pixKey;
       document.body.appendChild(textArea);
       textArea.select();
-      textArea.setSelectionRange(0, 99999); // Para dispositivos móveis, seleciona todo o texto
-
+      textArea.setSelectionRange(0, 99999);
       try {
-        document.execCommand("copy"); // Copia o texto selecionado
+        document.execCommand("copy");
         setCopied(true);
         setTimeout(() => setCopied(false), 2000);
       } catch (err) {
@@ -39,6 +36,31 @@ const Doacoes = () => {
       document.body.removeChild(textArea);
     }
   };
+
+  useEffect(() => {
+    const items = document.querySelectorAll(".doacao-item");
+    const observerOptions = {
+      root: null, // viewport
+      threshold: 0.1, // 10% do elemento visível
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("appear");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    items.forEach((item) => observer.observe(item));
+
+    // Cleanup
+    return () => {
+      items.forEach((item) => observer.unobserve(item));
+    };
+  }, []);
+  
 
   return (
     <section className="doacoes">
@@ -54,8 +76,8 @@ const Doacoes = () => {
         <div className="doacao-item">
           <h3>Doa Legal</h3>
           <p>
-            Com a contribuição de R$10,00 por mês você se torna um Amigo do Mobiliza e
-            contribui mensalmente com nossos trabalhos.
+            Com a contribuição de R$10,00 por mês você se torna um Amigo do
+            Mobiliza e contribui mensalmente com nossos trabalhos.
           </p>
           <a
             href="https://pag.ae/7_q2Wo_TN"

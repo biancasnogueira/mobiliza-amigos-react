@@ -9,14 +9,14 @@ footer {
 }
 
 .footer-link {
-  color: yellow; /* Cor do link */
+  color: var(--amarelo-mobiliza); /* Cor do link */
   text-decoration: none; /* Remove o sublinhado */
   font-weight: bold; /* Deixa o texto mais destacado */
   transition: color 0.3s ease-in-out; /* Suaviza a transição de cor */
 }
 
 .footer-link:hover {
-  color: gold; /* Cor quando o mouse passa por cima */
+  color: var(--amarelo-mobiliza); /* Cor quando o mouse passa por cima */
 }
 
 /* Container Principal */
@@ -93,7 +93,6 @@ ul {
 
 .links-column a::after {
   content: "";
-  position: absolute;
   bottom: 0;
   left: 50%;
   width: 0;
@@ -103,7 +102,7 @@ ul {
 }
 
 .links-column a:hover {
-  color: white;
+  color: var(--amarelo-mobiliza);
   transform: translateY(-3px);
 }
 
@@ -200,4 +199,5 @@ ul {
   .footer-column {
     margin-bottom: 0; /* Remove a margem inferior */
   }
+  
 }

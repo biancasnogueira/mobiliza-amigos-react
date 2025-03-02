@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import "./AboutUs.css";
 
-// ASSETS
-// import imgAboutUs1 from "/Image1.webp";
-// import imgAboutUs2 from "/AFE539E8-7AC9-41B9-964C-FC59B84F3D74.webp";
-// import imgAboutUs3 from "../../assets/aboutus3.svg";
+import AboutUs1 from "../../assets/aboutus1.webp";
+import AboutUs2 from "../../assets/aboutus2.webp";
+import AboutUs3 from "../../assets/aboutus3.webp";
+import AboutUs4 from "../../assets/aboutus4.webp";
 
 const AboutUs = () => {
   const [count, setCount] = useState(0);
@@ -53,18 +53,18 @@ const AboutUs = () => {
       <div className="imagens-sobre-nos">
         <img
           id="imgAboutUs1"
-          src="/Image1.webp"
+          src={AboutUs1}
           alt="Voluntários entregando alimentos para Comunidade Mandela Campinas-SP"
         />
         <img
           id="imgAboutUs2"
-          src="/IMG_8958.webp"
+          src={AboutUs2}
           alt="Voluntária na ação Amigo do Idoso"
         />
-        <img id="imgAboutUs3" src="/Foto.png" alt="Voluntários sorrindo" />
+        <img id="imgAboutUs3" src={AboutUs3} alt="Voluntários sorrindo" />
         <img
           id="imgAboutUs4"
-          src="/MeioAmbiente.webp"
+          src={AboutUs4}
           alt="Voluntários em ação de meio ambiente plantando flores"
         />
       </div>

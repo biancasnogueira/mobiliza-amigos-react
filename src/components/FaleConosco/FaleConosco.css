@@ -1,6 +1,7 @@
+/* Estilização geral do formulário */
 .form-status {
   margin-top: 10px;
-  font-size: 1rem;
+  font-size: 0.9rem;
   padding: 10px;
   border-radius: 5px;
   text-align: center;
@@ -16,31 +17,31 @@
   background-color: #f9e7e7;
 }
 
+/* Seção Fale com a gente */
 #fale-com-a-gente {
   background-color: var(--amarelo-mobiliza);
-  color: #FFFFFF;
+  color: #ffffff;
   text-align: left;
   opacity: 0;
   animation: fadeIn 1s forwards;
 }
 
 #fale-com-a-gente h2 {
-  font-size: 36px;
-  font-weight: bold;
-  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
   font-weight: 800;
-  font-style: normal;
-  /* padding: 50px 0px 0px 40px; */
+  font-family: "Poppins", sans-serif;
+  padding: 40px 20px 0;
   opacity: 0;
   animation: fadeIn 1s forwards 0.5s;
 }
 
+/* Container de contato */
 .contato-container {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   align-items: flex-start;
-  padding: 40px;
+  padding: 40px 20px;
 }
 
 .contatos {
@@ -48,9 +49,11 @@
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, auto);
   gap: 20px;
-  width: 60%;
+  width: 100%;
+  max-width: 800px;
 }
 
+/* Opções de contato */
 .contato-opcao {
   background-color: var(--amarelo-mobiliza);
   border-radius: 5px;
@@ -62,7 +65,7 @@
 }
 
 .contato-opcao h3 {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   margin-bottom: 10px;
   color: var(--roxo-mobiliza);
 }
@@ -71,7 +74,6 @@
   font-size: 0.9rem;
   margin-bottom: 10px;
   color: white;
-  width: 280px;
   text-align: left;
 }
 
@@ -87,8 +89,10 @@
   opacity: 0.8;
 }
 
+/* Formulário de contato */
 .formulario-contato {
-  width: 35%;
+  width: 100%;
+  max-width: 450px;
   opacity: 0;
   animation: fadeIn 1s forwards 1s;
 }
@@ -110,7 +114,7 @@
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   transition: border 0.3s ease;
 }
 
@@ -121,107 +125,66 @@
 
 .formulario-contato button {
   background-color: var(--roxo-mobiliza);
-  color: #FFFFFF;
+  color: #ffffff;
   padding: 10px;
-  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  border: 2px solid var(--amarelo-mobiliza);
   border-radius: 5px;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .formulario-contato button:hover {
-  background-color: darken(var(--roxo-mobiliza), 10%);
+  background-color: var(--roxo-mobiliza);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* Animações */
 @keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
 
 @keyframes slideUp {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
 }
 
 /* Responsividade */
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
+  #fale-com-a-gente h2 {
+    font-size: 1.5rem;
+    padding: 40px 0px 10px 25px;
+  }
+
   .contato-container {
     padding: 20px;
   }
 
   .contatos {
-    width: 100%;
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .formulario-contato {
-    width: 100%;
-  }
-
-  #fale-com-a-gente h2 {
-    font-size: 28px;
-    padding: 30px 0 0 30px;
-  }
-}
-
-@media (max-width: 768px) {
-  .contatos {
     grid-template-columns: 1fr;
-    width: 100%;
   }
 
   .formulario-contato {
-    width: 100%;
-    margin-top: 20px;
+    max-width: 100%;
   }
 
-  #fale-com-a-gente h2 {
-    font-size: 24px;
-    padding: 20px 0 0 20px;
-  }
-
-  .form-status {
-    font-size: 0.9rem;
+  .contato-opcao img {
+    width: 150px;
   }
 }
 
 @media (max-width: 480px) {
-  .contato-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .contatos {
-    width: 100%;
-    grid-template-columns: 1fr;
-  }
-
-  .contato-opcao p {
-    width: auto;
+  .form-status {
     font-size: 0.8rem;
   }
 
-  .formulario-contato input,
-  .formulario-contato textarea {
-    width: 100%;
+  .contato-opcao h3 {
+    font-size: 1.3rem;
   }
 
-  .formulario-contato button {
-    width: 100%;
-  }
-
-  #fale-com-a-gente h2 {
-    font-size: 20px;
-    padding: 15px 0 0 15px;
+  .contato-opcao p {
+    font-size: 1rem;
   }
 }
