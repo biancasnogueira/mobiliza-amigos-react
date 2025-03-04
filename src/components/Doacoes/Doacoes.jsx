@@ -60,7 +60,6 @@ const Doacoes = () => {
       items.forEach((item) => observer.unobserve(item));
     };
   }, []);
-  
 
   return (
     <section className="doacoes">
@@ -80,7 +79,7 @@ const Doacoes = () => {
             Mobiliza e contribui mensalmente com nossos trabalhos.
           </p>
           <a
-            href="https://pag.ae/7_q2Wo_TN"
+            href="https://pag.ae/7_qB4pSsM"
             className="btn-doacao"
             target="_blank"
             rel="noopener noreferrer"
@@ -137,7 +136,7 @@ const Doacoes = () => {
             boleto bancário.
           </p>
           <a
-            href="https://pag.ae/7_q2Wo_TN"
+            href="https://pag.ae/7_qB4pSsM"
             className="btn-doacao"
             target="_blank"
             rel="noopener noreferrer"
