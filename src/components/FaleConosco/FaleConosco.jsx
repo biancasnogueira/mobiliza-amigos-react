@@ -1,10 +1,10 @@
 import React from "react";
 import "../FaleConosco/FaleConosco.css";
 
-import AboutUs1 from "../../assets/aboutus1.webp";
-import AboutUs2 from "../../assets/aboutus2.webp";
-import AboutUs3 from "../../assets/aboutus3.webp";
-import AboutUs4 from "../../assets/aboutus4.webp";
+import AboutUs1 from "../../assets/images-aboutus/aboutus1.webp";
+import AboutUs2 from "../../assets/images-aboutus/aboutus2.webp";
+import AboutUs3 from "../../assets/images-aboutus/aboutus3.webp";
+import AboutUs4 from "../../assets/images-aboutus/aboutus4.webp";
 
 const FaleConosco = () => {
   const contatos = [

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Missao.css";
 
 // ASSETS
@@ -14,18 +14,34 @@ const images = Object.values(
   })
 );
 
-const ITEMS_VISIBLE = 3; // Número de imagens visíveis
-
 const Missao = () => {
   const [currentItem, setCurrentItem] = useState(0);
+  const [itemsVisible, setItemsVisible] = useState(3);
   const maxItems = images.length;
+
+  useEffect(() => {
+    const updateItemsVisible = () => {
+      const width = window.innerWidth;
+      if (width <= 600) {
+        setItemsVisible(1);
+      } else if (width <= 900) {
+        setItemsVisible(2);
+      } else {
+        setItemsVisible(3);
+      }
+    };
+
+    updateItemsVisible();
+    window.addEventListener("resize", updateItemsVisible);
+    return () => window.removeEventListener("resize", updateItemsVisible);
+  }, []);
 
   const handleControlClick = (isLeft) => {
     setCurrentItem((prevItem) => {
       if (isLeft) {
-        return Math.max(0, prevItem - ITEMS_VISIBLE);
+        return Math.max(0, prevItem - 1);
       } else {
-        return Math.min(maxItems - ITEMS_VISIBLE, prevItem + ITEMS_VISIBLE);
+        return Math.min(maxItems - itemsVisible, prevItem + 1);
       }
     });
   };
@@ -40,8 +56,9 @@ const Missao = () => {
           alt="Mobiliza Amigos - Retângulo abaixo do título"
         />
       </div>
-      <div class="informacoes-container">
-        <div class="informacao-item">
+
+      <div className="informacoes-container">
+        <div className="informacao-item">
           <h3>MISSÃO</h3>
           <p>
             Nosso propósito é transformar vidas de crianças, adolescentes e
@@ -49,7 +66,7 @@ const Missao = () => {
             semeando amor e esperança.
           </p>
         </div>
-        <div class="informacao-item">
+        <div className="informacao-item">
           <h3>VISÃO</h3>
           <p>
             Ser referência em voluntariado, promovendo equidade e justiça social
@@ -57,7 +74,7 @@ const Missao = () => {
             da união e do respeito.
           </p>
         </div>
-        <div class="informacao-item">
+        <div className="informacao-item">
           <h3>VALORES</h3>
           <p>
             Companheirismo - Compaixão - Empatia - Esperança - Humildade -
@@ -65,10 +82,10 @@ const Missao = () => {
           </p>
         </div>
       </div>
+
       <div className="container-carrossel">
         <button
           className="arrow-left control"
-          aria-label="Previous image"
           onClick={() => handleControlClick(true)}
           disabled={currentItem === 0}
         >
@@ -80,7 +97,7 @@ const Missao = () => {
             className="gallery"
             style={{
               transform: `translateX(-${(currentItem / maxItems) * 100}%)`,
-              width: `${(maxItems / ITEMS_VISIBLE) * 100}%`,
+              width: `${(maxItems / itemsVisible) * 100}%`,
             }}
           >
             {images.map((item, index) => (
@@ -96,9 +113,8 @@ const Missao = () => {
 
         <button
           className="arrow-right control"
-          aria-label="Next Image"
           onClick={() => handleControlClick(false)}
-          disabled={currentItem >= maxItems - ITEMS_VISIBLE}
+          disabled={currentItem >= maxItems - itemsVisible}
         >
           <img src={setaDireita} alt="Next" />
         </button>

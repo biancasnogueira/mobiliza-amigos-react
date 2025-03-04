@@ -32,7 +32,7 @@ function Header() {
               <Link to="/about">Quem Somos</Link>
             </li>
             <li>
-              <Link to="/donations">Doações</Link>
+              <Link to="/loja">Lojinha</Link>
             </li>
             <li>
               <Link to="/register">Inscrições</Link>

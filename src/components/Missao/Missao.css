@@ -1,7 +1,6 @@
 .missao-mobiliza {
   padding: 40px;
   background-color: var(--roxo-mobiliza);
-
 }
 
 .missao-mobiliza h2 {
@@ -23,7 +22,7 @@
 
 .informacoes-container {
   display: flex;
-  justify-content: space-around;
+  /* justify-content: space-around; */
   margin: 20px 0;
   flex-wrap: wrap;
   color: #fff;
@@ -71,8 +70,10 @@
 .gallery {
   display: flex;
   transition: transform 0.5s ease;
-  gap: 10px; /* Espaço entre imagens */
-  width: calc(303px * 10); /* Multiplique pelo número total de imagens */
+  gap: 10px;
+  width: calc(303px * 10); /* Adjust this if you have more items */
+  transform: translateX(0%);
+  width: 17.33%;
 }
 
 .item {
@@ -140,34 +141,116 @@
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes slideInLeft {
   from {
-      transform: translateX(-50px);
-      opacity: 0;
+    transform: translateX(-50px);
+    opacity: 0;
   }
   to {
-      transform: translateX(0);
-      opacity: 1;
+    transform: translateX(0);
+    opacity: 1;
   }
 }
 
 @keyframes slideUp {
   from {
-      transform: translateY(50px);
-      opacity: 0;
+    transform: translateY(50px);
+    opacity: 0;
   }
   to {
-      transform: translateY(0);
-      opacity: 1;
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 
+/* Media Queries */
+/* @media (max-width: 1024px) {
+  .informacao-item {
+    width: 45%;
+  }
+
+  .misso-mobiliza h2 {
+    font-size: 30px;
+  }
+
+  .gallery {
+    width: calc(100% * 3); 
+  }
+
+  .item {
+    min-width: 100%;
+    height: 150px; 
+  }
+
+  .gallery img {
+    width: 100%;
+    height: auto;
+  }
+
+  .arrow-left,
+  .arrow-right {
+    width: 30px;
+    height: 30px;
+  }
+} */
+
 @media (max-width: 768px) {
   .informacao-item {
-      width: 45%;
+    width: 100%;
+    margin: 20px 0;
+  }
+
+  .misso-mobiliza h2 {
+    font-size: 26px;
+  }
+
+  /* Ajuste para mostrar uma imagem de forma compacta */
+  .gallery {
+    width: calc(100% * 1); /* Exibe uma imagem por vez */
+  }
+
+  .item {
+    min-width: 303px;
+    height: 150px; /* Menor altura */
+  }
+
+  .gallery img {
+    width: 100%;
+    height: auto;
+    width: 100%;
+    height: 190px;
+    max-width: 200px;
+  }
+
+  .arrow-left,
+  .arrow-right {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 700px) {
+  .informacao-item h3 {
+    font-size: 1.2rem;
+  }
+
+  .informacao-item p {
+    font-size: 0.9rem;
+  }
+
+  .misso-mobiliza h2 {
+    font-size: 22px;
+  }
+
+  .gallery-wrapper {
+    display: block; /* Garante que o carrossel será exibido */
   }
 }

@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import "./AboutUs.css";
 
-import AboutUs1 from "../../assets/aboutus1.webp";
-import AboutUs2 from "../../assets/aboutus2.webp";
-import AboutUs3 from "../../assets/aboutus3.webp";
-import AboutUs4 from "../../assets/aboutus4.webp";
+import AboutUs1 from "../../assets/images-aboutus/aboutus1.webp";
+import AboutUs2 from "../../assets/images-aboutus/aboutus2.webp";
+import AboutUs3 from "../../assets/images-aboutus/aboutus3.webp";
+import AboutUs4 from "../../assets/images-aboutus/aboutus4.webp";
+import AboutUs5 from "../../assets/images-aboutus/aboutus8.jpg";
 
 const AboutUs = () => {
   const [count, setCount] = useState(0);
@@ -61,7 +62,7 @@ const AboutUs = () => {
           src={AboutUs2}
           alt="Voluntária na ação Amigo do Idoso"
         />
-        <img id="imgAboutUs3" src={AboutUs3} alt="Voluntários sorrindo" />
+        <img id="imgAboutUs3" src={AboutUs5} alt="Voluntários sorrindo" />
         <img
           id="imgAboutUs4"
           src={AboutUs4}

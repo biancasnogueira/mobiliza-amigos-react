@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 //ASSETS
 import "./Voluntariado.css";
 import Voluntario from "../../assets/voluntario.webp";
-import Lojinha1 from "../../assets/lojinha1.svg";
-import Lojinha2 from "../../assets/lojinha2.webp";
-import Lojinha3 from "../../assets/lojinha3.webp";
+import Lojinha1 from "../../assets/images-loja/lojinha1.svg";
+import Lojinha2 from "../../assets/images-loja/lojinha2.webp";
+import Lojinha3 from "../../assets/images-loja/lojinha3.webp";
 
 function Voluntariado() {
   return (
@@ -59,7 +59,9 @@ function Voluntariado() {
             target="_blank"
             rel="noopener noreferrer"
           >
+            <Link to="/loja">
             <button>SAIBA MAIS</button>
+          </Link>
           </a>
         </div>
       </div>

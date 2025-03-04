@@ -12,13 +12,13 @@ import Register from "./pages/Register";
 import Contact from "./pages/Contact";
 import Patrocinador from "./pages/Patrocinio"; // Verifique se o nome do arquivo está correto
 import CookiePolicy from "./pages/CookiePolicy";
+import Loja from "./pages/Loja";
 
 function App() {
   return (
     <Router>
       <ScrollToTop /> {/* Faz a página rolar para o topo ao mudar de rota */}
       <CookieBanner /> {/* Banner de Cookies aparece em todas as páginas */}
-
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -27,6 +27,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/patrocinador" element={<Patrocinador />} />
         <Route path="/cookie-policy" element={<CookiePolicy />} />
+        <Route path="/loja" element={<Loja />} />
       </Routes>
     </Router>
   );

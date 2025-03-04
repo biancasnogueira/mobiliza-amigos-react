@@ -194,6 +194,7 @@ ul {
 @media (min-width: 768px) {
   .footer-container {
     flex-direction: row; /* Alinha as colunas em linha */
+    margin-top: 1rem;
   }
 
   .footer-column {

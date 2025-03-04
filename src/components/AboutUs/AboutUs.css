@@ -50,7 +50,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* Mantém 2 colunas */
   grid-gap: 15px;
-  margin-top: 35px;
+  margin-top: 3.1rem;
   max-width: 30%; /* Ajuste a largura para manter as imagens menores */
   opacity: 0;
   padding-left: 1rem;
@@ -135,6 +135,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-top: 4rem;
   }
 
   .conteudo-sobre-nos {
@@ -143,6 +144,7 @@
     max-width: 1200px;
     margin: 0 auto;
     text-align: left;
+    margin-top: 10px;
   }
 
   .imagens-sobre-nos {
@@ -171,6 +173,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-top: 4rem;
   }
 
   .imagens-sobre-nos {
