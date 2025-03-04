@@ -5,6 +5,7 @@ import "./Lojinha.css";
 // ASSETS
 import garrafinhaAmorExiste from "../../assets/images-loja/garrafinha-amor-existe.webp";
 import camisetaAmorExistePretaColorida from "../../assets/images-loja/camiseta-preta-colorida-amor-existe-amor-existe.webp";
+import camisetaAmorExistePretaBranca from "../../assets/images-loja/camiseta-preta-branco-amor-existe.webp";
 import canecaPromocional from "../../assets/images-loja/caneca-promocional.webp";
 import camisetaPilaresPretaColorida from "../../assets/images-loja/camiseta-preta-colorida-4pilares.webp";
 import camisetaSejaOLadoBomAmarelo from "../../assets/images-loja/camiseta-amarela-seja-o-lado-bom.webp";
@@ -25,17 +26,18 @@ import chaveiroAmorQueCresce from "../../assets/images-loja/chaveiro-amor-que-cr
 import chaveiroSejaOLadoBomVerde from "../../assets/images-loja/chaveiro-seja-o-lado-bom-verde.webp";
 import chaveiroSejaOLadoBomRoxo from "../../assets/images-loja/chaveiro-seja-o-lado-bom-roxo.webp";
 import chaveiroSejaOLadoBomAmarelo from "../../assets/images-loja/chaveiro-seja-o-lado-bom-amarelo.webp";
-import camisetaAmorExisteBrancaPreta from "../../assets/images-loja/camiseta-branca-preta-amor-existe.png";
-import camisetaAmorExisteBrancaColorida from "../../assets/images-loja/camiseta-branca-colorida-amor-existe.png";
+import camisetaAmorExisteBrancaPreta from "../../assets/images-loja/camiseta-branca-preta-amor-existe.webp";
+import camisetaAmorExisteBrancaColorida from "../../assets/images-loja/camiseta-branca-colorida-amor-existe.webp";
 
 const products = [
   {
     id: 1,
     category: "Garrafinhas",
-    name: "Garrafinha amor existe",
+    name: "Garrafinha Amor Existe",
     currentPrice: "R$35.00",
     oldPrice: null,
-    description: "",
+    description:
+      "💧 Leve o amor para onde você for! Esta garrafinha é perfeita para manter-se hidratado enquanto espalha amor e solidariedade. 🌈",
     bestseller: true,
     images: [garrafinhaAmorExiste],
     pagbankLink: "https://www.pagbank.com.br/checkout",
@@ -43,11 +45,11 @@ const products = [
   {
     id: 2,
     category: "Camisetas",
-    name: "Camiseta - O Amor Existe - Preta com colorido",
+    name: "Camiseta - O Amor Existe - Preta com Colorido",
     currentPrice: "R$30.00",
     oldPrice: "R$50.00",
     description:
-      "👕 Camiseta da Lojinha do Bem: Vista a solidariedade com esta camiseta! Confeccionada com material de qualidade, estilosa e confortável, ajudando o projeto 'Mobiliza Amigos'.",
+      "👕 Vista a solidariedade! Esta camiseta é confeccionada com material de alta qualidade, estilosa e confortável. Ao comprar, você apoia o projeto 'Mobiliza Amigos'. 💛",
     bestseller: true,
     images: [camisetaAmorExistePretaColorida],
     pagbankLink: "https://www.pagbank.com.br/checkout",
@@ -55,11 +57,11 @@ const products = [
   {
     id: 3,
     category: "Camisetas",
-    name: "Camiseta - O Amor Existe - Preta com branco",
+    name: "Camiseta - O Amor Existe - Preta com Branco",
     currentPrice: "R$30.00",
     oldPrice: "R$50.00",
     description:
-      "👕 Camiseta da Lojinha do Bem: Vista a solidariedade com esta camiseta! Conforto e estilo para apoiar o 'Mobiliza Amigos'.",
+      "👕 Estilo e propósito andam juntos! Esta camiseta é perfeita para quem quer conforto e um visual moderno enquanto apoia uma causa incrível. ✨",
     bestseller: false,
     images: [camisetaPilaresPretoBranco],
     pagbankLink: "https://www.pagbank.com.br/checkout",
@@ -67,11 +69,11 @@ const products = [
   {
     id: 4,
     category: "Camisetas",
-    name: "Camiseta - O Amor Existe - Branca com preto",
+    name: "Camiseta - O Amor Existe - Branca com Preto",
     currentPrice: "R$30.00",
     oldPrice: "R$50.00",
     description:
-      "👕 Camiseta da Lojinha do Bem: Vista a solidariedade e ajude o projeto 'Mobiliza Amigos'.",
+      "👕 Simplicidade e significado! Esta camiseta branca com detalhes em preto é ideal para quem quer vestir a solidariedade com estilo. ❤️",
     bestseller: false,
     images: [camisetaAmorExisteBrancaPreta],
     pagbankLink: "https://www.pagbank.com.br/checkout",
@@ -79,11 +81,11 @@ const products = [
   {
     id: 5,
     category: "Chaveiros",
-    name: "Chaveiros Seja O Lado Bom - Verde 🌟",
+    name: "Chaveiro Seja O Lado Bom - Verde 🌟",
     currentPrice: "R$7.00",
     oldPrice: null,
     description:
-      "Chaveiros personalizados para todos os gostos. Entrega rápida e garantida!",
+      "🔑 Leve uma mensagem de positividade com você! Este chaveiro verde é perfeito para presentear ou para lembrar de sempre escolher o lado bom da vida. 🌿",
     bestseller: false,
     images: [chaveiroSejaOLadoBomVerde],
     pagbankLink: "https://www.pagbank.com.br/checkout",
@@ -91,11 +93,11 @@ const products = [
   {
     id: 6,
     category: "Chaveiros",
-    name: "Chaveiros Seja O Lado Bom - Roxo 🌟",
+    name: "Chaveiro Seja O Lado Bom - Roxo 🌟",
     currentPrice: "R$7.00",
     oldPrice: null,
     description:
-      "Chaveiros personalizados para todos os gostos. Entrega rápida e garantida!",
+      "🔑 Um toque de inspiração no seu dia a dia! Este chaveiro roxo é ideal para quem quer espalhar amor e positividade por onde passar. 💜",
     bestseller: false,
     images: [chaveiroSejaOLadoBomRoxo],
     pagbankLink: "https://www.pagbank.com.br/checkout",
@@ -103,11 +105,11 @@ const products = [
   {
     id: 7,
     category: "Chaveiros",
-    name: "Chaveiros Seja O Lado Bom - Amarelo 🌟",
+    name: "Chaveiro Seja O Lado Bom - Amarelo 🌟",
     currentPrice: "R$7.00",
     oldPrice: null,
     description:
-      "Chaveiros personalizados para todos os gostos. Entrega rápida e garantida!",
+      "🔑 Ilumine seu dia com este chaveiro amarelo! Uma mensagem de otimismo e amor para você ou para presentear alguém especial. 🌞",
     bestseller: false,
     images: [chaveiroSejaOLadoBomAmarelo],
     pagbankLink: "https://www.pagbank.com.br/checkout",
@@ -119,7 +121,7 @@ const products = [
     currentPrice: "R$50.00",
     oldPrice: "R$65.00",
     description:
-      "📢 Promoção imperdível! Adquira duas canecas exclusivas e ajude o projeto 'Mobiliza Amigos'.",
+      "☕📢 Promoção imperdível! Adquira duas canecas exclusivas e ajude o projeto 'Mobiliza Amigos'. Perfeitas para começar o dia com amor e solidariedade. 💛",
     bestseller: true,
     images: [canecaPromocional],
     pagbankLink: "https://www.pagbank.com.br/checkout",
@@ -131,7 +133,7 @@ const products = [
     currentPrice: "R$25.00",
     oldPrice: "R$34.00",
     description:
-      "🌟 Desperte seu espírito solidário com nossa linda caneca de projeto voluntariado! Com os 4 pilares da fé, amor, respeito e união estampados, ela é perfeita para lembrar que juntos podemos fazer a diferença.",
+      "🌟 Desperte seu espírito solidário com nossa linda caneca! Com os 4 pilares da fé, amor, respeito e união estampados, ela é perfeita para lembrar que juntos podemos fazer a diferença. 💪",
     bestseller: false,
     images: [canecaPilaresBranca],
     pagbankLink: "https://www.pagbank.com.br/checkout",
@@ -143,7 +145,7 @@ const products = [
     currentPrice: "R$30.00",
     oldPrice: "R$40.00",
     description:
-      "🌟 Desperte seu espírito solidário com nossa linda caneca de projeto voluntariado! Com os 4 pilares da fé, amor, respeito e união estampados, ela é perfeita para lembrar que juntos podemos fazer a diferença.",
+      "🌟 Uma explosão de cores e significado! Esta caneca colorida traz os 4 pilares do Mobiliza: fé, amor, respeito e união. Ideal para quem quer inspirar e ser inspirado. 🌈",
     bestseller: false,
     images: [canecaPilaresColorida],
     pagbankLink: "https://www.pagbank.com.br/checkout",
@@ -155,7 +157,7 @@ const products = [
     currentPrice: "R$90.00",
     oldPrice: null,
     description:
-      "Conforto com Propósito! 💛💜 Adquira nosso Moletom Gola Redonda Unissex e ajude a fazer a diferença.",
+      "🧥 Conforto com propósito! Este moletom unissex é perfeito para os dias mais frios, mantendo você aquecido e estiloso enquanto apoia uma causa incrível. 💛💜",
     bestseller: false,
     images: [moletomCarecaPretoBranco],
     pagbankLink: "https://www.pagbank.com.br/checkout",
@@ -167,7 +169,7 @@ const products = [
     currentPrice: "R$100.00",
     oldPrice: null,
     description:
-      "Conforto com Propósito! 💛💜 Adquira nosso Moletom com Capuz Unissex e ajude a fazer a diferença.",
+      "🧥 Estilo e conforto em um só lugar! Este moletom com capuz é ideal para quem quer se aquecer com propósito e ajudar o projeto 'Mobiliza Amigos'. ❄️💛",
     bestseller: false,
     images: [moletomCanguruPretoBranco],
     pagbankLink: "https://www.pagbank.com.br/checkout",
@@ -179,7 +181,7 @@ const products = [
     currentPrice: "R$100.00",
     oldPrice: null,
     description:
-      "Conforto com Propósito! 💛💜 Adquira nosso Moletom com Capuz Unissex e ajude a fazer a diferença.",
+      "🧥 Moderno e cheio de significado! Este moletom cropped é perfeito para quem quer um visual descolado enquanto apoia uma causa incrível. 🌟",
     bestseller: false,
     images: [croppedPilaresPretoColorido],
     pagbankLink: "https://www.pagbank.com.br/checkout",
@@ -191,7 +193,7 @@ const products = [
     currentPrice: "R$100.00",
     oldPrice: null,
     description:
-      "Conforto com Propósito! 💛💜 Adquira nosso Moletom com Capuz Unissex e ajude a fazer a diferença.",
+      "🧥 Estilo e propósito em um só look! Este moletom cropped é ideal para quem quer um visual moderno e cheio de significado. 💥",
     bestseller: false,
     images: [croppedPilaresPretoBranco],
     pagbankLink: "https://www.pagbank.com.br/checkout",
@@ -203,7 +205,7 @@ const products = [
     currentPrice: "R$30.00",
     oldPrice: "R$50.00",
     description:
-      "👕 Camiseta 4 Pilares: Vista com propósito! Essa camiseta simboliza os pilares do Mobiliza: fé, amor, respeito e união.",
+      "👕 Vista com propósito! Esta camiseta branca simboliza os pilares do Mobiliza: fé, amor, respeito e união. Perfeita para quem quer vestir uma causa. 💪",
     bestseller: false,
     images: [camisetaPilaresBrancaPreto],
     pagbankLink: "https://www.pagbank.com.br/checkout",
@@ -215,7 +217,7 @@ const products = [
     currentPrice: "R$30.00",
     oldPrice: "R$50.00",
     description:
-      "👕 Camiseta 4 Pilares: Vista com propósito! Essa camiseta simboliza os pilares do Mobiliza: fé, amor, respeito e união.",
+      "👕 Estilo e significado em uma só peça! Esta camiseta preta com detalhes coloridos representa os pilares do Mobiliza e é ideal para quem quer vestir uma causa com atitude. 🌈",
     bestseller: false,
     images: [camisetaPilaresPretaColorida],
     pagbankLink: "https://www.pagbank.com.br/checkout",
@@ -227,7 +229,7 @@ const products = [
     currentPrice: "R$30.00",
     oldPrice: "R$50.00",
     description:
-      "👕 Camiseta da Lojinha do Bem: Vista a solidariedade com esta camiseta! Ao comprar, você contribui para o projeto voluntariado 'Mobiliza Amigos'.",
+      "👕 Vista a solidariedade com esta camiseta amarela vibrante! Ao comprar, você contribui para o projeto voluntariado 'Mobiliza Amigos'. 🌞",
     bestseller: false,
     images: [camisetaSejaOLadoBomAmarelo],
     pagbankLink: "https://www.pagbank.com.br/checkout",
@@ -239,7 +241,7 @@ const products = [
     currentPrice: "R$7.00",
     oldPrice: null,
     description:
-      "Chaveiros personalizados para todos os gostos. Encontre o chaveiro perfeito para você ou para presentear alguém especial.",
+      "🔑 Um toque de inspiração no seu dia a dia! Este chaveiro branco é perfeito para quem quer lembrar dos pilares do Mobiliza: fé, amor, respeito e união. ✨",
     bestseller: false,
     images: [chaveiroPilaresBranco],
     pagbankLink: "https://www.pagbank.com.br/checkout",
@@ -251,7 +253,7 @@ const products = [
     currentPrice: "R$7.00",
     oldPrice: null,
     description:
-      "Chaveiros personalizados para todos os gostos. Encontre o chaveiro perfeito para você ou para presentear alguém especial.",
+      "🔑 Estilo e significado em um pequeno detalhe! Este chaveiro preto é ideal para quem quer carregar consigo os pilares do Mobiliza. 🖤",
     bestseller: false,
     images: [chaveiroPilaresPreto],
     pagbankLink: "https://www.pagbank.com.br/checkout",
@@ -263,7 +265,7 @@ const products = [
     currentPrice: "R$20.00",
     oldPrice: "R$34.00",
     description:
-      "🌟 Caneca 'Amor que Cresce e se Multiplica': Adquira nossa caneca exclusiva da Lojinha do Bem e espalhe amor!",
+      "🌟 Espalhe amor com esta caneca colorida! Perfeita para quem quer começar o dia com uma mensagem de amor e solidariedade. 💖",
     bestseller: false,
     images: [canecaAmorQueCresceColorida],
     pagbankLink: "https://www.pagbank.com.br/checkout",
@@ -275,7 +277,7 @@ const products = [
     currentPrice: "R$20.00",
     oldPrice: "R$34.00",
     description:
-      "🌟 Caneca 'Amor que Cresce e se Multiplica': Adquira nossa caneca exclusiva da Lojinha do Bem e espalhe amor!",
+      "🌟 Uma caneca cheia de significado! Ideal para quem quer espalhar amor e ajudar o projeto 'Mobiliza Amigos'. 💕",
     bestseller: false,
     images: [canecaAmorQueCresceBranca],
     pagbankLink: "https://www.pagbank.com.br/checkout",
@@ -287,7 +289,7 @@ const products = [
     currentPrice: "R$7.00",
     oldPrice: null,
     description:
-      "Chaveiros personalizados para todos os gostos. Encontre o chaveiro perfeito para você ou para presentear alguém especial.",
+      "🔑 Um pequeno símbolo de amor! Este chaveiro é perfeito para quem quer carregar consigo uma mensagem de amor e solidariedade. ❤️",
     bestseller: false,
     images: [chaveiroAmorQueCresce],
     pagbankLink: "https://www.pagbank.com.br/checkout",
@@ -299,7 +301,7 @@ const products = [
     currentPrice: "R$25.00",
     oldPrice: "R$35.00",
     description:
-      "Conheça a Garrafinha 4 Pilares da Lojinha do Bem! Compre e contribua para a nossa causa!",
+      "💧 Hidrate-se com propósito! Esta garrafinha é perfeita para quem quer levar consigo os pilares do Mobiliza: fé, amor, respeito e união. 🌟",
     bestseller: false,
     images: [garrafinhaPilares],
     pagbankLink: "https://www.pagbank.com.br/checkout",
@@ -311,9 +313,21 @@ const products = [
     currentPrice: "R$30.00",
     oldPrice: "R$50.00",
     description:
-      "👕 Camiseta da Lojinha do Bem: Vista a solidariedade e ajude o projeto 'Mobiliza Amigos'.",
+      "👕 Vista a solidariedade com esta camiseta branca e colorida! Ao comprar, você contribui para o projeto 'Mobiliza Amigos'. 🌈",
     bestseller: false,
     images: [camisetaAmorExisteBrancaColorida],
+    pagbankLink: "https://www.pagbank.com.br/checkout",
+  },
+  {
+    id: 2,
+    category: "Camisetas",
+    name: "Camiseta - O Amor Existe - Preta com Branco",
+    currentPrice: "R$30.00",
+    oldPrice: "R$50.00",
+    description:
+      "👕 Vista a solidariedade! Esta camiseta é confeccionada com material de alta qualidade, estilosa e confortável. Ao comprar, você apoia o projeto 'Mobiliza Amigos'. 💛",
+    bestseller: true,
+    images: [camisetaAmorExistePretaBranca],
     pagbankLink: "https://www.pagbank.com.br/checkout",
   },
 ];
