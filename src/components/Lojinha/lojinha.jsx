@@ -1,10 +1,32 @@
 import React, { useState, useMemo } from "react";
+import PropTypes from "prop-types";
 import "./Lojinha.css";
 
-//ASSETS
-import garrafinhaImage from "../../assets/images-loja/garrafinha-amor-existe.webp";
+// ASSETS
+import garrafinhaAmorExiste from "../../assets/images-loja/garrafinha-amor-existe.webp";
 import camisetaAmorExistePretaColorida from "../../assets/images-loja/camiseta-preta-colorida-amor-existe-amor-existe.webp";
 import canecaPromocional from "../../assets/images-loja/caneca-promocional.webp";
+import camisetaPilaresPretaColorida from "../../assets/images-loja/camiseta-preta-colorida-4pilares.webp";
+import camisetaSejaOLadoBomAmarelo from "../../assets/images-loja/camiseta-amarela-seja-o-lado-bom.webp";
+import moletomCarecaPretoBranco from "../../assets/images-loja/moletom-gola-careca-preto-branco-4-pilares.webp";
+import camisetaPilaresBrancaPreto from "../../assets/images-loja/camiseta-branca-com-preto-4pilares.webp";
+import moletomCanguruPretoBranco from "../../assets/images-loja/moletom-canguru-preto-4-pilares.webp";
+import croppedPilaresPretoColorido from "../../assets/images-loja/cropped-4-pilares-colorido.webp";
+import croppedPilaresPretoBranco from "../../assets/images-loja/cropped-4-pilares-branco.webp";
+import camisetaPilaresPretoBranco from "../../assets/images-loja/camiseta-preta-com-branco-4pilares.webp";
+import canecaPilaresColorida from "../../assets/images-loja/caneca-colorida-4-pilares.webp";
+import canecaPilaresBranca from "../../assets/images-loja/caneca-branca-4-pilares.webp";
+import canecaAmorQueCresceColorida from "../../assets/images-loja/caneca-colorida-amor-que-cresce.webp";
+import canecaAmorQueCresceBranca from "../../assets/images-loja/caneca-branca-amor-que-cresce.webp";
+import garrafinhaPilares from "../../assets/images-loja/garrafinha-4-pilares.webp";
+import chaveiroPilaresBranco from "../../assets/images-loja/chaveiro-branco-4-pilares.webp";
+import chaveiroPilaresPreto from "../../assets/images-loja/chaveiro-preto-4-pilares.webp";
+import chaveiroAmorQueCresce from "../../assets/images-loja/chaveiro-amor-que-cresce.webp";
+import chaveiroSejaOLadoBomVerde from "../../assets/images-loja/chaveiro-seja-o-lado-bom-verde.webp";
+import chaveiroSejaOLadoBomRoxo from "../../assets/images-loja/chaveiro-seja-o-lado-bom-roxo.webp";
+import chaveiroSejaOLadoBomAmarelo from "../../assets/images-loja/chaveiro-seja-o-lado-bom-amarelo.webp";
+import camisetaAmorExisteBrancaPreta from "../../assets/images-loja/camiseta-branca-preta-amor-existe.png";
+import camisetaAmorExisteBrancaColorida from "../../assets/images-loja/camiseta-branca-colorida-amor-existe.png";
 
 const products = [
   {
@@ -15,7 +37,7 @@ const products = [
     oldPrice: null,
     description: "",
     bestseller: true,
-    images: [garrafinhaImage],
+    images: [garrafinhaAmorExiste],
     pagbankLink: "https://www.pagbank.com.br/checkout",
   },
   {
@@ -39,7 +61,7 @@ const products = [
     description:
       "👕 Camiseta da Lojinha do Bem: Vista a solidariedade com esta camiseta! Conforto e estilo para apoiar o 'Mobiliza Amigos'.",
     bestseller: false,
-    images: [],
+    images: [camisetaPilaresPretoBranco],
     pagbankLink: "https://www.pagbank.com.br/checkout",
   },
   {
@@ -51,23 +73,47 @@ const products = [
     description:
       "👕 Camiseta da Lojinha do Bem: Vista a solidariedade e ajude o projeto 'Mobiliza Amigos'.",
     bestseller: false,
-    images: [],
+    images: [camisetaAmorExisteBrancaPreta],
     pagbankLink: "https://www.pagbank.com.br/checkout",
   },
   {
     id: 5,
     category: "Chaveiros",
-    name: "Chaveiros da Solidariedade 🌟",
+    name: "Chaveiros Seja O Lado Bom - Verde 🌟",
     currentPrice: "R$7.00",
     oldPrice: null,
     description:
       "Chaveiros personalizados para todos os gostos. Entrega rápida e garantida!",
     bestseller: false,
-    images: [],
+    images: [chaveiroSejaOLadoBomVerde],
     pagbankLink: "https://www.pagbank.com.br/checkout",
   },
   {
     id: 6,
+    category: "Chaveiros",
+    name: "Chaveiros Seja O Lado Bom - Roxo 🌟",
+    currentPrice: "R$7.00",
+    oldPrice: null,
+    description:
+      "Chaveiros personalizados para todos os gostos. Entrega rápida e garantida!",
+    bestseller: false,
+    images: [chaveiroSejaOLadoBomRoxo],
+    pagbankLink: "https://www.pagbank.com.br/checkout",
+  },
+  {
+    id: 7,
+    category: "Chaveiros",
+    name: "Chaveiros Seja O Lado Bom - Amarelo 🌟",
+    currentPrice: "R$7.00",
+    oldPrice: null,
+    description:
+      "Chaveiros personalizados para todos os gostos. Entrega rápida e garantida!",
+    bestseller: false,
+    images: [chaveiroSejaOLadoBomAmarelo],
+    pagbankLink: "https://www.pagbank.com.br/checkout",
+  },
+  {
+    id: 8,
     category: "Canecas",
     name: "Promoção - Caneca Seja o Lado Bom",
     currentPrice: "R$50.00",
@@ -79,7 +125,7 @@ const products = [
     pagbankLink: "https://www.pagbank.com.br/checkout",
   },
   {
-    id: 7,
+    id: 9,
     category: "Canecas",
     name: "Caneca 4 Pilares",
     currentPrice: "R$25.00",
@@ -87,11 +133,11 @@ const products = [
     description:
       "🌟 Desperte seu espírito solidário com nossa linda caneca de projeto voluntariado! Com os 4 pilares da fé, amor, respeito e união estampados, ela é perfeita para lembrar que juntos podemos fazer a diferença.",
     bestseller: false,
-    images: [],
+    images: [canecaPilaresBranca],
     pagbankLink: "https://www.pagbank.com.br/checkout",
   },
   {
-    id: 8,
+    id: 10,
     category: "Canecas",
     name: "Caneca 4 Pilares - Colorida",
     currentPrice: "R$30.00",
@@ -99,11 +145,11 @@ const products = [
     description:
       "🌟 Desperte seu espírito solidário com nossa linda caneca de projeto voluntariado! Com os 4 pilares da fé, amor, respeito e união estampados, ela é perfeita para lembrar que juntos podemos fazer a diferença.",
     bestseller: false,
-    images: [],
+    images: [canecaPilaresColorida],
     pagbankLink: "https://www.pagbank.com.br/checkout",
   },
   {
-    id: 9,
+    id: 11,
     category: "Moletons",
     name: "Moletom Gola Redonda Unissex - 4 Pilares",
     currentPrice: "R$90.00",
@@ -111,11 +157,11 @@ const products = [
     description:
       "Conforto com Propósito! 💛💜 Adquira nosso Moletom Gola Redonda Unissex e ajude a fazer a diferença.",
     bestseller: false,
-    images: [],
+    images: [moletomCarecaPretoBranco],
     pagbankLink: "https://www.pagbank.com.br/checkout",
   },
   {
-    id: 10,
+    id: 12,
     category: "Moletons",
     name: "Moletom com Capuz - 4 Pilares",
     currentPrice: "R$100.00",
@@ -123,11 +169,35 @@ const products = [
     description:
       "Conforto com Propósito! 💛💜 Adquira nosso Moletom com Capuz Unissex e ajude a fazer a diferença.",
     bestseller: false,
-    images: [],
+    images: [moletomCanguruPretoBranco],
     pagbankLink: "https://www.pagbank.com.br/checkout",
   },
   {
-    id: 11,
+    id: 13,
+    category: "Moletons",
+    name: "Moletom Cropped - 4 Pilares Preto com Colorido",
+    currentPrice: "R$100.00",
+    oldPrice: null,
+    description:
+      "Conforto com Propósito! 💛💜 Adquira nosso Moletom com Capuz Unissex e ajude a fazer a diferença.",
+    bestseller: false,
+    images: [croppedPilaresPretoColorido],
+    pagbankLink: "https://www.pagbank.com.br/checkout",
+  },
+  {
+    id: 14,
+    category: "Moletons",
+    name: "Moletom Cropped - 4 Pilares Preto com Branco",
+    currentPrice: "R$100.00",
+    oldPrice: null,
+    description:
+      "Conforto com Propósito! 💛💜 Adquira nosso Moletom com Capuz Unissex e ajude a fazer a diferença.",
+    bestseller: false,
+    images: [croppedPilaresPretoBranco],
+    pagbankLink: "https://www.pagbank.com.br/checkout",
+  },
+  {
+    id: 15,
     category: "Camisetas",
     name: "Camiseta 4 Pilares - Branca",
     currentPrice: "R$30.00",
@@ -135,23 +205,23 @@ const products = [
     description:
       "👕 Camiseta 4 Pilares: Vista com propósito! Essa camiseta simboliza os pilares do Mobiliza: fé, amor, respeito e união.",
     bestseller: false,
-    images: [],
+    images: [camisetaPilaresBrancaPreto],
     pagbankLink: "https://www.pagbank.com.br/checkout",
   },
   {
-    id: 12,
+    id: 16,
     category: "Camisetas",
-    name: "Camiseta 4 Pilares - Preta",
+    name: "Camiseta 4 Pilares - Preta com Colorido",
     currentPrice: "R$30.00",
     oldPrice: "R$50.00",
     description:
       "👕 Camiseta 4 Pilares: Vista com propósito! Essa camiseta simboliza os pilares do Mobiliza: fé, amor, respeito e união.",
     bestseller: false,
-    images: [],
+    images: [camisetaPilaresPretaColorida],
     pagbankLink: "https://www.pagbank.com.br/checkout",
   },
   {
-    id: 13,
+    id: 17,
     category: "Camisetas",
     name: "Camiseta Seja o Lado Bom - Amarela",
     currentPrice: "R$30.00",
@@ -159,11 +229,11 @@ const products = [
     description:
       "👕 Camiseta da Lojinha do Bem: Vista a solidariedade com esta camiseta! Ao comprar, você contribui para o projeto voluntariado 'Mobiliza Amigos'.",
     bestseller: false,
-    images: [],
+    images: [camisetaSejaOLadoBomAmarelo],
     pagbankLink: "https://www.pagbank.com.br/checkout",
   },
   {
-    id: 14,
+    id: 18,
     category: "Chaveiros",
     name: "Chaveiro - 4 Pilares - Branco",
     currentPrice: "R$7.00",
@@ -171,11 +241,11 @@ const products = [
     description:
       "Chaveiros personalizados para todos os gostos. Encontre o chaveiro perfeito para você ou para presentear alguém especial.",
     bestseller: false,
-    images: [],
+    images: [chaveiroPilaresBranco],
     pagbankLink: "https://www.pagbank.com.br/checkout",
   },
   {
-    id: 15,
+    id: 19,
     category: "Chaveiros",
     name: "Chaveiro - 4 Pilares - Preto",
     currentPrice: "R$7.00",
@@ -183,11 +253,23 @@ const products = [
     description:
       "Chaveiros personalizados para todos os gostos. Encontre o chaveiro perfeito para você ou para presentear alguém especial.",
     bestseller: false,
-    images: [],
+    images: [chaveiroPilaresPreto],
     pagbankLink: "https://www.pagbank.com.br/checkout",
   },
   {
-    id: 16,
+    id: 20,
+    category: "Canecas",
+    name: "Caneca Amor que Cresce e se Multiplica - Colorida",
+    currentPrice: "R$20.00",
+    oldPrice: "R$34.00",
+    description:
+      "🌟 Caneca 'Amor que Cresce e se Multiplica': Adquira nossa caneca exclusiva da Lojinha do Bem e espalhe amor!",
+    bestseller: false,
+    images: [canecaAmorQueCresceColorida],
+    pagbankLink: "https://www.pagbank.com.br/checkout",
+  },
+  {
+    id: 21,
     category: "Canecas",
     name: "Caneca Amor que Cresce e se Multiplica",
     currentPrice: "R$20.00",
@@ -195,11 +277,11 @@ const products = [
     description:
       "🌟 Caneca 'Amor que Cresce e se Multiplica': Adquira nossa caneca exclusiva da Lojinha do Bem e espalhe amor!",
     bestseller: false,
-    images: [],
+    images: [canecaAmorQueCresceBranca],
     pagbankLink: "https://www.pagbank.com.br/checkout",
   },
   {
-    id: 17,
+    id: 22,
     category: "Chaveiros",
     name: "Chaveiro - ❤️ Que Cresce e se Multiplica",
     currentPrice: "R$7.00",
@@ -207,11 +289,11 @@ const products = [
     description:
       "Chaveiros personalizados para todos os gostos. Encontre o chaveiro perfeito para você ou para presentear alguém especial.",
     bestseller: false,
-    images: [],
+    images: [chaveiroAmorQueCresce],
     pagbankLink: "https://www.pagbank.com.br/checkout",
   },
   {
-    id: 18,
+    id: 23,
     category: "Garrafinhas",
     name: "🌟 Garrafinha 4 Pilares 🌟",
     currentPrice: "R$25.00",
@@ -219,10 +301,21 @@ const products = [
     description:
       "Conheça a Garrafinha 4 Pilares da Lojinha do Bem! Compre e contribua para a nossa causa!",
     bestseller: false,
-    images: [],
+    images: [garrafinhaPilares],
     pagbankLink: "https://www.pagbank.com.br/checkout",
   },
-  // ... (outros produtos)
+  {
+    id: 24,
+    category: "Camisetas",
+    name: "Camiseta - O Amor Existe - Branca Colorida",
+    currentPrice: "R$30.00",
+    oldPrice: "R$50.00",
+    description:
+      "👕 Camiseta da Lojinha do Bem: Vista a solidariedade e ajude o projeto 'Mobiliza Amigos'.",
+    bestseller: false,
+    images: [camisetaAmorExisteBrancaColorida],
+    pagbankLink: "https://www.pagbank.com.br/checkout",
+  },
 ];
 
 const categories = [
@@ -256,17 +349,26 @@ const ProductCard = ({ product }) => (
           <span className="old-price">{product.oldPrice}</span>
         )}
       </div>
-      <a
+      <button
         className="buy-button"
-        href={product.pagbankLink}
-        target="_blank"
-        rel="noopener noreferrer"
+        onClick={() => window.open(product.pagbankLink, "_blank")}
       >
         Comprar
-      </a>
+      </button>
     </div>
   </div>
 );
+
+ProductCard.propTypes = {
+  product: PropTypes.shape({
+    images: PropTypes.arrayOf(PropTypes.string),
+    name: PropTypes.string.isRequired,
+    description: PropTypes.string,
+    currentPrice: PropTypes.string.isRequired,
+    oldPrice: PropTypes.string,
+    pagbankLink: PropTypes.string.isRequired,
+  }).isRequired,
+};
 
 const FilterBar = ({
   selectedCategory,
@@ -303,6 +405,24 @@ const FilterBar = ({
   </div>
 );
 
+FilterBar.propTypes = {
+  selectedCategory: PropTypes.string.isRequired,
+  handleCategoryChange: PropTypes.func.isRequired,
+  filterBestsellers: PropTypes.bool.isRequired,
+  handleBestsellerToggle: PropTypes.func.isRequired,
+};
+
+const useFilteredProducts = (products, selectedCategory, filterBestsellers) => {
+  return useMemo(() => {
+    return products.filter((prod) => {
+      const categoryMatch =
+        selectedCategory === "Todos" || prod.category === selectedCategory;
+      const bestsellerMatch = filterBestsellers ? prod.bestseller : true;
+      return categoryMatch && bestsellerMatch;
+    });
+  }, [products, selectedCategory, filterBestsellers]);
+};
+
 const Lojinha = () => {
   const [selectedCategory, setSelectedCategory] = useState("Todos");
   const [filterBestsellers, setFilterBestsellers] = useState(false);
@@ -315,18 +435,15 @@ const Lojinha = () => {
     setFilterBestsellers(e.target.checked);
   };
 
-  const filteredProducts = useMemo(() => {
-    return products.filter((prod) => {
-      const categoryMatch =
-        selectedCategory === "Todos" || prod.category === selectedCategory;
-      const bestsellerMatch = filterBestsellers ? prod.bestseller : true;
-      return categoryMatch && bestsellerMatch;
-    });
-  }, [selectedCategory, filterBestsellers]);
+  const filteredProducts = useFilteredProducts(
+    products,
+    selectedCategory,
+    filterBestsellers
+  );
 
   const bestsellers = useMemo(() => {
     return products.filter((prod) => prod.bestseller);
-  }, []);
+  }, [products]);
 
   return (
     <div className="lojinha-container">
@@ -337,7 +454,6 @@ const Lojinha = () => {
         filterBestsellers={filterBestsellers}
         handleBestsellerToggle={handleBestsellerToggle}
       />
-      {/* Exibir os "Mais Vendidos" primeiro, se o filtro de categoria não for ativado */}
       {!filterBestsellers &&
         selectedCategory === "Todos" &&
         bestsellers.length > 0 && (
@@ -350,7 +466,6 @@ const Lojinha = () => {
             </div>
           </section>
         )}
-      {/* Exibir os produtos filtrados depois */}
       <section className="product-section">
         <h2 className="section-title">Produtos</h2>
         {filteredProducts.length > 0 ? (
