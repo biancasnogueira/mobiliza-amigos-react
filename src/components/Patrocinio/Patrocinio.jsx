@@ -22,6 +22,22 @@ const Patrocinio = () => {
               alt="Logo Pururucas"
               className="logo"
             />
+            <img
+              src="/PapelariaUmSonhoDePapel-1.webp"
+              alt="Logo Papelaria Um Sonho De Papel Valinhos"
+              className="logo"
+              id="Papelaria"
+            />
+            <img
+              src="/Brincar.webp"
+              alt="Logo Brincar Locação de Brinquedos"
+              className="logo"
+            />
+            <img
+              src="/lendarios.webp"
+              alt="Logo Lendarios Bar & Burguer"
+              className="logo"
+            />
           </div>
         </div>
 
@@ -34,7 +50,7 @@ const Patrocinio = () => {
             rel="noopener noreferrer"
             aria-label="Entre em contato pelo WhatsApp para saber mais sobre o patrocínio"
           >
-            <Button>Quero Patrocinar</Button>
+            <button className="btn-patrocinar">Quero Patrocinar</button>
           </a>
         </div>
       </section>

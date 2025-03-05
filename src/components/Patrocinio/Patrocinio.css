@@ -8,6 +8,21 @@
   max-width: 1200px;
   width: 100%;
   box-sizing: border-box;
+  padding-top: 4rem; /* Espaço para o header */
+}
+
+/* Ajustes para a imagem #Papelaria */
+img#Papelaria {
+  width: 150px; /* Tamanho padrão igual às outras imagens */
+  height: 150px;
+  border-radius: 50%; /* Mantém o visual arredondado */
+  object-fit: scale-down;
+  overflow: hidden;
+  transition: transform 0.3s ease; /* Adiciona uma transição suave ao hover */
+}
+
+img#Papelaria:hover {
+  transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
 }
 
 .patrocinador-texto {
@@ -34,12 +49,14 @@
   line-height: 1.6;
 }
 
+/* Contêiner dos Logos */
 .logos-patrocinadores {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
+  flex-wrap: wrap; /* Permite que os logos quebrem em várias linhas */
+  justify-content: center; /* Centraliza os logos horizontalmente */
+  gap: 15px; /* Espaçamento entre os logos */
   margin: 20px 0;
+  align-items: center;
 }
 
 .logos-patrocinadores img {
@@ -48,6 +65,11 @@
   border-radius: 50%;
   object-fit: scale-down;
   overflow: hidden;
+  transition: transform 0.3s ease; /* Adiciona uma transição suave ao hover */
+}
+
+.logos-patrocinadores img:hover {
+  transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
 }
 
 /* Formulário de Contato */
@@ -84,6 +106,11 @@
   resize: none;
 }
 
+/* Estilo do Botão "Quero Patrocinar" */
+.formulario-contato a {
+  text-decoration: none;
+}
+
 .formulario-contato button {
   width: 100%;
   padding: 12px;
@@ -100,14 +127,15 @@
   background-color: var(--amarelo-mobiliza);
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
+/* Responsividade para Tablets (481px a 768px) */
+@media (max-width: 768px) and (min-width: 481px) {
   .patrocinador-section {
     flex-direction: column;
     align-items: center;
-    margin: 30px 20px;
-    padding: 0 10px;
+    margin: 40px 30px 0 30px;
+    padding: 0 20px;
     box-sizing: border-box;
+    padding-top: 4rem; /* Manter o padding-top em telas menores */
   }
 
   .patrocinador-texto,
@@ -122,15 +150,22 @@
     margin: 20px 0;
   }
 
+  img#Papelaria {
+    width: 130px; /* Reduz o tamanho da imagem #Papelaria */
+    height: 130px;
+  }
+
   .logos-patrocinadores img {
-    width: 120px;
-    height: 120px;
+    width: 130px; /* Tamanho intermediário para tablets */
+    height: 130px;
   }
 }
 
+/* Responsividade para Celulares (até 480px) */
 @media (max-width: 480px) {
   .patrocinador-section {
     padding: 10px;
+    padding-top: 4rem; /* Manter o padding-top em telas menores */
   }
 
   .patrocinador-texto h2 {
@@ -145,12 +180,13 @@
     margin-bottom: 20px;
   }
 
-  .logos-patrocinadores img {
-    width: 100px;
-    height: 100px;
+  img#Papelaria {
+    width: 90px; /* Reduz o tamanho da imagem #Papelaria */
+    height: 90px;
   }
 
-  .formulario-contato {
-    margin: 20px 0;
+  .logos-patrocinadores img {
+    width: 90px; /* Reduz o tamanho das imagens para telas menores */
+    height: 90px;
   }
 }
