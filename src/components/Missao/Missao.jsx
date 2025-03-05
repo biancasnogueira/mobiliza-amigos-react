@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import { useSwipeable } from "react-swipeable"; // Importe a biblioteca
 import "./Missao.css";
 
 // ASSETS
@@ -8,7 +9,7 @@ import setaDireita from "../../assets/seta-direita.svg";
 
 // Importação dinâmica das imagens do carrossel
 const images = Object.values(
-  import.meta.glob("../../assets/carrossel*.webp", {
+  import.meta.glob("../../assets/images-carrossel/carrossel*.webp", {
     eager: true,
     import: "default",
   })
@@ -16,35 +17,25 @@ const images = Object.values(
 
 const Missao = () => {
   const [currentItem, setCurrentItem] = useState(0);
-  const [itemsVisible, setItemsVisible] = useState(3);
   const maxItems = images.length;
-
-  useEffect(() => {
-    const updateItemsVisible = () => {
-      const width = window.innerWidth;
-      if (width <= 600) {
-        setItemsVisible(1);
-      } else if (width <= 900) {
-        setItemsVisible(2);
-      } else {
-        setItemsVisible(3);
-      }
-    };
-
-    updateItemsVisible();
-    window.addEventListener("resize", updateItemsVisible);
-    return () => window.removeEventListener("resize", updateItemsVisible);
-  }, []);
 
   const handleControlClick = (isLeft) => {
     setCurrentItem((prevItem) => {
       if (isLeft) {
         return Math.max(0, prevItem - 1);
       } else {
-        return Math.min(maxItems - itemsVisible, prevItem + 1);
+        return Math.min(maxItems - 1, prevItem + 1);
       }
     });
   };
+
+  // Configuração do swipe
+  const swipeHandlers = useSwipeable({
+    onSwipedLeft: () => handleControlClick(false), // Swipe para a esquerda = próxima imagem
+    onSwipedRight: () => handleControlClick(true), // Swipe para a direita = imagem anterior
+    preventDefaultTouchmoveEvent: true, // Evita comportamento padrão do touch
+    trackMouse: true, // Permite testar o swipe com o mouse (opcional)
+  });
 
   return (
     <section className="missao-mobiliza">
@@ -92,12 +83,11 @@ const Missao = () => {
           <img src={setaEsquerda} alt="Previous" />
         </button>
 
-        <div className="gallery-wrapper">
+        <div className="gallery-wrapper" {...swipeHandlers}>
           <div
             className="gallery"
             style={{
-              transform: `translateX(-${(currentItem / maxItems) * 100}%)`,
-              width: `${(maxItems / itemsVisible) * 100}%`,
+              transform: `translateX(-${currentItem * 100}%)`,
             }}
           >
             {images.map((item, index) => (
@@ -114,7 +104,7 @@ const Missao = () => {
         <button
           className="arrow-right control"
           onClick={() => handleControlClick(false)}
-          disabled={currentItem >= maxItems - itemsVisible}
+          disabled={currentItem >= maxItems - 1}
         >
           <img src={setaDireita} alt="Next" />
         </button>

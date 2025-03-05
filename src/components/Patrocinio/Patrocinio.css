@@ -11,20 +11,6 @@
   padding-top: 4rem; /* Espaço para o header */
 }
 
-/* Ajustes para a imagem #Papelaria */
-img#Papelaria {
-  width: 150px; /* Tamanho padrão igual às outras imagens */
-  height: 150px;
-  border-radius: 50%; /* Mantém o visual arredondado */
-  object-fit: scale-down;
-  overflow: hidden;
-  transition: transform 0.3s ease; /* Adiciona uma transição suave ao hover */
-}
-
-img#Papelaria:hover {
-  transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
-}
-
 .patrocinador-texto {
   flex: 1;
   margin-right: 20px;
@@ -60,12 +46,12 @@ img#Papelaria:hover {
 }
 
 .logos-patrocinadores img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: scale-down;
-  overflow: hidden;
-  transition: transform 0.3s ease; /* Adiciona uma transição suave ao hover */
+  width: 150px; /* Tamanho fixo para todos os logos */
+  height: 150px; /* Tamanho fixo para todos os logos */
+  border-radius: 50%; /* Transforma as imagens em círculos */
+  object-fit: cover; /* Garante que a imagem cubra o contêiner sem distorcer */
+  border: 2px solid #49073d; /* Borda sólida para todos os logos */
+  transition: transform 0.3s ease;
 }
 
 .logos-patrocinadores img:hover {
@@ -150,11 +136,6 @@ img#Papelaria:hover {
     margin: 20px 0;
   }
 
-  img#Papelaria {
-    width: 130px; /* Reduz o tamanho da imagem #Papelaria */
-    height: 130px;
-  }
-
   .logos-patrocinadores img {
     width: 130px; /* Tamanho intermediário para tablets */
     height: 130px;
@@ -178,11 +159,6 @@ img#Papelaria:hover {
     font-size: 1rem;
     width: 100%;
     margin-bottom: 20px;
-  }
-
-  img#Papelaria {
-    width: 90px; /* Reduz o tamanho da imagem #Papelaria */
-    height: 90px;
   }
 
   .logos-patrocinadores img {

@@ -23,7 +23,7 @@ const Patrocinio = () => {
               className="logo"
             />
             <img
-              src="/PapelariaUmSonhoDePapel-1.webp"
+              src="/PapelariaUmSonhoDePapel.webp"
               alt="Logo Papelaria Um Sonho De Papel Valinhos"
               className="logo"
               id="Papelaria"
