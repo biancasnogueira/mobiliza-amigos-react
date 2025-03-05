@@ -54,15 +54,15 @@ function Voluntariado() {
             <img src={Lojinha2} alt="Produto 2 da lojinha" />
             <img src={Lojinha3} alt="Produto 3 da lojinha" />
           </div>
-          <a
-            href="https://wa.me/5519995022463?text=Olá%20Mobiliza,%20gostaria%20de%20saber%20mais%20sobre%20o%20catálogo%20da%20lojinha"
+          {/* <Link 
+            to="https://wa.me/5519995022463?text=Olá%20Mobiliza,%20gostaria%20de%20saber%20mais%20sobre%20o%20catálogo%20da%20lojinha"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Link to="/loja">
+          </Link> */}
+          <Link to="/loja">
             <button>SAIBA MAIS</button>
           </Link>
-          </a>
         </div>
       </div>
     </section>

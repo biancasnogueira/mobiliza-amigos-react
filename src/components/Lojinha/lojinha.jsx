@@ -319,7 +319,7 @@ const products = [
     pagbankLink: "https://www.pagbank.com.br/checkout",
   },
   {
-    id: 2,
+    id: 25,
     category: "Camisetas",
     name: "Camiseta - O Amor Existe - Preta com Branco",
     currentPrice: "R$30.00",
