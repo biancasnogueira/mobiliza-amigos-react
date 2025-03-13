@@ -5,7 +5,8 @@
   align-items: center;
   background-color: var(--amarelo-mobiliza);
   padding: 40px;
-  flex-wrap: wrap; /* Permite que os elementos se ajustem em telas pequenas */
+  flex-wrap: wrap;
+  margin-top: 5rem; /* Permite que os elementos se ajustem em telas pequenas */
 }
 
 .conteudo-sobre-nos {
@@ -17,7 +18,7 @@
 .sobre-nos h2 {
   color: var(--roxo-mobiliza);
   font-size: 2.25rem; /* 36px em unidades de rem */
-  margin-bottom: 20px;
+  margin-bottom: 53px;
   font-family: "Poppins", sans-serif;
   font-weight: 800;
   transform: translateX(-50px);
@@ -50,7 +51,6 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* Mantém 2 colunas */
   grid-gap: 15px;
-  margin-top: 3.1rem;
   max-width: 30%; /* Ajuste a largura para manter as imagens menores */
   opacity: 0;
   padding-left: 1rem;
