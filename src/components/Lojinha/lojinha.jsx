@@ -9,7 +9,9 @@ import camisetaAmorExistePretaBranca from "../../assets/images-loja/camiseta-pre
 import canecaPromocional from "../../assets/images-loja/caneca-promocional.webp";
 import camisetaPilaresPretaColorida from "../../assets/images-loja/camiseta-preta-colorida-4pilares.webp";
 import camisetaSejaOLadoBomAmarelo from "../../assets/images-loja/camiseta-amarela-seja-o-lado-bom.webp";
+import camisetaSejaOLadoBomRoxa from "../../assets/images-loja/camisa-roxa-seja-o-lado-bom.webp";
 import moletomCarecaPretoBranco from "../../assets/images-loja/moletom-gola-careca-preto-branco-4-pilares.webp";
+import moletomCarecaPretoColorida from "../../assets/images-loja/moletom-gola-careca-preto-colorido-4-pilares2.webp";
 import camisetaPilaresBrancaPreto from "../../assets/images-loja/camiseta-branca-com-preto-4pilares.webp";
 import moletomCanguruPretoBranco from "../../assets/images-loja/moletom-canguru-preto-4-pilares.webp";
 import croppedPilaresPretoColorido from "../../assets/images-loja/cropped-4-pilares-colorido.webp";
@@ -28,6 +30,11 @@ import chaveiroSejaOLadoBomRoxo from "../../assets/images-loja/chaveiro-seja-o-l
 import chaveiroSejaOLadoBomAmarelo from "../../assets/images-loja/chaveiro-seja-o-lado-bom-amarelo.webp";
 import camisetaAmorExisteBrancaPreta from "../../assets/images-loja/camiseta-branca-preta-amor-existe.webp";
 import camisetaAmorExisteBrancaColorida from "../../assets/images-loja/camiseta-branca-colorida-amor-existe.webp";
+import camisetaPilaresBrancaColorida from "../../assets/images-loja/camiseta-branca-com-colorido-4pilares.webp";
+import canecaAmorExiste from "../../assets/images-loja/caneca-branca-amor-existe.webp";
+import canecaSejaOLadoBom from "../../assets/images-loja/caneca-seja-o-lado-bom.webp";
+import canecaSejaOLadoBomColorida from "../../assets/images-loja/caneca-colorida-seja-o-lado-bom.webp";
+import garrafinhaAmorQueCresce from "../../assets/images-loja/garrafinha-amor-que-cresce.webp";
 
 const products = [
   {
@@ -40,7 +47,7 @@ const products = [
       "💧 Leve o amor para onde você for! Esta garrafinha é perfeita para manter-se hidratado enquanto espalha amor e solidariedade. 🌈",
     bestseller: true,
     images: [garrafinhaAmorExiste],
-    pagbankLink: "https://www.pagbank.com.br/checkout",
+    pagbankLink: "https://pag.ae/7_rJdkoEt",
   },
   {
     id: 2,
@@ -81,14 +88,14 @@ const products = [
   {
     id: 5,
     category: "Chaveiros",
-    name: "Chaveiro Seja O Lado Bom - Verde 🌟",
+    name: "Chaveiro Seja O Lado Bom - Azul 🌟",
     currentPrice: "R$7.00",
     oldPrice: null,
     description:
       "🔑 Leve uma mensagem de positividade com você! Este chaveiro verde é perfeito para presentear ou para lembrar de sempre escolher o lado bom da vida. 🌿",
     bestseller: false,
     images: [chaveiroSejaOLadoBomVerde],
-    pagbankLink: "https://www.pagbank.com.br/checkout",
+    pagbankLink: "https://pag.ae/7_rJBq59t",
   },
   {
     id: 6,
@@ -100,7 +107,7 @@ const products = [
       "🔑 Um toque de inspiração no seu dia a dia! Este chaveiro roxo é ideal para quem quer espalhar amor e positividade por onde passar. 💜",
     bestseller: false,
     images: [chaveiroSejaOLadoBomRoxo],
-    pagbankLink: "https://www.pagbank.com.br/checkout",
+    pagbankLink: "https://pag.ae/7_rJyc-4t",
   },
   {
     id: 7,
@@ -112,7 +119,7 @@ const products = [
       "🔑 Ilumine seu dia com este chaveiro amarelo! Uma mensagem de otimismo e amor para você ou para presentear alguém especial. 🌞",
     bestseller: false,
     images: [chaveiroSejaOLadoBomAmarelo],
-    pagbankLink: "https://www.pagbank.com.br/checkout",
+    pagbankLink: "https://pag.ae/7_rJAob2L",
   },
   {
     id: 8,
@@ -153,14 +160,14 @@ const products = [
   {
     id: 11,
     category: "Moletons",
-    name: "Moletom Gola Redonda Unissex - 4 Pilares",
+    name: "Moletom Gola Redonda Unissex - 4 Pilares Preta com Branco",
     currentPrice: "R$90.00",
     oldPrice: null,
     description:
       "🧥 Conforto com propósito! Este moletom unissex é perfeito para os dias mais frios, mantendo você aquecido e estiloso enquanto apoia uma causa incrível. 💛💜",
     bestseller: false,
     images: [moletomCarecaPretoBranco],
-    pagbankLink: "https://www.pagbank.com.br/checkout",
+    pagbankLink: "https://pag.ae/7_rJGPd9q",
   },
   {
     id: 12,
@@ -172,7 +179,7 @@ const products = [
       "🧥 Estilo e conforto em um só lugar! Este moletom com capuz é ideal para quem quer se aquecer com propósito e ajudar o projeto 'Mobiliza Amigos'. ❄️💛",
     bestseller: false,
     images: [moletomCanguruPretoBranco],
-    pagbankLink: "https://www.pagbank.com.br/checkout",
+    pagbankLink: "https://pag.ae/7_rVEgwYR",
   },
   {
     id: 13,
@@ -184,7 +191,7 @@ const products = [
       "🧥 Moderno e cheio de significado! Este moletom cropped é perfeito para quem quer um visual descolado enquanto apoia uma causa incrível. 🌟",
     bestseller: false,
     images: [croppedPilaresPretoColorido],
-    pagbankLink: "https://www.pagbank.com.br/checkout",
+    pagbankLink: "https://pag.ae/7_rVDu_cR",
   },
   {
     id: 14,
@@ -196,7 +203,7 @@ const products = [
       "🧥 Estilo e propósito em um só look! Este moletom cropped é ideal para quem quer um visual moderno e cheio de significado. 💥",
     bestseller: false,
     images: [croppedPilaresPretoBranco],
-    pagbankLink: "https://www.pagbank.com.br/checkout",
+    pagbankLink: "https://pag.ae/7_rVCJ7m5",
   },
   {
     id: 15,
@@ -244,7 +251,7 @@ const products = [
       "🔑 Um toque de inspiração no seu dia a dia! Este chaveiro branco é perfeito para quem quer lembrar dos pilares do Mobiliza: fé, amor, respeito e união. ✨",
     bestseller: false,
     images: [chaveiroPilaresBranco],
-    pagbankLink: "https://www.pagbank.com.br/checkout",
+    pagbankLink: "https://pag.ae/7_rJ3bzcR",
   },
   {
     id: 19,
@@ -256,7 +263,7 @@ const products = [
       "🔑 Estilo e significado em um pequeno detalhe! Este chaveiro preto é ideal para quem quer carregar consigo os pilares do Mobiliza. 🖤",
     bestseller: false,
     images: [chaveiroPilaresPreto],
-    pagbankLink: "https://www.pagbank.com.br/checkout",
+    pagbankLink: "https://pag.ae/7_rJxn9Ga",
   },
   {
     id: 20,
@@ -292,7 +299,7 @@ const products = [
       "🔑 Um pequeno símbolo de amor! Este chaveiro é perfeito para quem quer carregar consigo uma mensagem de amor e solidariedade. ❤️",
     bestseller: false,
     images: [chaveiroAmorQueCresce],
-    pagbankLink: "https://www.pagbank.com.br/checkout",
+    pagbankLink: "https://pag.ae/7_rJCcum8",
   },
   {
     id: 23,
@@ -304,7 +311,7 @@ const products = [
       "💧 Hidrate-se com propósito! Esta garrafinha é perfeita para quem quer levar consigo os pilares do Mobiliza: fé, amor, respeito e união. 🌟",
     bestseller: false,
     images: [garrafinhaPilares],
-    pagbankLink: "https://www.pagbank.com.br/checkout",
+    pagbankLink: "https://pag.ae/7_rJeKQKt",
   },
   {
     id: 24,
@@ -329,6 +336,90 @@ const products = [
     bestseller: true,
     images: [camisetaAmorExistePretaBranca],
     pagbankLink: "https://www.pagbank.com.br/checkout",
+  },
+  {
+    id: 26,
+    category: "Camisetas",
+    name: "Camiseta 4 Pilares - Branca Colorida",
+    currentPrice: "R$30.00",
+    oldPrice: "R$50.00",
+    description:
+      "👕 Vista com propósito! Esta camiseta branca simboliza os pilares do Mobiliza: fé, amor, respeito e união. Perfeita para quem quer vestir uma causa. 💪",
+    bestseller: false,
+    images: [camisetaPilaresBrancaColorida],
+    pagbankLink: "https://www.pagbank.com.br/checkout",
+  },
+  {
+    id: 27,
+    category: "Camisetas",
+    name: "Camiseta Seja o Lado Bom - Roxa",
+    currentPrice: "R$30.00",
+    oldPrice: "R$50.00",
+    description:
+      "👕 Vista a solidariedade com esta camiseta amarela vibrante! Ao comprar, você contribui para o projeto voluntariado 'Mobiliza Amigos'. 🌞",
+    bestseller: false,
+    images: [camisetaSejaOLadoBomRoxa],
+    pagbankLink: "https://www.pagbank.com.br/checkout",
+  },
+  {
+    id: 28,
+    category: "Canecas",
+    name: "Caneca Seja o Lado Bom - Colorida",
+    currentPrice: "R$30.00",
+    oldPrice: "R$40.00",
+    description:
+      "🌟 Uma explosão de cores e significado! Esta caneca colorida traz os 4 pilares do Mobiliza: fé, amor, respeito e união. Ideal para quem quer inspirar e ser inspirado. 🌈",
+    bestseller: false,
+    images: [canecaSejaOLadoBomColorida],
+    pagbankLink: "https://www.pagbank.com.br/checkout",
+  },
+  {
+    id: 29,
+    category: "Canecas",
+    name: "Caneca Seja o Lado Bom",
+    currentPrice: "R$30.00",
+    oldPrice: "R$40.00",
+    description:
+      "🌟 Uma explosão de cores e significado! Esta caneca colorida traz os 4 pilares do Mobiliza: fé, amor, respeito e união. Ideal para quem quer inspirar e ser inspirado. 🌈",
+    bestseller: false,
+    images: [canecaSejaOLadoBom],
+    pagbankLink: "https://www.pagbank.com.br/checkout",
+  },
+  {
+    id: 30,
+    category: "Canecas",
+    name: "Caneca O Amor Existe",
+    currentPrice: "R$30.00",
+    oldPrice: "R$40.00",
+    description:
+      "🌟 Uma explosão de cores e significado! Esta caneca colorida traz os 4 pilares do Mobiliza: fé, amor, respeito e união. Ideal para quem quer inspirar e ser inspirado. 🌈",
+    bestseller: false,
+    images: [canecaAmorExiste],
+    pagbankLink: "https://www.pagbank.com.br/checkout",
+  },
+  {
+    id: 31,
+    category: "Garrafinhas",
+    name: "🌟 Garrafinha Amor que Cresce e Se Multiplica 🌟",
+    currentPrice: "R$25.00",
+    oldPrice: "R$35.00",
+    description:
+      "💧 Hidrate-se com propósito! Esta garrafinha é perfeita para quem quer levar consigo os pilares do Mobiliza: fé, amor, respeito e união. 🌟",
+    bestseller: false,
+    images: [garrafinhaAmorQueCresce],
+    pagbankLink: "https://pag.ae/7_rJfAicL",
+  },
+  {
+    id: 32,
+    category: "Moletons",
+    name: "Moletom Gola Redonda Unissex - 4 Pilares Preta com Colorida",
+    currentPrice: "R$90.00",
+    oldPrice: null,
+    description:
+      "🧥 Conforto com propósito! Este moletom unissex é perfeito para os dias mais frios, mantendo você aquecido e estiloso enquanto apoia uma causa incrível. 💛💜",
+    bestseller: false,
+    images: [moletomCarecaPretoColorida],
+    pagbankLink: "https://pag.ae/7_rJHEkjq",
   },
 ];
 
