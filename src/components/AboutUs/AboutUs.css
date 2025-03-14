@@ -6,7 +6,7 @@
   background-color: var(--amarelo-mobiliza);
   padding: 40px;
   flex-wrap: wrap;
-  margin-top: 5rem; /* Permite que os elementos se ajustem em telas pequenas */
+  padding-top: 5rem; /* Permite que os elementos se ajustem em telas pequenas */
 }
 
 .conteudo-sobre-nos {
@@ -66,7 +66,6 @@
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out;
-  loading: lazy; /* Carregamento preguiçoso */
 }
 
 .imagens-sobre-nos img:hover {
