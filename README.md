@@ -19,9 +19,11 @@ Confira o progresso do site e acesse os designs no Figma:
 | **Sobre**                   | [Figma](https://www.figma.com/proto/yaQYz6BMbPSKatZjsp56wn/Mobiliza-Amigos---Website?node-id=4-608) | ✅ Concluída   |
 | **Missão**                  | [Figma](https://www.figma.com/proto/yaQYz6BMbPSKatZjsp56wn/Mobiliza-Amigos---Website?node-id=4-608) | ✅ Concluída   |
 | **Página de Contato**       | [Figma](https://www.figma.com/proto/yaQYz6BMbPSKatZjsp56wn/Mobiliza-Amigos---Website?node-id=4-608) | ✅ Concluída   |
-| **Cadastro de Patrocinador**| [Figma](https://www.figma.com/proto/yaQYz6BMbPSKatZjsp56wn/Mobiliza-Amigos---Website?node-id=68-2)  | 🔄 Em andamento |
+| **Cadastro de Patrocinador**| [Figma](https://www.figma.com/proto/yaQYz6BMbPSKatZjsp56wn/Mobiliza-Amigos---Website?node-id=68-2)  | ✅ Concluída |
 | **Página de Transparência** | *(Em breve!)*                                                                                      | ⏳ Planejada   |
 | **Footer**                  | [Figma](https://www.figma.com/proto/yaQYz6BMbPSKatZjsp56wn/Mobiliza-Amigos---Website?node-id=4-608) | ✅ Concluída   |
+
+<!--| **Cadastro de Patrocinador**| [Figma](https://www.figma.com/proto/yaQYz6BMbPSKatZjsp56wn/Mobiliza-Amigos---Website?node-id=68-2)  | 🔄 Em andamento | -->
 
 ## 🔄 Melhorias Futuras  
 
