@@ -1,37 +1,49 @@
-# Mobiliza Amigos - Website 🌟
+# Mobiliza Amigos - Website 🌟  
 
-Bem-vindo ao repositório do **Mobiliza Amigos**! Este site foi desenvolvido como parte de minha contribuição voluntária para conectar pessoas interessadas em apoiar nosso projeto. Nosso objetivo é ampliar a visibilidade da iniciativa, formalizar nossa presença online e alcançar mais pessoas dispostas a colaborar com nossa missão.
+🔗 **Acesse agora:** [mobilizaamigos.org](https://mobilizaamigos.org)  
 
-## Objetivo 🎯
+Bem-vindo ao repositório do **Mobiliza Amigos**! Este projeto foi desenvolvido como parte da minha contribuição voluntária para fortalecer a presença online da iniciativa, conectar voluntários e patrocinadores e ampliar nosso impacto social.  
 
-O **Mobiliza Amigos** é uma iniciativa que promove o voluntariado e apoia causas sociais. Este website tem como finalidade facilitar a interação entre voluntários, patrocinadores e organizações que precisam de ajuda, criando um ponto de encontro digital para todos que desejam fazer a diferença.
+## 🎯 Objetivo  
 
-## Status do Desenvolvimento 📊
+O **Mobiliza Amigos** é um projeto dedicado ao voluntariado e ao apoio a causas sociais. Nosso site serve como um ponto de encontro digital para facilitar a interação entre voluntários, apoiadores e organizações que precisam de ajuda, tornando o engajamento mais acessível e eficiente.  
 
-Abaixo está o progresso das telas do site com links para o design no Figma:
+## 🚀 Status do Desenvolvimento  
 
-| Tela                          | Link do Design                                                                                         | Status         |
-|-------------------------------|--------------------------------------------------------------------------------------------------------|----------------|
-| **Tela Inicial**              | [Tela Inicial no Figma](https://www.figma.com/proto/yaQYz6BMbPSKatZjsp56wn/Mobiliza-Amigos---Website?node-id=4-608) | ✅ Concluída    |
-| **Inscrição de Voluntário**    | [Cadastro no Figma](https://www.figma.com/proto/yaQYz6BMbPSKatZjsp56wn/Mobiliza-Amigos---Website?node-id=4-608)    | ✅ Concluída |
-| **Sobre**                     | [Sobre no Figma](https://www.figma.com/proto/yaQYz6BMbPSKatZjsp56wn/Mobiliza-Amigos---Website?node-id=4-608)       | ✅ Concluída |
-| **Missão**                    | [Missão no Figma](https://www.figma.com/proto/yaQYz6BMbPSKatZjsp56wn/Mobiliza-Amigos---Website?node-id=4-608)      | ✅ Concluída |
-| **Página de Contato**         | [Contato no Figma](https://www.figma.com/proto/yaQYz6BMbPSKatZjsp56wn/Mobiliza-Amigos---Website?node-id=4-608)     | ✅ Concluída |
-| **Cadastro de Patrocinador**  | [Patrocinador no Figma](https://www.figma.com/proto/yaQYz6BMbPSKatZjsp56wn/Mobiliza-Amigos---Website?node-id=68-2) | 🔄 Em andamento |
-| **Footer**                    | [Footer no Figma](https://www.figma.com/proto/yaQYz6BMbPSKatZjsp56wn/Mobiliza-Amigos---Website?node-id=4-608)      | ✅ Concluída |
+Confira o progresso do site e acesse os designs no Figma:  
 
-## Estrutura do Repositório 📁
+| Página                      | Link para o Design                                                                                   | Status          |
+|-----------------------------|------------------------------------------------------------------------------------------------------|----------------|
+| **Tela Inicial**            | [Figma](https://www.figma.com/proto/yaQYz6BMbPSKatZjsp56wn/Mobiliza-Amigos---Website?node-id=4-608) | ✅ Concluída   |
+| **Inscrição de Voluntário**  | [Figma](https://www.figma.com/proto/yaQYz6BMbPSKatZjsp56wn/Mobiliza-Amigos---Website?node-id=4-608) | ✅ Concluída   |
+| **Sobre**                   | [Figma](https://www.figma.com/proto/yaQYz6BMbPSKatZjsp56wn/Mobiliza-Amigos---Website?node-id=4-608) | ✅ Concluída   |
+| **Missão**                  | [Figma](https://www.figma.com/proto/yaQYz6BMbPSKatZjsp56wn/Mobiliza-Amigos---Website?node-id=4-608) | ✅ Concluída   |
+| **Página de Contato**       | [Figma](https://www.figma.com/proto/yaQYz6BMbPSKatZjsp56wn/Mobiliza-Amigos---Website?node-id=4-608) | ✅ Concluída   |
+| **Cadastro de Patrocinador**| [Figma](https://www.figma.com/proto/yaQYz6BMbPSKatZjsp56wn/Mobiliza-Amigos---Website?node-id=68-2)  | ✅ Concluída |
+| **Página de Transparência** | *(Em breve!)*                                                                                      | ⏳ Planejada   |
+| **Footer**                  | [Figma](https://www.figma.com/proto/yaQYz6BMbPSKatZjsp56wn/Mobiliza-Amigos---Website?node-id=4-608) | ✅ Concluída   |
 
-- **`/src`**: Diretório com o código-fonte do site (HTML, CSS, JavaScript e React).
-- **`README.md`**: Este arquivo, que explica o propósito e o progresso do projeto.
+<!--| **Cadastro de Patrocinador**| [Figma](https://www.figma.com/proto/yaQYz6BMbPSKatZjsp56wn/Mobiliza-Amigos---Website?node-id=68-2)  | 🔄 Em andamento | -->
 
-## Como Contribuir 🤝
+## 🔄 Melhorias Futuras  
 
-Estamos abertos a contribuições! Você pode colaborar de diversas maneiras: 
-- Abrindo **issues** para reportar problemas ou sugerir melhorias.
-- Criando **pull requests** com ajustes ou novas funcionalidades.
-- Compartilhando feedbacks para aprimorar o projeto.
+O projeto segue em evolução! Algumas das próximas atualizações incluem:  
+- 📊 **Página de Transparência Financeira**, para detalhar receitas e investimentos do projeto.  
+- 🔧 **Otimizações de desempenho e acessibilidade** para uma experiência ainda melhor.  
+- 🎨 **Novas seções e aprimoramento do design** para melhor usabilidade.  
 
-## Contato 📬
+## 📁 Estrutura do Repositório  
 
-Quer saber mais sobre o **Mobiliza Amigos** ou tem interesse em colaborar? Entre em contato comigo pelo [LinkedIn](https://www.linkedin.com/in/biancasilvanogueira/).
+- **`/src`** → Código-fonte do site (HTML, CSS, JavaScript e React).  
+- **`README.md`** → Documentação do projeto.  
+
+## 🤝 Como Contribuir  
+
+Se quiser colaborar, há diversas formas de ajudar:  
+- **Abrir issues** para relatar problemas ou sugerir melhorias.  
+- **Criar pull requests** com ajustes ou novas funcionalidades.  
+- **Compartilhar feedback** para aprimorar o projeto.  
+
+## 📬 Contato  
+
+Dúvidas ou interesse em participar? Fale comigo no [LinkedIn](https://www.linkedin.com/in/biancasilvanogueira/)!  
