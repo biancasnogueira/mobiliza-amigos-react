@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
 
 // COMPONENTES
 import ScrollToTop from "./components/ScrollToTop"; // Garante que a página volte ao topo ao mudar de rota
@@ -16,20 +17,22 @@ import Loja from "./pages/Loja";
 
 function App() {
   return (
-    <Router>
-      <ScrollToTop /> {/* Faz a página rolar para o topo ao mudar de rota */}
-      <CookieBanner /> {/* Banner de Cookies aparece em todas as páginas */}
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/donations" element={<Donations />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/patrocinador" element={<Patrocinador />} />
-        <Route path="/cookie-policy" element={<CookiePolicy />} />
-        <Route path="/loja" element={<Loja />} />
-      </Routes>
-    </Router>
+    <HelmetProvider>
+      <Router>
+        <ScrollToTop /> {/* Faz a página rolar para o topo ao mudar de rota */}
+        <CookieBanner /> {/* Banner de Cookies aparece em todas as páginas */}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/donations" element={<Donations />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/patrocinador" element={<Patrocinador />} />
+          <Route path="/cookie-policy" element={<CookiePolicy />} />
+          <Route path="/loja" element={<Loja />} />
+        </Routes>
+      </Router>
+    </HelmetProvider>
   );
 }
 

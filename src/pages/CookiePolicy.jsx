@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet"; // Importando o Helmet para gerenciar o head da página
 import { Link } from "react-router-dom"; // Importando o Link para navegação interna
 import Header from "../components/Header/Header"; // Importando o Header
 import Footer from "../components/Footer/Footer"; // Importando o Footer
@@ -7,6 +8,28 @@ import "./CookiePolicy.css"; // Estilo da página CookiePolicy
 const CookiePolicy = () => {
   return (
     <>
+      <Helmet>
+        <title>Política de Cookies - Mobiliza Amigos</title>
+        <meta
+          name="description"
+          content="Entenda como o Mobiliza Amigos utiliza cookies para melhorar sua experiência de navegação. Saiba mais sobre nossa política de cookies e privacidade."
+        />
+        <meta
+          name="keywords"
+          content="política de cookies, cookies, privacidade, Mobiliza Amigos, gerenciamento de cookies"
+        />
+        <meta property="og:title" content="Política de Cookies - Mobiliza Amigos" />
+        <meta
+          property="og:description"
+          content="Entenda como o Mobiliza Amigos utiliza cookies para melhorar sua experiência de navegação."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.mobilizaamigos.com/cookie-policy" />
+        
+        {/* Tag Canônica */}
+        <link rel="canonical" href="https://mobilizaamigos.org/cookie-policy" />
+      </Helmet>
+
       <Header /> {/* Adicionando o Header */}
       <div className="cookie-policy-container">
         <h1>Política de Cookies do Mobiliza Amigos</h1>
