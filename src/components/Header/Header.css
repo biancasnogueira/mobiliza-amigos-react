@@ -112,7 +112,6 @@ header {
   }
 }
 
-
 .container {
   display: flex;
   justify-content: space-between;
@@ -195,6 +194,16 @@ nav ul li a:hover {
   transform: scale(1.1);
 }
 
+@media (max-width: 928px) {
+  nav ul {
+    list-style: none;
+    display: unset;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 /* Responsividade para telas menores */
 @media (max-width: 768px) {
   header {
@@ -210,6 +219,13 @@ nav ul li a:hover {
   .logo img {
     width: 120px;
   }
+
+  .cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding-left: 5rem;
+}
 
   .cta-buttons .btn {
     padding: 8px 16px;
@@ -267,6 +283,18 @@ nav ul li a:hover {
   }
 }
 
+@media (max-width: 650px) {
+  .cta-buttons {
+    flex-direction: row; /* Botões em linha */
+    gap: 5px;
+    padding-top: 3rem;
+    padding-left: 0;
+  }
+
+
+}
+
+
 /* Responsividade para telas muito pequenas (mobile) */
 @media (max-width: 576px) {
   .container {
@@ -278,6 +306,7 @@ nav ul li a:hover {
   .cta-buttons {
     flex-direction: row; /* Botões em linha */
     gap: 5px;
+    padding-top: 3rem;
   }
 
   .cta-buttons .btn {
@@ -297,21 +326,31 @@ nav ul li a:hover {
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 400px) and (max-height: 682px) {
   .button.primary {
-    width: 100%;
-    font-size: 14px;
-    padding: 8px 12px;
+    height: 3rem;
+    padding: 7px 12px;
+    font-size: 12px;
+    width: 118px;
+}
+
+  .cta-buttons {
+    gap: 5px; /* Espaçamento menor entre os botões */
+    flex-wrap: wrap; /* Permite que os botões quebrem para a próxima linha */
   }
 
-  .logo {
-    width: 18px;
-    margin-bottom: 30%;
+  .cta-buttons .btn {
+    width: auto; /* Largura automática para se ajustar ao conteúdo */
+    height: 2rem; /* Altura reduzida dos botões */
+    padding: 6px 12px; /* Padding ajustado */
+    font-size: 12px; /* Tamanho da fonte reduzido */
   }
 
   header {
-    padding: 10px;
+    padding: 0 5px; /* Padding reduzido no header */
+  }
+
+  .logo img {
+    width: 100px; /* Logo menor para economizar espaço */
   }
 }
-
-

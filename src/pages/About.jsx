@@ -11,7 +11,7 @@ function About() {
                 <title>Sobre Nós - Mobiliza Amigos</title>
                 <meta 
                     name="description" 
-                    content="Conheça o Mobiliza Amigos, um projeto de voluntariado que transforma vidas em Campinas e Valinhos. Saiba mais sobre nossa missão e impacto!" 
+                    content="Conheça o Mobiliza Amigos, um projeto voluntariado que transforma vidas em Campinas e Valinhos. Saiba mais sobre nossa missão e impacto!" 
                 />
                 <meta name="keywords" content="voluntariado, projeto social, Mobiliza Amigos, Campinas, Valinhos, missão social" />
                 <meta property="og:title" content="Sobre Nós - Mobiliza Amigos" />

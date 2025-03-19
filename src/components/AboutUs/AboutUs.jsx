@@ -56,17 +56,33 @@ const AboutUs = () => {
           id="imgAboutUs1"
           src={AboutUs1}
           alt="Voluntários entregando alimentos para Comunidade Mandela Campinas-SP"
+          width="250" /* Largura máxima definida no CSS */
+          height="200" /* Altura proporcional */
+          loading="lazy" /* Carregamento lento para melhor desempenho */
         />
         <img
           id="imgAboutUs2"
           src={AboutUs2}
           alt="Voluntária na ação Amigo do Idoso"
+          width="250"
+          height="200"
+          loading="lazy"
         />
-        <img id="imgAboutUs3" src={AboutUs5} alt="Voluntários sorrindo" />
+        <img
+          id="imgAboutUs3"
+          src={AboutUs5}
+          alt="Voluntários sorrindo"
+          width="250"
+          height="200"
+          loading="lazy"
+        />
         <img
           id="imgAboutUs4"
           src={AboutUs4}
           alt="Voluntários em ação de meio ambiente plantando flores"
+          width="250"
+          height="200"
+          loading="lazy"
         />
       </div>
     </section>

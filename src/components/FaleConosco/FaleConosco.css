@@ -1,57 +1,57 @@
-/* Estilização geral do formulário */
-.form-status {
-  margin-top: 10px;
-  font-size: 0.9rem;
-  padding: 10px;
-  border-radius: 5px;
-  text-align: center;
-}
-
-.form-status.success {
-  color: green;
-  background-color: #e7f9e7;
-}
-
-.form-status.error {
-  color: red;
-  background-color: #f9e7e7;
-}
-
 /* Seção Fale com a gente */
 #fale-com-a-gente {
-  background-color: var(--amarelo-mobiliza);
+  animation: gradientAnimation 10s ease infinite;
   color: #ffffff;
   text-align: left;
+  padding: 20px;
   opacity: 0;
   animation: fadeIn 1s forwards;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 #fale-com-a-gente h2 {
   font-size: 2.25rem;
   font-weight: 800;
-  margin-left: 20px;
-  margin-top: 5rem;
+  margin-top: 6.5rem;
+  margin-left: 1rem;
   font-family: "Poppins", sans-serif;
-  padding: 40px 20px 0;
+  color: var(--roxo-mobiliza);
   opacity: 0;
   animation: fadeIn 1s forwards 0.5s;
-  margin-bottom: 10px;
+}
+
+.descricao-contato {
+  font-size: 1.5rem;
+  font-family: "Roboto", sans-serif;
   color: var(--roxo-mobiliza);
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: fadeIn 1s forwards 0.7s;
+  margin-left: 1rem;
 }
 
 /* Container de contato */
 .contato-container {
   display: flex;
-  flex-wrap: wrap;
   gap: 20px;
   align-items: flex-start;
-  padding: 10px 20px;
+  padding: 20px;
 }
 
 .contatos {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, auto);
   gap: 20px;
   width: 100%;
   max-width: 800px;
@@ -59,13 +59,22 @@
 
 /* Opções de contato */
 .contato-opcao {
-  background-color: var(--amarelo-mobiliza);
-  border-radius: 5px;
+  /* background: rgba(255, 255, 255, 0.1); */
+  border-radius: 10px;
   text-align: left;
   padding: 20px;
   opacity: 0;
   animation: slideUp 0.8s forwards;
   font-family: "Poppins", sans-serif;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  backdrop-filter: blur(10px);
+  border: 1px solid #49073d6b;
+}
+
+.contato-opcao:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.2);
 }
 
 .contato-opcao h3 {
@@ -77,12 +86,12 @@
 .contato-opcao p {
   font-size: 0.9rem;
   margin-bottom: 10px;
-  color: white;
+  color: var(--roxo-mobiliza);
   text-align: left;
 }
 
 .contato-opcao img {
-  width: 150px;
+  width: 154px;
   height: auto;
   margin-top: 8px;
   transition: transform 0.3s ease, opacity 0.3s ease;
@@ -93,56 +102,23 @@
   opacity: 0.8;
 }
 
-/* Formulário de contato */
-.formulario-contato {
-  width: 100%;
-  max-width: 450px;
-  opacity: 0;
-  animation: fadeIn 1s forwards 1s;
+/* Imagens sobre nós */
+.imagens-fale-conosco {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  width: 450px;
+  max-width: 800px;
 }
 
-.formulario-contato h3 {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-  color: var(--roxo-mobiliza);
+.imagens-fale-conosco img {
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.formulario-contato form {
-  display: flex;
-  flex-direction: column;
-}
-
-.formulario-contato input,
-.formulario-contato textarea {
-  margin-bottom: 10px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-family: "Roboto", sans-serif;
-  transition: border 0.3s ease;
-}
-
-.formulario-contato input:focus,
-.formulario-contato textarea:focus {
-  border-color: var(--roxo-mobiliza);
-}
-
-.formulario-contato button {
-  background-color: var(--roxo-mobiliza);
-  color: #ffffff;
-  padding: 10px;
-  cursor: pointer;
-  font-weight: bold;
-  border: 2px solid var(--amarelo-mobiliza);
-  border-radius: 5px;
-  transition: background-color 0.3s ease, transform 0.3s ease,
-    box-shadow 0.3s ease;
-}
-
-.formulario-contato button:hover {
-  background-color: var(--roxo-mobiliza);
-  transform: translateY(-3px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+.imagens-sobre-nos img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
 /* Animações */
@@ -169,37 +145,38 @@
 /* Responsividade */
 @media (max-width: 768px) {
   #fale-com-a-gente h2 {
-    font-size: 1.5rem;
-    padding: 40px 0px 10px 25px;
+    font-size: 1.8rem;
+    padding-top: 8.5rem;
+
+    padding: 20px 0;
   }
 
   .contato-container {
-    padding: 20px;
+    flex-direction: column;
+    padding: 10px;
   }
 
   .contatos {
     grid-template-columns: 1fr;
   }
 
-  .formulario-contato {
-    max-width: 100%;
-  }
-
-  .contato-opcao img {
-    width: 150px;
+  .imagens-sobre-nos {
+    grid-template-columns: 1  ;
   }
 }
 
 @media (max-width: 480px) {
-  .form-status {
-    font-size: 0.8rem;
+  #fale-com-a-gente h2 {
+    font-size: 1.5rem;
+    padding-top: 8.5rem;
+
   }
 
   .contato-opcao h3 {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
 
   .contato-opcao p {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 }

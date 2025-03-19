@@ -123,6 +123,7 @@
 @media (max-width: 768px) {
   .conteudo-sobre-nos h2 {
     font-size: 1.5rem; /* Ajustando o tamanho da fonte para telas menores */
+    padding-top: 2rem;
   }
 
   .conteudo-sobre-nos p,

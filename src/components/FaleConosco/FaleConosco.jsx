@@ -36,10 +36,14 @@ const FaleConosco = () => {
   return (
     <section id="fale-com-a-gente">
       <h2>FALE COM A GENTE</h2>
+      <p className="descricao-contato">
+        Entre em contato conosco através dos nossos canais de atendimento. Estamos aqui para tirar suas dúvidas,
+        receber sugestões e ajudar você a se envolver em nossas ações de voluntariado.
+      </p>
       <div className="contato-container">
         <div className="contatos">
           {contatos.map((contato, index) => (
-            <div className="contato-opcao" key={index}>
+            <article className="contato-opcao" key={index}>
               <h3>{contato.titulo}</h3>
               <p>{contato.texto}</p>
               <a
@@ -48,9 +52,15 @@ const FaleConosco = () => {
                 rel="noopener noreferrer"
                 title={contato.titulo}
               >
-                <img src="/whatsapp.svg" alt="Fale agora por WhatsApp" />
+                <img
+                  src="/whatsapp.svg"
+                  alt="Fale agora por WhatsApp"
+                  width="24"
+                  height="24"
+                  loading="lazy"
+                />
               </a>
-            </div>
+            </article>
           ))}
         </div>
         <div className="imagens-sobre-nos">
@@ -58,17 +68,33 @@ const FaleConosco = () => {
             id="imgAboutUs1"
             src={AboutUs1}
             alt="Voluntários entregando alimentos para Comunidade Mandela Campinas-SP"
+            width="300"
+            height="200"
+            loading="lazy"
           />
           <img
             id="imgAboutUs2"
             src={AboutUs2}
             alt="Voluntária na ação Amigo do Idoso"
+            width="300"
+            height="200"
+            loading="lazy"
           />
-          <img id="imgAboutUs3" src={AboutUs3} alt="Voluntários sorrindo" />
+          <img
+            id="imgAboutUs3"
+            src={AboutUs3}
+            alt="Voluntários sorrindo"
+            width="300"
+            height="200"
+            loading="lazy"
+          />
           <img
             id="imgAboutUs4"
             src={AboutUs4}
             alt="Voluntários em ação de meio ambiente plantando flores"
+            width="300"
+            height="200"
+            loading="lazy"
           />
         </div>
       </div>
