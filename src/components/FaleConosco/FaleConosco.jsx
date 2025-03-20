@@ -1,4 +1,4 @@
-import React from "react";
+import { Helmet } from "react-helmet-async"; // Adicionamos o Helmet para a tag canonical
 import "../FaleConosco/FaleConosco.css";
 
 import AboutUs1 from "../../assets/images-aboutus/aboutus1.webp";
@@ -35,6 +35,11 @@ const FaleConosco = () => {
 
   return (
     <section id="fale-com-a-gente">
+      {/* Adicionamos a tag canonical para SEO */}
+      <Helmet>
+        <link rel="canonical" href="https://mobilizaamigos.org/contact" />
+      </Helmet>
+
       <h2>FALE COM A GENTE</h2>
       <p className="descricao-contato">
         Entre em contato conosco através dos nossos canais de atendimento. Estamos aqui para tirar suas dúvidas,

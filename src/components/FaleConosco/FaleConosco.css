@@ -23,7 +23,7 @@
 #fale-com-a-gente h2 {
   font-size: 2.25rem;
   font-weight: 800;
-  margin-top: 6.5rem;
+  margin-top: 4rem;
   margin-left: 1rem;
   font-family: "Poppins", sans-serif;
   color: var(--roxo-mobiliza);
@@ -168,7 +168,7 @@
 @media (max-width: 480px) {
   #fale-com-a-gente h2 {
     font-size: 1.5rem;
-    padding-top: 8.5rem;
+    padding-top: 5.5rem;
 
   }
 

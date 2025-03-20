@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import { useState } from "react"; // Removemos a importação do React, pois não é necessária no React 17+
+import { Helmet } from "react-helmet-async"; // Adicionamos o Helmet para a tag canonical
 import "./Inscricao.css";
 
 const InscricaoForm = () => {
@@ -60,6 +61,11 @@ const InscricaoForm = () => {
 
   return (
     <section className="inscricao">
+      {/* Adicionamos a tag canonical para SEO */}
+      <Helmet>
+        <link rel="canonical" href="https://mobilizaamigos.org/register" />
+      </Helmet>
+
       <div className="container-inscricao">
         <h1>Inscreva-se para o Mobiliza Amigos</h1>
         <p className="paragrafo-1">

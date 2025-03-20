@@ -1,5 +1,6 @@
-import React, { useState, useMemo } from "react";
+import { useState, useMemo } from "react"; // Removemos a importação do React, pois não é necessária no React 17+
 import PropTypes from "prop-types";
+import { Helmet } from "react-helmet-async"; // Adicionamos o Helmet para a tag canonical
 import "./Lojinha.css";
 
 // ASSETS
@@ -552,6 +553,10 @@ const Lojinha = () => {
 
   return (
     <div className="lojinha-container">
+      {/* Adicionamos a tag canonical para SEO */}
+      <Helmet>
+        <link rel="canonical" href="https://mobilizaamigos.org/loja" />
+      </Helmet>
       <h1>Lojinha do Bem</h1>
       <FilterBar
         selectedCategory={selectedCategory}
