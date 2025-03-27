@@ -84,11 +84,11 @@ function Footer() {
         <br />
         Desenvolvido por{" "}
         <a
-          href="https://github.com/biancasnogueira"
+          href="https://www.biancanogueira.com/"
           target="_blank"
           className="footer-link"
         >
-          BN Development
+          BN Tech Solutions
         </a>
       </div>
     </footer>
