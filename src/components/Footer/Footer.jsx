@@ -88,7 +88,7 @@ function Footer() {
           target="_blank"
           className="footer-link"
         >
-          BN Tech Solutions
+          Sovich .Co Tech
         </a>
       </div>
     </footer>
