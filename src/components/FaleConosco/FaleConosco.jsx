@@ -8,12 +8,12 @@ import AboutUs4 from "../../assets/images-aboutus/aboutus4.webp";
 
 const FaleConosco = () => {
   const contatos = [
-    {
-      titulo: "Incentivo",
-      texto:
-        "Tire dúvida sobre abertura de inscrições, próximas ações, fique ligado na nossa agenda.",
-      link: "https://wa.me/5519989906423?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20o%20Incentivo!",
-    },
+    // {
+    //   titulo: "Incentivo",
+    //   texto:
+    //     "Tire dúvida sobre abertura de inscrições, próximas ações, fique ligado na nossa agenda.",
+    //   link: "https://wa.me/5519989906423?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20o%20Incentivo!",
+    // },
     {
       titulo: "Financeiro",
       texto:
@@ -42,8 +42,9 @@ const FaleConosco = () => {
 
       <h2>FALE COM A GENTE</h2>
       <p className="descricao-contato">
-        Entre em contato conosco através dos nossos canais de atendimento. Estamos aqui para tirar suas dúvidas,
-        receber sugestões e ajudar você a se envolver em nossas ações de voluntariado.
+        Entre em contato conosco através dos nossos canais de atendimento.
+        Estamos aqui para tirar suas dúvidas, receber sugestões e ajudar você a
+        se envolver em nossas ações de voluntariado.
       </p>
       <div className="contato-container">
         <div className="contatos">
